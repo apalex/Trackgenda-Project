@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Trackgenda
 {
-    public partial class LoginForm : Form
+    public partial class ForgotPasswordForm : Form
     {
-        public LoginForm()
+        public ForgotPasswordForm()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Trackgenda
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
+        private void RegisterForm_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -34,5 +34,13 @@ namespace Trackgenda
         {
             Application.Exit();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
     }
 }
