@@ -10,13 +10,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
+using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Trackgenda
 {
     public partial class RegisterForm : Form
     {
+        private MySqlConnection conn;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
+        private string query;
         public RegisterForm()
         {
+            server = "localhost";
+            database = "trackgenda";
+            uid = "root";
+            password = "";
+            string connString = $"server={server};database={database};uid={uid};password={password};";
+            conn = new MySqlConnection(connString);
+            OpenConnection();
             InitializeComponent();
         }
 
@@ -116,14 +131,35 @@ namespace Trackgenda
             // Registration
             if (error.Length == 0)
             {
-
+                query = $"INSERT INTO user_info (first_name,last_name,u_email,username,u_password) VALUES ('{firstNameTextBox.Text}','{lastNameTextBox.Text}','{emailTextBox.Text}','{usernameTextBox.Text}','{passwordTextBox.Text}');";
+                try
+                {
+                    MySqlCommand cmd = new MySqlCommand(query,conn);
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Account has been successfully made!");
+                        conn.Close();
+                        LoginForm loginForm = new LoginForm();
+                        loginForm.Show();
+                        this.Hide();
+                    }
+                    catch (Exception E)
+                    {
+                        MessageBox.Show(E.ToString());
+                    }
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
             } else
             {
                 MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        public bool isValidEmailAddress(string email)
+        private bool isValidEmailAddress(string email)
         {
             try
             {
@@ -136,14 +172,54 @@ namespace Trackgenda
             }
         }
 
-        public bool isEmailInUse(string email)
+        private bool isEmailInUse(string email)
         {
-            return true;
+            query = $"SELECT * FROM user_info WHERE u_email = '{email}'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
         }
 
-        public bool isUsernameInUse(string username)
+        private bool isUsernameInUse(string username)
         {
-            return true;
+            query = $"SELECT * FROM user_info WHERE username = '{username}'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        private bool OpenConnection()
+        {
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (MySqlException E)
+            {
+                switch(E.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Connection to server failed!");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Server username or password is inccorect!");
+                        break;
+                }
+                return false;
+            }
         }
     }
 }
