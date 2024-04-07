@@ -89,11 +89,11 @@ namespace Trackgenda
             // Email
             if (!isValidEmailAddress(emailTextBox.Text))
             {
-                error += "\nTestEmailisValid";
+                error += "\nEmail Address is invalid";
             }
             if (isEmailInUse(emailTextBox.Text))
             {
-                error += "\nTestEmailInUse";
+                error += "\nEmail is already in use";
             }
             // Username
             if (!Regex.Match(usernameTextBox.Text, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+){1,}$").Success)

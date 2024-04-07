@@ -29,6 +29,7 @@ namespace Trackgenda
             password = "";
             string connString = $"server={server};database={database};uid={uid};password={password};";
             conn = new MySqlConnection(connString);
+            OpenConnection();
             InitializeComponent();
         }
 
@@ -64,6 +65,69 @@ namespace Trackgenda
             forgotPasswordForm.Show();
             this.Hide();
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            if (usernameTextBox.TextLength == 0 || passwordTextBox.TextLength == 0)
+            {
+                MessageBox.Show("Username or Password missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else
+            {
+                if (IsLogin(usernameTextBox.Text,passwordTextBox.Text))
+                {
+                    int uid = getUID(usernameTextBox.Text);
+                    if (uid != 0)
+                    {
+                        MessageBox.Show("Login Successful!");
+                        conn.Close();
+                        CalendarForm calendar = new CalendarForm(uid);
+                        calendar.Show();
+                        this.Hide();
+                    } else
+                    {
+                        MessageBox.Show("An error has occured! Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Username or Password is wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private bool IsLogin(string username, string password)
+        {
+            query = $"SELECT * FROM user_info WHERE username = '{username}' AND u_password = '{password}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+
+            reader.Close();
+            return false;
+        }
+
+        private int getUID(string username)
+        {
+            int uid = 0;
+            query = $"SELECT uid FROM user_info WHERE username = '{username}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                uid = reader.GetInt32(0);
+                reader.Close();
+                return uid;
+            }
+            reader.Close();
+            return uid;
+        }
+
         private bool OpenConnection()
         {
             try
@@ -84,49 +148,6 @@ namespace Trackgenda
                 }
                 return false;
             }
-        }
-
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-            if (usernameTextBox.TextLength == 0 || passwordTextBox.TextLength == 0)
-            {
-                MessageBox.Show("Username or Password missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else
-            {
-                if (IsLogin(usernameTextBox.Text,passwordTextBox.Text))
-                {
-                    // Redirect to calendar page here with calendar default constructor accepting parameters as uid
-                }
-                else
-                {
-                    MessageBox.Show("Username or Password is wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        private bool IsLogin(string username, string password)
-        {
-            query = $"SELECT * FROM user_info WHERE username = '{username}' AND password = '{password}';";
-
-            try
-            {
-                if (OpenConnection())
-                {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        reader.Close();
-                        conn.Close();
-                        return true;
-                    }
-                }
-            }
-            catch (MySqlException E)
-            {
-            }
-            return false;
         }
     }
 }

@@ -69,7 +69,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(39, 66);
+            this.usernameLabel.Location = new System.Drawing.Point(41, 121);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(144, 32);
             this.usernameLabel.TabIndex = 4;
@@ -79,7 +79,7 @@
             // 
             this.newPasswordLabel.AutoSize = true;
             this.newPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPasswordLabel.Location = new System.Drawing.Point(41, 253);
+            this.newPasswordLabel.Location = new System.Drawing.Point(41, 294);
             this.newPasswordLabel.Name = "newPasswordLabel";
             this.newPasswordLabel.Size = new System.Drawing.Size(201, 32);
             this.newPasswordLabel.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(39, 154);
+            this.emailLabel.Location = new System.Drawing.Point(41, 207);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(86, 32);
             this.emailLabel.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             this.confirmLabel.AutoSize = true;
             this.confirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmLabel.Location = new System.Drawing.Point(44, 345);
+            this.confirmLabel.Location = new System.Drawing.Point(41, 377);
             this.confirmLabel.Name = "confirmLabel";
             this.confirmLabel.Size = new System.Drawing.Size(244, 32);
             this.confirmLabel.TabIndex = 7;
@@ -107,28 +107,28 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(45, 101);
+            this.usernameTextBox.Location = new System.Drawing.Point(47, 156);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(334, 26);
             this.usernameTextBox.TabIndex = 8;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(45, 189);
+            this.emailTextBox.Location = new System.Drawing.Point(45, 242);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(334, 26);
             this.emailTextBox.TabIndex = 9;
             // 
             // confirmTextBox
             // 
-            this.confirmTextBox.Location = new System.Drawing.Point(47, 380);
+            this.confirmTextBox.Location = new System.Drawing.Point(47, 412);
             this.confirmTextBox.Name = "confirmTextBox";
             this.confirmTextBox.Size = new System.Drawing.Size(330, 26);
             this.confirmTextBox.TabIndex = 10;
             // 
             // newPasswordTextBox
             // 
-            this.newPasswordTextBox.Location = new System.Drawing.Point(47, 288);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(43, 329);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
             this.newPasswordTextBox.Size = new System.Drawing.Size(332, 26);
             this.newPasswordTextBox.TabIndex = 11;
@@ -136,12 +136,13 @@
             // confirmButton
             // 
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.confirmButton.Location = new System.Drawing.Point(50, 438);
+            this.confirmButton.Location = new System.Drawing.Point(45, 478);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(334, 38);
             this.confirmButton.TabIndex = 12;
             this.confirmButton.Text = "Confirm";
             this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // ForgotPasswordForm
             // 
@@ -162,7 +163,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
             this.Text = "ForgotPasswordForm";
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
