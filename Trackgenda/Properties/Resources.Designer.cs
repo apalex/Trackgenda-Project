@@ -73,9 +73,29 @@ namespace Trackgenda.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap n6mIeR0 {
+            get {
+                object obj = ResourceManager.GetObject("n6mIeR0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sample_User_Icon {
             get {
                 object obj = ResourceManager.GetObject("Sample_User_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TG {
+            get {
+                object obj = ResourceManager.GetObject("TG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

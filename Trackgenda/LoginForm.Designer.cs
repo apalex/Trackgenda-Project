@@ -33,11 +33,13 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
-            this.userPictureBox = new System.Windows.Forms.PictureBox();
-            this.lockPictureBox = new System.Windows.Forms.PictureBox();
             this.XButton = new System.Windows.Forms.Button();
             this.registerLabel = new System.Windows.Forms.Label();
             this.forgotPasswordLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userPictureBox = new System.Windows.Forms.PictureBox();
+            this.lockPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -91,30 +93,6 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // userPictureBox
-            // 
-            this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.userPictureBox.Image = global::Trackgenda.Properties.Resources.Sample_User_Icon;
-            this.userPictureBox.Location = new System.Drawing.Point(185, 197);
-            this.userPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.userPictureBox.Name = "userPictureBox";
-            this.userPictureBox.Size = new System.Drawing.Size(45, 31);
-            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPictureBox.TabIndex = 6;
-            this.userPictureBox.TabStop = false;
-            // 
-            // lockPictureBox
-            // 
-            this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.lockPictureBox.Image = global::Trackgenda.Properties.Resources.Lock_icon;
-            this.lockPictureBox.Location = new System.Drawing.Point(185, 293);
-            this.lockPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lockPictureBox.Name = "lockPictureBox";
-            this.lockPictureBox.Size = new System.Drawing.Size(45, 31);
-            this.lockPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lockPictureBox.TabIndex = 5;
-            this.lockPictureBox.TabStop = false;
-            // 
             // XButton
             // 
             this.XButton.BackColor = System.Drawing.Color.LightCoral;
@@ -153,12 +131,47 @@
             this.forgotPasswordLabel.Text = "Forgot Password? Click Here!";
             this.forgotPasswordLabel.Click += new System.EventHandler(this.forgotPasswordLabel_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
+            this.pictureBox1.Location = new System.Drawing.Point(109, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 124);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // userPictureBox
+            // 
+            this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.userPictureBox.Image = global::Trackgenda.Properties.Resources.Sample_User_Icon;
+            this.userPictureBox.Location = new System.Drawing.Point(185, 197);
+            this.userPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userPictureBox.Name = "userPictureBox";
+            this.userPictureBox.Size = new System.Drawing.Size(45, 31);
+            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPictureBox.TabIndex = 6;
+            this.userPictureBox.TabStop = false;
+            // 
+            // lockPictureBox
+            // 
+            this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.lockPictureBox.Image = global::Trackgenda.Properties.Resources.Lock_icon;
+            this.lockPictureBox.Location = new System.Drawing.Point(185, 293);
+            this.lockPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lockPictureBox.Name = "lockPictureBox";
+            this.lockPictureBox.Size = new System.Drawing.Size(45, 31);
+            this.lockPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lockPictureBox.TabIndex = 5;
+            this.lockPictureBox.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 615);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.XButton);
             this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.forgotPasswordLabel);
@@ -172,6 +185,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -191,6 +205,7 @@
         private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Label registerLabel;
         private System.Windows.Forms.Label forgotPasswordLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -166,6 +166,12 @@
   <ItemGroup>
     <None Include="Resources\Sample_User_Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n6mIeR0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
