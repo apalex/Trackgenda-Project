@@ -71,6 +71,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(44, 332);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(332, 26);
             this.passwordTextBox.TabIndex = 2;
             // 
@@ -185,6 +186,7 @@
             this.Controls.Add(this.usernameLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();

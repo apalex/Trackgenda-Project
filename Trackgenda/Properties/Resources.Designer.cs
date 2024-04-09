@@ -99,5 +99,15 @@ namespace Trackgenda.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TG_ezgif_com_video_to_gif_converter {
+            get {
+                object obj = ResourceManager.GetObject("TG-ezgif.com-video-to-gif-converter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -185,6 +185,7 @@
             this.Controls.Add(this.XButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPasswordForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);

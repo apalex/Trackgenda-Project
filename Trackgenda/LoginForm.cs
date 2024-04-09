@@ -80,8 +80,8 @@ namespace Trackgenda
                     {
                         MessageBox.Show("Login Successful!");
                         conn.Close();
-                        CalendarForm calendar = new CalendarForm(uid);
-                        calendar.Show();
+                        ProgressBarForm progressBarForm = new ProgressBarForm(uid);
+                        progressBarForm.Show();
                         this.Hide();
                     } else
                     {

@@ -237,6 +237,7 @@
             this.Controls.Add(this.XButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
