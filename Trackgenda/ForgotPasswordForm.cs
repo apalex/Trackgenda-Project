@@ -159,5 +159,77 @@ namespace Trackgenda
             }
             return false;
         }
+
+        private void usernameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text == "Username")
+            {
+                usernameTextBox.Text = "";
+                usernameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "Email")
+            {
+                emailTextBox.Text = "";
+                emailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void newPasswordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (newPasswordTextBox.Text == "New Password")
+            {
+                newPasswordTextBox.Text = "";
+                newPasswordTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void confirmTextBox_Enter(object sender, EventArgs e)
+        {
+            if (confirmTextBox.Text == "New Password")
+            {
+                confirmTextBox.Text = "";
+                confirmTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void usernameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text == "")
+            {
+                usernameTextBox.Text = "Username";
+                usernameTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "")
+            {
+                emailTextBox.Text = "Email";
+                emailTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void newPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (newPasswordTextBox.Text == "")
+            {
+                newPasswordTextBox.Text = "New Password";
+                newPasswordTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void confirmTextBox_Leave(object sender, EventArgs e)
+        {
+            if (confirmTextBox.Text == "")
+            {
+                confirmTextBox.Text = "New Password";
+                confirmTextBox.ForeColor = Color.DarkGray;
+            }
+        }
     }
 }

@@ -134,7 +134,7 @@ namespace Trackgenda
                 query = $"INSERT INTO user_info (first_name,last_name,u_email,username,u_password) VALUES ('{firstNameTextBox.Text}','{lastNameTextBox.Text}','{emailTextBox.Text}','{usernameTextBox.Text}','{passwordTextBox.Text}');";
                 try
                 {
-                    MySqlCommand cmd = new MySqlCommand(query,conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     try
                     {
                         cmd.ExecuteNonQuery();
@@ -209,7 +209,7 @@ namespace Trackgenda
             }
             catch (MySqlException E)
             {
-                switch(E.Number)
+                switch (E.Number)
                 {
                     case 0:
                         MessageBox.Show("Connection to server failed!");
@@ -219,6 +219,114 @@ namespace Trackgenda
                         break;
                 }
                 return false;
+            }
+        }
+
+        private void firstNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (firstNameTextBox.Text == "First Name")
+            {
+                firstNameTextBox.Text = "";
+                firstNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void lastNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (lastNameTextBox.Text == "Last Name")
+            {
+                lastNameTextBox.Text = "";
+                lastNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "Email")
+            {
+                emailTextBox.Text = "";
+                emailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void usernameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text == "Username")
+            {
+                usernameTextBox.Text = "";
+                usernameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void passwordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (passwordTextBox.Text == "Password")
+            {
+                passwordTextBox.Text = "";
+                passwordTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void confirmTextBox_Enter(object sender, EventArgs e)
+        {
+            if (confirmTextBox.Text == "Password")
+            {
+                confirmTextBox.Text = "";
+                confirmTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void firstNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (firstNameTextBox.Text == "")
+            {
+                firstNameTextBox.Text = "First Name";
+                firstNameTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void lastNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (lastNameTextBox.Text == "")
+            {
+                lastNameTextBox.Text = "Last Name";
+                lastNameTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "")
+            {
+                emailTextBox.Text = "Email";
+                emailTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void usernameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text == "")
+            {
+                usernameTextBox.Text = "Username";
+                usernameTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void passwordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (passwordTextBox.Text == "")
+            {
+                passwordTextBox.Text = "Password";
+                passwordTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void confirmTextBox_Leave(object sender, EventArgs e)
+        {
+            if (confirmTextBox.Text == "")
+            {
+                confirmTextBox.Text = "Password";
+                confirmTextBox.ForeColor = Color.DarkGray;
             }
         }
     }

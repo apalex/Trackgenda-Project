@@ -121,43 +121,69 @@
             // 
             // emailTextBox
             // 
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.emailTextBox.Location = new System.Drawing.Point(43, 255);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(334, 26);
+            this.emailTextBox.Size = new System.Drawing.Size(334, 30);
             this.emailTextBox.TabIndex = 7;
+            this.emailTextBox.Text = "Email";
+            this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.firstNameTextBox.Location = new System.Drawing.Point(43, 101);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(334, 26);
-            this.firstNameTextBox.TabIndex = 8;
+            this.firstNameTextBox.Size = new System.Drawing.Size(334, 30);
+            this.firstNameTextBox.TabIndex = 0;
+            this.firstNameTextBox.Text = "First Name";
+            this.firstNameTextBox.Enter += new System.EventHandler(this.firstNameTextBox_Enter);
+            this.firstNameTextBox.Leave += new System.EventHandler(this.firstNameTextBox_Leave);
             // 
             // lastNameTextBox
             // 
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.lastNameTextBox.Location = new System.Drawing.Point(43, 176);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(334, 26);
-            this.lastNameTextBox.TabIndex = 9;
+            this.lastNameTextBox.Size = new System.Drawing.Size(334, 30);
+            this.lastNameTextBox.TabIndex = 1;
+            this.lastNameTextBox.Text = "Last Name";
+            this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
+            this.lastNameTextBox.Leave += new System.EventHandler(this.lastNameTextBox_Leave);
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.passwordTextBox.Location = new System.Drawing.Point(43, 412);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(334, 26);
+            this.passwordTextBox.Size = new System.Drawing.Size(334, 30);
             this.passwordTextBox.TabIndex = 10;
+            this.passwordTextBox.Text = "Password";
+            this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
+            this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.usernameTextBox.Location = new System.Drawing.Point(43, 333);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(334, 26);
+            this.usernameTextBox.Size = new System.Drawing.Size(334, 30);
             this.usernameTextBox.TabIndex = 11;
+            this.usernameTextBox.Text = "Username";
+            this.usernameTextBox.Enter += new System.EventHandler(this.usernameTextBox_Enter);
+            this.usernameTextBox.Leave += new System.EventHandler(this.usernameTextBox_Leave);
             // 
             // registerButton
             // 
             this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.Location = new System.Drawing.Point(43, 542);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(334, 38);
@@ -178,11 +204,16 @@
             // 
             // confirmTextBox
             // 
+            this.confirmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.confirmTextBox.Location = new System.Drawing.Point(43, 495);
             this.confirmTextBox.Name = "confirmTextBox";
             this.confirmTextBox.PasswordChar = '*';
-            this.confirmTextBox.Size = new System.Drawing.Size(334, 26);
+            this.confirmTextBox.Size = new System.Drawing.Size(334, 30);
             this.confirmTextBox.TabIndex = 14;
+            this.confirmTextBox.Text = "Password";
+            this.confirmTextBox.Enter += new System.EventHandler(this.confirmTextBox_Enter);
+            this.confirmTextBox.Leave += new System.EventHandler(this.confirmTextBox_Leave);
             // 
             // RegisterForm
             // 
