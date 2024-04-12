@@ -14,6 +14,7 @@ namespace Trackgenda
     public partial class CalendarForm : Form
     {
         private int uid;
+        private bool sidePanelShow = true;
         public CalendarForm(int uid)
         {
             this.uid = uid;
@@ -96,6 +97,19 @@ namespace Trackgenda
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void hamburgerPictureBox_Click(object sender, EventArgs e)
+        {
+            if (sidePanelShow)
+            {
+                sidePanel.Hide();
+                sidePanelShow = false;
+            } else
+            {
+                sidePanel.Show();
+                sidePanelShow = true;
+            }
         }
     }
 }

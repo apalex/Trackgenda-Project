@@ -31,17 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.currentTimeLabel = new System.Windows.Forms.Label();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.maximizeButton = new System.Windows.Forms.Button();
             this.XButton = new System.Windows.Forms.Button();
+            this.hamburgerPictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.dashboardButton = new System.Windows.Forms.Button();
             this.currentTimeTimer = new System.Windows.Forms.Timer(this.components);
+            this.eventsButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
+            this.backgroundButton = new System.Windows.Forms.Button();
+            this.factButton = new System.Windows.Forms.Button();
+            this.noteButton = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.studyButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
+            this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,16 +66,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(971, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -71,7 +73,7 @@
             this.panel1.Controls.Add(this.minimizeButton);
             this.panel1.Controls.Add(this.maximizeButton);
             this.panel1.Controls.Add(this.XButton);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.hamburgerPictureBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -84,7 +86,7 @@
             // 
             this.currentTimeLabel.Location = new System.Drawing.Point(197, 16);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(76, 21);
+            this.currentTimeLabel.Size = new System.Drawing.Size(129, 21);
             this.currentTimeLabel.TabIndex = 4;
             // 
             // minimizeButton
@@ -135,6 +137,17 @@
             this.XButton.MouseLeave += new System.EventHandler(this.XButton_MouseLeave);
             this.XButton.MouseHover += new System.EventHandler(this.XButton_MouseHover);
             // 
+            // hamburgerPictureBox
+            // 
+            this.hamburgerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("hamburgerPictureBox.Image")));
+            this.hamburgerPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.hamburgerPictureBox.Name = "hamburgerPictureBox";
+            this.hamburgerPictureBox.Size = new System.Drawing.Size(37, 30);
+            this.hamburgerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hamburgerPictureBox.TabIndex = 3;
+            this.hamburgerPictureBox.TabStop = false;
+            this.hamburgerPictureBox.Click += new System.EventHandler(this.hamburgerPictureBox_Click);
+            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,45 +157,209 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Trackgenda |";
             // 
-            // pictureBox1
+            // sidePanel
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sidePanel.Controls.Add(this.pictureBox1);
+            this.sidePanel.Controls.Add(this.dashboardButton);
+            this.sidePanel.Controls.Add(this.eventsButton);
+            this.sidePanel.Controls.Add(this.studyButton);
+            this.sidePanel.Controls.Add(this.button7);
+            this.sidePanel.Controls.Add(this.noteButton);
+            this.sidePanel.Controls.Add(this.factButton);
+            this.sidePanel.Controls.Add(this.backgroundButton);
+            this.sidePanel.Controls.Add(this.settingsButton);
+            this.sidePanel.Controls.Add(this.logoutButton);
+            this.sidePanel.Controls.Add(this.exitButton);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 51);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(220, 1029);
+            this.sidePanel.TabIndex = 4;
             // 
-            // flowLayoutPanel1
+            // dashboardButton
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 51);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 1029);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.dashboardButton.BackColor = System.Drawing.Color.White;
+            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Image")));
+            this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardButton.Location = new System.Drawing.Point(10, 121);
+            this.dashboardButton.Margin = new System.Windows.Forms.Padding(10, 40, 10, 10);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Size = new System.Drawing.Size(200, 60);
+            this.dashboardButton.TabIndex = 5;
+            this.dashboardButton.Text = "Dashboard";
+            this.dashboardButton.UseVisualStyleBackColor = false;
             // 
             // currentTimeTimer
             // 
             this.currentTimeTimer.Enabled = true;
             this.currentTimeTimer.Tick += new System.EventHandler(this.currentTimeTimer_Tick);
             // 
+            // eventsButton
+            // 
+            this.eventsButton.BackColor = System.Drawing.Color.White;
+            this.eventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eventsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventsButton.Image = ((System.Drawing.Image)(resources.GetObject("eventsButton.Image")));
+            this.eventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.eventsButton.Location = new System.Drawing.Point(10, 201);
+            this.eventsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.eventsButton.Name = "eventsButton";
+            this.eventsButton.Size = new System.Drawing.Size(200, 60);
+            this.eventsButton.TabIndex = 14;
+            this.eventsButton.Text = "Events";
+            this.eventsButton.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.White;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exitButton.Location = new System.Drawing.Point(10, 951);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(200, 60);
+            this.exitButton.TabIndex = 15;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.White;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(10, 871);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(10);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(200, 60);
+            this.logoutButton.TabIndex = 16;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            // 
+            // settingsButton
+            // 
+            this.settingsButton.BackColor = System.Drawing.Color.White;
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsButton.Location = new System.Drawing.Point(10, 791);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(10, 120, 10, 10);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(200, 60);
+            this.settingsButton.TabIndex = 17;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.UseVisualStyleBackColor = false;
+            // 
+            // backgroundButton
+            // 
+            this.backgroundButton.BackColor = System.Drawing.Color.White;
+            this.backgroundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backgroundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backgroundButton.Image = ((System.Drawing.Image)(resources.GetObject("backgroundButton.Image")));
+            this.backgroundButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.backgroundButton.Location = new System.Drawing.Point(10, 601);
+            this.backgroundButton.Margin = new System.Windows.Forms.Padding(10);
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.Size = new System.Drawing.Size(200, 60);
+            this.backgroundButton.TabIndex = 18;
+            this.backgroundButton.Text = "Background";
+            this.backgroundButton.UseVisualStyleBackColor = false;
+            // 
+            // factButton
+            // 
+            this.factButton.BackColor = System.Drawing.Color.White;
+            this.factButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.factButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.factButton.Image = ((System.Drawing.Image)(resources.GetObject("factButton.Image")));
+            this.factButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.factButton.Location = new System.Drawing.Point(10, 521);
+            this.factButton.Margin = new System.Windows.Forms.Padding(10);
+            this.factButton.Name = "factButton";
+            this.factButton.Size = new System.Drawing.Size(200, 60);
+            this.factButton.TabIndex = 19;
+            this.factButton.Text = "Fun Fact";
+            this.factButton.UseVisualStyleBackColor = false;
+            // 
+            // noteButton
+            // 
+            this.noteButton.BackColor = System.Drawing.Color.White;
+            this.noteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.noteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noteButton.Image = ((System.Drawing.Image)(resources.GetObject("noteButton.Image")));
+            this.noteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.noteButton.Location = new System.Drawing.Point(10, 441);
+            this.noteButton.Margin = new System.Windows.Forms.Padding(10);
+            this.noteButton.Name = "noteButton";
+            this.noteButton.Size = new System.Drawing.Size(200, 60);
+            this.noteButton.TabIndex = 20;
+            this.noteButton.Text = "Notes";
+            this.noteButton.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(10, 361);
+            this.button7.Margin = new System.Windows.Forms.Padding(10);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(200, 60);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "Stopwatch";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // studyButton
+            // 
+            this.studyButton.BackColor = System.Drawing.Color.White;
+            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.studyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studyButton.Image = ((System.Drawing.Image)(resources.GetObject("studyButton.Image")));
+            this.studyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.studyButton.Location = new System.Drawing.Point(10, 281);
+            this.studyButton.Margin = new System.Windows.Forms.Padding(10);
+            this.studyButton.Name = "studyButton";
+            this.studyButton.Size = new System.Drawing.Size(200, 60);
+            this.studyButton.TabIndex = 22;
+            this.studyButton.Text = "Study";
+            this.studyButton.UseVisualStyleBackColor = false;
+            // 
             // CalendarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalendarForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
+            this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,15 +369,25 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox hamburgerPictureBox;
         private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Button maximizeButton;
         private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel sidePanel;
         private System.Windows.Forms.Label currentTimeLabel;
         private System.Windows.Forms.Timer currentTimeTimer;
+        private System.Windows.Forms.Button dashboardButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button eventsButton;
+        private System.Windows.Forms.Button studyButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button backgroundButton;
+        private System.Windows.Forms.Button factButton;
+        private System.Windows.Forms.Button noteButton;
+        private System.Windows.Forms.Button button7;
     }
 }
