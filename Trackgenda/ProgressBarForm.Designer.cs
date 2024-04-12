@@ -51,7 +51,7 @@
             // timerLabel
             // 
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerLabel.Location = new System.Drawing.Point(530, 209);
+            this.timerLabel.Location = new System.Drawing.Point(480, 209);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(70, 38);
             this.timerLabel.TabIndex = 1;
@@ -61,7 +61,7 @@
             this.progressBar.BackColor = System.Drawing.Color.White;
             this.progressBar.Location = new System.Drawing.Point(0, 250);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(600, 37);
+            this.progressBar.Size = new System.Drawing.Size(617, 37);
             this.progressBar.TabIndex = 2;
             // 
             // timer1
@@ -73,7 +73,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG_ezgif_com_video_to_gif_converter;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(177, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 286);
+            this.ClientSize = new System.Drawing.Size(550, 286);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.timerLabel);

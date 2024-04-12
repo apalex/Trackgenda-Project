@@ -149,5 +149,13 @@ namespace Trackgenda
                 return false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Close();
+            ProgressBarForm progressBarForm = new ProgressBarForm(1);
+            progressBarForm.Show();
+            this.Hide();
+        }
     }
 }

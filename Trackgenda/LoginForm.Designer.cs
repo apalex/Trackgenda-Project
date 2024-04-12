@@ -33,12 +33,13 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
-            this.XButton = new System.Windows.Forms.Button();
             this.registerLabel = new System.Windows.Forms.Label();
             this.forgotPasswordLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userPictureBox = new System.Windows.Forms.PictureBox();
             this.lockPictureBox = new System.Windows.Forms.PictureBox();
+            this.closeButton1 = new Trackgenda.CloseButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockPictureBox)).BeginInit();
@@ -94,20 +95,6 @@
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // XButton
-            // 
-            this.XButton.BackColor = System.Drawing.Color.LightCoral;
-            this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.XButton.ForeColor = System.Drawing.Color.Snow;
-            this.XButton.Location = new System.Drawing.Point(382, -2);
-            this.XButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.XButton.Name = "XButton";
-            this.XButton.Size = new System.Drawing.Size(68, 40);
-            this.XButton.TabIndex = 9;
-            this.XButton.Text = "X";
-            this.XButton.UseVisualStyleBackColor = false;
-            this.XButton.Click += new System.EventHandler(this.XButton_Click);
             // 
             // registerLabel
             // 
@@ -167,14 +154,32 @@
             this.lockPictureBox.TabIndex = 5;
             this.lockPictureBox.TabStop = false;
             // 
+            // closeButton1
+            // 
+            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(68, 40);
+            this.closeButton1.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(185, 541);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 615);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.XButton);
             this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.forgotPasswordLabel);
             this.Controls.Add(this.userPictureBox);
@@ -205,10 +210,11 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.PictureBox lockPictureBox;
         private System.Windows.Forms.PictureBox userPictureBox;
-        private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Label registerLabel;
         private System.Windows.Forms.Label forgotPasswordLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CloseButton closeButton1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

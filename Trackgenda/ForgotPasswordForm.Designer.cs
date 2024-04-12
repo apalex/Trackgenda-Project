@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.XButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.newPasswordLabel = new System.Windows.Forms.Label();
@@ -39,25 +38,14 @@
             this.confirmTextBox = new System.Windows.Forms.TextBox();
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
+            this.closeButton1 = new Trackgenda.CloseButton();
             this.SuspendLayout();
-            // 
-            // XButton
-            // 
-            this.XButton.BackColor = System.Drawing.Color.LightCoral;
-            this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.XButton.ForeColor = System.Drawing.Color.Snow;
-            this.XButton.Location = new System.Drawing.Point(384, -2);
-            this.XButton.Name = "XButton";
-            this.XButton.Size = new System.Drawing.Size(68, 40);
-            this.XButton.TabIndex = 2;
-            this.XButton.Text = "X";
-            this.XButton.UseVisualStyleBackColor = false;
-            this.XButton.Click += new System.EventHandler(this.XButton_Click);
             // 
             // backButton
             // 
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.Location = new System.Drawing.Point(0, -2);
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Location = new System.Drawing.Point(0, 0);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(68, 40);
             this.backButton.TabIndex = 3;
@@ -167,11 +155,19 @@
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
+            // closeButton1
+            // 
+            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(68, 40);
+            this.closeButton1.TabIndex = 13;
+            // 
             // ForgotPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 615);
+            this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.newPasswordTextBox);
             this.Controls.Add(this.confirmTextBox);
@@ -182,7 +178,6 @@
             this.Controls.Add(this.newPasswordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.XButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -194,7 +189,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label newPasswordLabel;
@@ -205,5 +199,6 @@
         private System.Windows.Forms.TextBox confirmTextBox;
         private System.Windows.Forms.TextBox newPasswordTextBox;
         private System.Windows.Forms.Button confirmButton;
+        private CloseButton closeButton1;
     }
 }

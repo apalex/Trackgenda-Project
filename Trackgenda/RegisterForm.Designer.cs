@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.XButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
@@ -43,25 +42,14 @@
             this.registerButton = new System.Windows.Forms.Button();
             this.confirmLabel = new System.Windows.Forms.Label();
             this.confirmTextBox = new System.Windows.Forms.TextBox();
+            this.closeButton1 = new Trackgenda.CloseButton();
             this.SuspendLayout();
-            // 
-            // XButton
-            // 
-            this.XButton.BackColor = System.Drawing.Color.LightCoral;
-            this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.XButton.ForeColor = System.Drawing.Color.Snow;
-            this.XButton.Location = new System.Drawing.Point(382, -2);
-            this.XButton.Name = "XButton";
-            this.XButton.Size = new System.Drawing.Size(68, 40);
-            this.XButton.TabIndex = 0;
-            this.XButton.Text = "X";
-            this.XButton.UseVisualStyleBackColor = false;
-            this.XButton.Click += new System.EventHandler(this.XButton_Click);
             // 
             // backButton
             // 
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.Location = new System.Drawing.Point(0, -2);
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Location = new System.Drawing.Point(0, 0);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(68, 40);
             this.backButton.TabIndex = 1;
@@ -215,11 +203,19 @@
             this.confirmTextBox.Enter += new System.EventHandler(this.confirmTextBox_Enter);
             this.confirmTextBox.Leave += new System.EventHandler(this.confirmTextBox_Leave);
             // 
+            // closeButton1
+            // 
+            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(68, 40);
+            this.closeButton1.TabIndex = 15;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 615);
+            this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmTextBox);
             this.Controls.Add(this.confirmLabel);
             this.Controls.Add(this.registerButton);
@@ -234,7 +230,6 @@
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.XButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -245,8 +240,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label firstNameLabel;
@@ -261,5 +254,6 @@
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label confirmLabel;
         private System.Windows.Forms.TextBox confirmTextBox;
+        private CloseButton closeButton1;
     }
 }
