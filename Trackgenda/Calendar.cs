@@ -16,9 +16,7 @@ namespace Trackgenda
         private int uid;
         private bool sidePanelShow = true;
         private bool stopWatchShow = false;
-        private bool factButtonShow = false;
         private StopwatchForm stopWatchForm = new StopwatchForm();
-        private FactForm factForm = new FactForm();
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
 
@@ -83,7 +81,6 @@ namespace Trackgenda
             this.Select();
             currentTimeTimer.Start();
             stopWatchForm.MdiParent = this;
-            factForm.MdiParent = this;
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -156,16 +153,24 @@ namespace Trackgenda
 
         private void factButton_Click(object sender, EventArgs e)
         {
-            if (factButtonShow == false)
-            {
-                factForm.Show();
-                factButtonShow = !factButtonShow;
-            }
-            else
-            {
-                factForm.Close();
-                factButtonShow = !factButtonShow;
-            }
+            FactForm form = new FactForm();
+            form.Show();
+        }
+
+        private void motivationalButton_Click(object sender, EventArgs e)
+        {
+            MotivionalQuoteForm form = new MotivionalQuoteForm();
+            form.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

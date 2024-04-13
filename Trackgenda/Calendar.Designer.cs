@@ -45,6 +45,7 @@
             this.studyButton = new System.Windows.Forms.Button();
             this.stopwatchButton = new System.Windows.Forms.Button();
             this.notesButton = new System.Windows.Forms.Button();
+            this.motivationalButton = new System.Windows.Forms.Button();
             this.factButton = new System.Windows.Forms.Button();
             this.backgroundButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(994, 279);
+            this.label1.Location = new System.Drawing.Point(922, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
@@ -167,6 +168,7 @@
             this.sidePanel.Controls.Add(this.studyButton);
             this.sidePanel.Controls.Add(this.stopwatchButton);
             this.sidePanel.Controls.Add(this.notesButton);
+            this.sidePanel.Controls.Add(this.motivationalButton);
             this.sidePanel.Controls.Add(this.factButton);
             this.sidePanel.Controls.Add(this.backgroundButton);
             this.sidePanel.Controls.Add(this.settingsButton);
@@ -265,6 +267,22 @@
             this.notesButton.Text = "Notes";
             this.notesButton.UseVisualStyleBackColor = false;
             // 
+            // motivationalButton
+            // 
+            this.motivationalButton.BackColor = System.Drawing.Color.White;
+            this.motivationalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.motivationalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motivationalButton.Image = ((System.Drawing.Image)(resources.GetObject("motivationalButton.Image")));
+            this.motivationalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.motivationalButton.Location = new System.Drawing.Point(10, 551);
+            this.motivationalButton.Margin = new System.Windows.Forms.Padding(10);
+            this.motivationalButton.Name = "motivationalButton";
+            this.motivationalButton.Size = new System.Drawing.Size(200, 60);
+            this.motivationalButton.TabIndex = 20;
+            this.motivationalButton.Text = "Motivional Quote";
+            this.motivationalButton.UseVisualStyleBackColor = false;
+            this.motivationalButton.Click += new System.EventHandler(this.motivationalButton_Click);
+            // 
             // factButton
             // 
             this.factButton.BackColor = System.Drawing.Color.White;
@@ -272,7 +290,7 @@
             this.factButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.factButton.Image = ((System.Drawing.Image)(resources.GetObject("factButton.Image")));
             this.factButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.factButton.Location = new System.Drawing.Point(10, 551);
+            this.factButton.Location = new System.Drawing.Point(10, 631);
             this.factButton.Margin = new System.Windows.Forms.Padding(10);
             this.factButton.Name = "factButton";
             this.factButton.Size = new System.Drawing.Size(200, 60);
@@ -288,7 +306,7 @@
             this.backgroundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backgroundButton.Image = ((System.Drawing.Image)(resources.GetObject("backgroundButton.Image")));
             this.backgroundButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.backgroundButton.Location = new System.Drawing.Point(10, 631);
+            this.backgroundButton.Location = new System.Drawing.Point(10, 711);
             this.backgroundButton.Margin = new System.Windows.Forms.Padding(10);
             this.backgroundButton.Name = "backgroundButton";
             this.backgroundButton.Size = new System.Drawing.Size(200, 60);
@@ -303,8 +321,8 @@
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
             this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(10, 801);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(10, 100, 10, 10);
+            this.settingsButton.Location = new System.Drawing.Point(10, 791);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(10);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(200, 60);
             this.settingsButton.TabIndex = 17;
@@ -318,13 +336,14 @@
             this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(10, 881);
+            this.logoutButton.Location = new System.Drawing.Point(10, 871);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(10);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(200, 60);
             this.logoutButton.TabIndex = 16;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // exitButton
             // 
@@ -332,13 +351,14 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitButton.Location = new System.Drawing.Point(10, 961);
+            this.exitButton.Location = new System.Drawing.Point(10, 951);
             this.exitButton.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(200, 60);
             this.exitButton.TabIndex = 15;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // currentTimeTimer
             // 
@@ -355,6 +375,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "CalendarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -392,5 +413,6 @@
         private System.Windows.Forms.Button factButton;
         private System.Windows.Forms.Button notesButton;
         private System.Windows.Forms.Button stopwatchButton;
+        private System.Windows.Forms.Button motivationalButton;
     }
 }

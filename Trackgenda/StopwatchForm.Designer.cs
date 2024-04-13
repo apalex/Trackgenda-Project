@@ -101,6 +101,7 @@
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.timerLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StopwatchForm";
             this.Load += new System.EventHandler(this.StopwatchForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StopwatchForm_MouseDown);
