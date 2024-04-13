@@ -115,7 +115,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(334, 30);
             this.emailTextBox.TabIndex = 7;
-            this.emailTextBox.Text = "Email";
+            this.emailTextBox.Text = "email@gmail.com";
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
@@ -127,7 +127,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(334, 30);
             this.firstNameTextBox.TabIndex = 0;
-            this.firstNameTextBox.Text = "First Name";
+            this.firstNameTextBox.Text = "John";
             this.firstNameTextBox.Enter += new System.EventHandler(this.firstNameTextBox_Enter);
             this.firstNameTextBox.Leave += new System.EventHandler(this.firstNameTextBox_Leave);
             // 
@@ -139,7 +139,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(334, 30);
             this.lastNameTextBox.TabIndex = 1;
-            this.lastNameTextBox.Text = "Last Name";
+            this.lastNameTextBox.Text = "Doe";
             this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
             this.lastNameTextBox.Leave += new System.EventHandler(this.lastNameTextBox_Leave);
             // 
@@ -172,7 +172,7 @@
             // 
             this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(43, 542);
+            this.registerButton.Location = new System.Drawing.Point(43, 547);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(334, 38);
             this.registerButton.TabIndex = 12;
@@ -212,8 +212,8 @@
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(450, 615);
             this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmTextBox);
@@ -233,6 +233,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();

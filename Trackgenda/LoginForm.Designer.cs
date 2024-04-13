@@ -38,8 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userPictureBox = new System.Windows.Forms.PictureBox();
             this.lockPictureBox = new System.Windows.Forms.PictureBox();
-            this.closeButton1 = new Trackgenda.CloseButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.closeButton1 = new Trackgenda.CloseButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockPictureBox)).BeginInit();
@@ -154,13 +154,6 @@
             this.lockPictureBox.TabIndex = 5;
             this.lockPictureBox.TabStop = false;
             // 
-            // closeButton1
-            // 
-            this.closeButton1.Location = new System.Drawing.Point(382, 0);
-            this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(68, 40);
-            this.closeButton1.TabIndex = 11;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(185, 541);
@@ -171,10 +164,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // closeButton1
+            // 
+            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(68, 40);
+            this.closeButton1.TabIndex = 11;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 615);
             this.Controls.Add(this.button1);
@@ -192,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();

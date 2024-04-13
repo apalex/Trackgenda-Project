@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Trackgenda
 {
@@ -224,7 +217,7 @@ namespace Trackgenda
 
         private void firstNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (firstNameTextBox.Text == "First Name")
+            if (firstNameTextBox.Text == "John")
             {
                 firstNameTextBox.Text = "";
                 firstNameTextBox.ForeColor = Color.Black;
@@ -233,7 +226,7 @@ namespace Trackgenda
 
         private void lastNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (lastNameTextBox.Text == "Last Name")
+            if (lastNameTextBox.Text == "Doe")
             {
                 lastNameTextBox.Text = "";
                 lastNameTextBox.ForeColor = Color.Black;
@@ -242,7 +235,7 @@ namespace Trackgenda
 
         private void emailTextBox_Enter(object sender, EventArgs e)
         {
-            if (emailTextBox.Text == "Email")
+            if (emailTextBox.Text == "email@gmail.com")
             {
                 emailTextBox.Text = "";
                 emailTextBox.ForeColor = Color.Black;
@@ -280,7 +273,7 @@ namespace Trackgenda
         {
             if (firstNameTextBox.Text == "")
             {
-                firstNameTextBox.Text = "First Name";
+                firstNameTextBox.Text = "John";
                 firstNameTextBox.ForeColor = Color.DarkGray;
             }
         }
@@ -289,7 +282,7 @@ namespace Trackgenda
         {
             if (lastNameTextBox.Text == "")
             {
-                lastNameTextBox.Text = "Last Name";
+                lastNameTextBox.Text = "Doe";
                 lastNameTextBox.ForeColor = Color.DarkGray;
             }
         }
@@ -298,7 +291,7 @@ namespace Trackgenda
         {
             if (emailTextBox.Text == "")
             {
-                emailTextBox.Text = "Email";
+                emailTextBox.Text = "email@gmail.com";
                 emailTextBox.ForeColor = Color.DarkGray;
             }
         }
@@ -328,6 +321,11 @@ namespace Trackgenda
                 confirmTextBox.Text = "Password";
                 confirmTextBox.ForeColor = Color.DarkGray;
             }
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            this.Select();
         }
     }
 }

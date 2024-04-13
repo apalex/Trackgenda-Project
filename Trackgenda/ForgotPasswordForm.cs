@@ -171,7 +171,7 @@ namespace Trackgenda
 
         private void emailTextBox_Enter(object sender, EventArgs e)
         {
-            if (emailTextBox.Text == "Email")
+            if (emailTextBox.Text == "email@gmail.com")
             {
                 emailTextBox.Text = "";
                 emailTextBox.ForeColor = Color.Black;
@@ -209,7 +209,7 @@ namespace Trackgenda
         {
             if (emailTextBox.Text == "")
             {
-                emailTextBox.Text = "Email";
+                emailTextBox.Text = "email@gmail.com";
                 emailTextBox.ForeColor = Color.DarkGray;
             }
         }
@@ -230,6 +230,11 @@ namespace Trackgenda
                 confirmTextBox.Text = "New Password";
                 confirmTextBox.ForeColor = Color.DarkGray;
             }
+        }
+
+        private void ForgotPasswordForm_Load(object sender, EventArgs e)
+        {
+            this.Select();
         }
     }
 }

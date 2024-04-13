@@ -15,10 +15,23 @@ namespace Trackgenda
     {
         private int uid;
         private bool sidePanelShow = true;
+        private bool stopWatchShow = false;
+        private bool factButtonShow = false;
+        private StopwatchForm stopWatchForm = new StopwatchForm();
+        private FactForm factForm = new FactForm();
+        const int WS_MINIMIZEBOX = 0x20000;
+        const int CS_DBLCLKS = 0x8;
+
         public CalendarForm(int uid)
         {
             this.uid = uid;
             InitializeComponent();
+        }
+
+        public bool StopWatchShow
+        {
+            get { return stopWatchShow;}
+            set { stopWatchShow = value;}
         }
 
         // Make Form Drag True
@@ -26,6 +39,17 @@ namespace Trackgenda
         private extern static void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style |= WS_MINIMIZEBOX;
+                cp.ClassStyle |= CS_DBLCLKS;
+                return cp;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,7 +79,11 @@ namespace Trackgenda
 
         private void CalendarForm_Load(object sender, EventArgs e)
         {
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
+            this.Select();
             currentTimeTimer.Start();
+            stopWatchForm.MdiParent = this;
+            factForm.MdiParent = this;
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -104,11 +132,39 @@ namespace Trackgenda
             if (sidePanelShow)
             {
                 sidePanel.Hide();
-                sidePanelShow = false;
+                sidePanelShow = !sidePanelShow;
             } else
             {
                 sidePanel.Show();
-                sidePanelShow = true;
+                sidePanelShow = !sidePanelShow;
+            }
+        }
+
+        private void stopwatchButton_Click(object sender, EventArgs e)
+        {
+            if (stopWatchShow == false)
+            {
+                stopWatchForm.Show();
+                stopWatchShow = !stopWatchShow;
+            }
+            else
+            {
+                stopWatchForm.Hide();
+                stopWatchShow = !stopWatchShow;
+            }
+        }
+
+        private void factButton_Click(object sender, EventArgs e)
+        {
+            if (factButtonShow == false)
+            {
+                factForm.Show();
+                factButtonShow = !factButtonShow;
+            }
+            else
+            {
+                factForm.Close();
+                factButtonShow = !factButtonShow;
             }
         }
     }
