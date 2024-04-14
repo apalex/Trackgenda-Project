@@ -170,7 +170,9 @@ namespace Trackgenda
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-
+            LoginForm form = new LoginForm();
+            this.Close();
+            form.Show();
         }
     }
 }
