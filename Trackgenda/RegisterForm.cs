@@ -1,43 +1,28 @@
 ﻿using System;
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
-using MySql.Data.MySqlClient;
 
 namespace Trackgenda
 {
     public partial class RegisterForm : Form
     {
-        private MySqlConnection conn;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-        private string query;
+        private DatabaseConnection dbConn;
+
         public RegisterForm()
         {
-            server = "localhost";
-            database = "trackgenda";
-            uid = "root";
-            password = "";
-            string connString = $"server={server};database={database};uid={uid};password={password};";
-            conn = new MySqlConnection(connString);
-            OpenConnection();
+            dbConn = new DatabaseConnection();
+            dbConn.OpenConnection();
             InitializeComponent();
         }
 
-        // Make Form Drag True
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void RegisterForm_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if (e.Button == MouseButtons.Left)
+            {
+                DraggeableForms.Drag(this.Handle);
+            }
         }
 
         private void XButton_Click(object sender, EventArgs e)
@@ -47,6 +32,7 @@ namespace Trackgenda
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            dbConn.CloseConnection();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
@@ -84,7 +70,7 @@ namespace Trackgenda
             {
                 error += "\nEmail Address is invalid";
             }
-            if (isEmailInUse(emailTextBox.Text))
+            if (dbConn.isEmailInUse(emailTextBox.Text))
             {
                 error += "\nEmail is already in use";
             }
@@ -97,7 +83,7 @@ namespace Trackgenda
                 } else if (usernameTextBox.TextLength < 3)
                 {
                     error += "\nUsername must be a minimum of 4 characters long";
-                } else if (isUsernameInUse(usernameTextBox.Text))
+                } else if (dbConn.isUsernameInUse(usernameTextBox.Text))
                 {
                     error += "\nUsername is already in use";
                 } else if (!Regex.Match(usernameTextBox.Text, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+){1,}$").Success)
@@ -124,27 +110,15 @@ namespace Trackgenda
             // Registration
             if (error.Length == 0)
             {
-                query = $"INSERT INTO user_info (first_name,last_name,u_email,username,u_password) VALUES ('{firstNameTextBox.Text}','{lastNameTextBox.Text}','{emailTextBox.Text}','{usernameTextBox.Text}','{passwordTextBox.Text}');";
-                try
+                if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text))
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Account has been successfully made!");
-                        conn.Close();
-                        LoginForm loginForm = new LoginForm();
-                        loginForm.Show();
-                        this.Hide();
-                    }
-                    catch (Exception E)
-                    {
-                        MessageBox.Show(E.ToString());
-                    }
-                }
-                catch (Exception E)
+                    MessageBox.Show("Account has been successfully made!");
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    this.Hide();
+                } else
                 {
-                    MessageBox.Show(E.ToString());
+                    MessageBox.Show("An error has occured, please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             } else
             {
@@ -161,56 +135,6 @@ namespace Trackgenda
             }
             catch
             {
-                return false;
-            }
-        }
-
-        private bool isEmailInUse(string email)
-        {
-            query = $"SELECT * FROM user_info WHERE u_email = '{email}'";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
-            {
-                reader.Close();
-                return true;
-            }
-            reader.Close();
-            return false;
-        }
-
-        private bool isUsernameInUse(string username)
-        {
-            query = $"SELECT * FROM user_info WHERE username = '{username}'";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
-            {
-                reader.Close();
-                return true;
-            }
-            reader.Close();
-            return false;
-        }
-
-        private bool OpenConnection()
-        {
-            try
-            {
-                conn.Open();
-                return true;
-            }
-            catch (MySqlException E)
-            {
-                switch (E.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Connection to server failed!");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Server username or password is inccorect!");
-                        break;
-                }
                 return false;
             }
         }

@@ -23,12 +23,6 @@ namespace Trackgenda
             InitializeComponent();
         }
 
-        // Make Form Drag True
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private async void MotivionalQuoteForm_Load(object sender, EventArgs e)
         {
             try
@@ -55,8 +49,10 @@ namespace Trackgenda
 
         private void MotivionalQuoteForm_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if (e.Button == MouseButtons.Left)
+            {
+                DraggeableForms.Drag(this.Handle);
+            }
         }
 
         private void closeButton_Click(object sender, EventArgs e)

@@ -132,6 +132,8 @@
     <Compile Include="CloseButton.Designer.cs">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DraggeableForms.cs" />
     <Compile Include="FactForm.cs">
       <SubType>Form</SubType>
     </Compile>
