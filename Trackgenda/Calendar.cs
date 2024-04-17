@@ -16,7 +16,9 @@ namespace Trackgenda
         private int uid;
         private bool sidePanelShow = true;
         private bool stopWatchShow = false;
+        private bool studyDashboardShow = false;
         private StopwatchForm stopWatchForm = new StopwatchForm();
+        StudyDashboard studyDashboardForm = new StudyDashboard();
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
 
@@ -30,6 +32,12 @@ namespace Trackgenda
         {
             get { return stopWatchShow;}
             set { stopWatchShow = value;}
+        }
+
+        public bool StudyDashboardShow
+        {
+            get { return studyDashboardShow;}
+            set { studyDashboardShow = value;}
         }
 
         protected override CreateParams CreateParams
@@ -72,6 +80,7 @@ namespace Trackgenda
             this.Select();
             currentTimeTimer.Start();
             stopWatchForm.MdiParent = this;
+            studyDashboardForm.MdiParent = this;
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -166,6 +175,18 @@ namespace Trackgenda
             LoginForm form = new LoginForm();
             this.Close();
             form.Show();
+        }
+
+        private void studyButton_Click(object sender, EventArgs e)
+        {
+            studyDashboardShow = !studyDashboardShow;
+            if (studyDashboardShow == true)
+            {
+                studyDashboardForm.Show();
+            } else
+            {
+                studyDashboardForm.Hide();
+            }
         }
     }
 }

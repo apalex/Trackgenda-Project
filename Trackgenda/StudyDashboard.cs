@@ -19,7 +19,23 @@ namespace Trackgenda
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            ((CalendarForm)MdiParent).StudyDashboardShow = false;
             this.Close();
+        }
+
+        private void fiftyTwoSeventeenRuleButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void personalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pomodoroButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

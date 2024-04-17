@@ -47,6 +47,7 @@
             this.personalButton.TabIndex = 0;
             this.personalButton.Text = "Personal";
             this.personalButton.UseVisualStyleBackColor = false;
+            this.personalButton.Click += new System.EventHandler(this.personalButton_Click);
             // 
             // pomodoroButton
             // 
@@ -60,6 +61,7 @@
             this.pomodoroButton.TabIndex = 1;
             this.pomodoroButton.Text = "Pomodoro";
             this.pomodoroButton.UseVisualStyleBackColor = false;
+            this.pomodoroButton.Click += new System.EventHandler(this.pomodoroButton_Click);
             // 
             // fiftyTwoSeventeenRuleButton
             // 
@@ -73,6 +75,7 @@
             this.fiftyTwoSeventeenRuleButton.TabIndex = 2;
             this.fiftyTwoSeventeenRuleButton.Text = "52/17 Rule";
             this.fiftyTwoSeventeenRuleButton.UseVisualStyleBackColor = false;
+            this.fiftyTwoSeventeenRuleButton.Click += new System.EventHandler(this.fiftyTwoSeventeenRuleButton_Click);
             // 
             // exitButton
             // 
@@ -92,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(450, 150);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.fiftyTwoSeventeenRuleButton);

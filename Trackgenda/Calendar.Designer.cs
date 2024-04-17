@@ -225,6 +225,7 @@
             this.studyButton.TabIndex = 22;
             this.studyButton.Text = "Study";
             this.studyButton.UseVisualStyleBackColor = false;
+            this.studyButton.Click += new System.EventHandler(this.studyButton_Click);
             // 
             // stopwatchButton
             // 

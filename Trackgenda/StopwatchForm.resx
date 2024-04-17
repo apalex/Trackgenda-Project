@@ -121,10 +121,13 @@
   <data name="minimizeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAFRJREFUSEvt0TEKgDAQRNHFEyjp1cp7S7yPV3Jm68VKU/0HPxAIhGwCAIA3k1rU
+        vAAADrwBlbxySQAAAFRJREFUSEvt0TEKgDAQRNHFEyjp1cp7S7yPV3Jm68VKU/0HPxAIhGwCAIA3k1rU
         pvYBzSod6lT3oLpaVS7eVIf+6FKebvLzq7F8nS9syt8LAEAl4gGQ4zPfPlFQpAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="timerStopwatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

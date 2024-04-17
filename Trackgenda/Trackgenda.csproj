@@ -190,12 +190,6 @@
     <Compile Include="StudyTechnique.Designer.cs">
       <DependentUpon>StudyTechnique.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudyUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="StudyUserControl.Designer.cs">
-      <DependentUpon>StudyUserControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudyTechnique.resx">
       <DependentUpon>StudyTechnique.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudyUserControl.resx">
-      <DependentUpon>StudyUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

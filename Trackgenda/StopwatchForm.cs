@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Trackgenda
 {
     public partial class StopwatchForm : Form
     {
+        private Stopwatch stopWatch;
+        private bool isStart = false;
         public StopwatchForm()
         {
+            stopWatch = new Stopwatch();
             InitializeComponent();
         }
         
@@ -34,12 +30,32 @@ namespace Trackgenda
 
         private void controlButton_Click(object sender, EventArgs e)
         {
-
+            isStart = !isStart;
+            if (isStart == true)
+            {
+                controlButton.Text = "Stop";
+                stopWatch.Start();
+            } else
+            {
+                controlButton.Text = "Resume";
+                stopWatch.Stop();
+            }
         }
 
         private void StopwatchForm_Load(object sender, EventArgs e)
         {
             this.Select();
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            controlButton.Text = "Start";
+            stopWatch.Reset();
+        }
+
+        private void timerStopwatch_Tick(object sender, EventArgs e)
+        {
+            timerLabel.Text = stopWatch.Elapsed.ToString();
         }
     }
 }
