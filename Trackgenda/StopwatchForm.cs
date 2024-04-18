@@ -24,8 +24,7 @@ namespace Trackgenda
 
         private void minimizeButton_Click(object sender, EventArgs e)
         {
-            ((CalendarForm)MdiParent).StopWatchShow = false;
-            this.Hide();
+            this.Close();
         }
 
         private void controlButton_Click(object sender, EventArgs e)

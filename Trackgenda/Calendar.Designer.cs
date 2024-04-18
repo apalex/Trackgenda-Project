@@ -36,7 +36,7 @@
             this.maximizeButton = new System.Windows.Forms.Button();
             this.XButton = new System.Windows.Forms.Button();
             this.hamburgerPictureBox = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.logoLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new System.Windows.Forms.Button();
@@ -51,10 +51,18 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.currentTimeTimer = new System.Windows.Forms.Timer(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.calendarTab = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dashboardTab = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.calendarTab.SuspendLayout();
+            this.dashboardTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +73,7 @@
             this.panel1.Controls.Add(this.maximizeButton);
             this.panel1.Controls.Add(this.XButton);
             this.panel1.Controls.Add(this.hamburgerPictureBox);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.logoLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,6 +90,7 @@
             // 
             // minimizeButton
             // 
+            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizeButton.BackColor = System.Drawing.Color.White;
             this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -98,6 +107,7 @@
             // 
             // maximizeButton
             // 
+            this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizeButton.BackColor = System.Drawing.Color.White;
             this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,6 +124,7 @@
             // 
             // XButton
             // 
+            this.XButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.XButton.BackColor = System.Drawing.Color.White;
             this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -139,14 +150,14 @@
             this.hamburgerPictureBox.TabStop = false;
             this.hamburgerPictureBox.Click += new System.EventHandler(this.hamburgerPictureBox_Click);
             // 
-            // label2
+            // logoLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 26);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Trackgenda |";
+            this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoLabel.Location = new System.Drawing.Point(60, 15);
+            this.logoLabel.Name = "logoLabel";
+            this.logoLabel.Size = new System.Drawing.Size(132, 26);
+            this.logoLabel.TabIndex = 3;
+            this.logoLabel.Text = "Trackgenda |";
             // 
             // sidePanel
             // 
@@ -183,6 +194,7 @@
             // 
             // dashboardButton
             // 
+            this.dashboardButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dashboardButton.BackColor = System.Drawing.Color.White;
             this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,9 +207,11 @@
             this.dashboardButton.TabIndex = 5;
             this.dashboardButton.Text = "Dashboard";
             this.dashboardButton.UseVisualStyleBackColor = false;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // eventsButton
             // 
+            this.eventsButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.eventsButton.BackColor = System.Drawing.Color.White;
             this.eventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eventsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +227,7 @@
             // 
             // studyButton
             // 
+            this.studyButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.studyButton.BackColor = System.Drawing.Color.White;
             this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.studyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,6 +244,7 @@
             // 
             // stopwatchButton
             // 
+            this.stopwatchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.stopwatchButton.BackColor = System.Drawing.Color.White;
             this.stopwatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopwatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,6 +261,7 @@
             // 
             // notesButton
             // 
+            this.notesButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.notesButton.BackColor = System.Drawing.Color.White;
             this.notesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.notesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,6 +277,7 @@
             // 
             // motivationalButton
             // 
+            this.motivationalButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.motivationalButton.BackColor = System.Drawing.Color.White;
             this.motivationalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.motivationalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,6 +294,7 @@
             // 
             // factButton
             // 
+            this.factButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.factButton.BackColor = System.Drawing.Color.White;
             this.factButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.factButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,6 +311,7 @@
             // 
             // backgroundButton
             // 
+            this.backgroundButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.backgroundButton.BackColor = System.Drawing.Color.White;
             this.backgroundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backgroundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -307,6 +327,7 @@
             // 
             // settingsButton
             // 
+            this.settingsButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.settingsButton.BackColor = System.Drawing.Color.White;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,6 +343,7 @@
             // 
             // logoutButton
             // 
+            this.logoutButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.logoutButton.BackColor = System.Drawing.Color.White;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +360,7 @@
             // 
             // exitButton
             // 
+            this.exitButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.exitButton.BackColor = System.Drawing.Color.White;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,13 +379,65 @@
             this.currentTimeTimer.Enabled = true;
             this.currentTimeTimer.Tick += new System.EventHandler(this.currentTimeTimer_Tick);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.calendarTab);
+            this.tabControl1.Controls.Add(this.dashboardTab);
+            this.tabControl1.Location = new System.Drawing.Point(223, 51);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1697, 1029);
+            this.tabControl1.TabIndex = 23;
+            // 
+            // calendarTab
+            // 
+            this.calendarTab.Controls.Add(this.label1);
+            this.calendarTab.Location = new System.Drawing.Point(4, 29);
+            this.calendarTab.Name = "calendarTab";
+            this.calendarTab.Padding = new System.Windows.Forms.Padding(3);
+            this.calendarTab.Size = new System.Drawing.Size(1689, 996);
+            this.calendarTab.TabIndex = 0;
+            this.calendarTab.Text = "tabPage1";
+            this.calendarTab.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(910, 508);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Calendar";
+            // 
+            // dashboardTab
+            // 
+            this.dashboardTab.Controls.Add(this.label3);
+            this.dashboardTab.Location = new System.Drawing.Point(4, 29);
+            this.dashboardTab.Name = "dashboardTab";
+            this.dashboardTab.Padding = new System.Windows.Forms.Padding(3);
+            this.dashboardTab.Size = new System.Drawing.Size(1689, 996);
+            this.dashboardTab.TabIndex = 1;
+            this.dashboardTab.Text = "tabPage2";
+            this.dashboardTab.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(775, 571);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dashboard";
+            // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -371,17 +446,23 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
+            this.Resize += new System.EventHandler(this.CalendarForm_Resize);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.calendarTab.ResumeLayout(false);
+            this.calendarTab.PerformLayout();
+            this.dashboardTab.ResumeLayout(false);
+            this.dashboardTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label logoLabel;
         private System.Windows.Forms.PictureBox hamburgerPictureBox;
         private System.Windows.Forms.Button XButton;
         private System.Windows.Forms.Button maximizeButton;
@@ -401,5 +482,10 @@
         private System.Windows.Forms.Button notesButton;
         private System.Windows.Forms.Button stopwatchButton;
         private System.Windows.Forms.Button motivationalButton;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage calendarTab;
+        private System.Windows.Forms.TabPage dashboardTab;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -34,7 +34,7 @@
             this.displayLabel = new System.Windows.Forms.Label();
             this.controlButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.seperatorLabel = new System.Windows.Forms.Label();
             this.timerStopwatch = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -84,17 +84,17 @@
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
-            // minimizeButton
+            // closeButton
             // 
-            this.minimizeButton.BackColor = System.Drawing.Color.White;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeButton.Image")));
-            this.minimizeButton.Location = new System.Drawing.Point(370, 0);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(50, 25);
-            this.minimizeButton.TabIndex = 6;
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(367, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(53, 34);
+            this.closeButton.TabIndex = 6;
+            this.closeButton.Text = "X";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // seperatorLabel
             // 
@@ -115,10 +115,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(420, 160);
             this.Controls.Add(this.seperatorLabel);
-            this.Controls.Add(this.minimizeButton);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.controlButton);
             this.Controls.Add(this.displayLabel);
@@ -139,7 +139,7 @@
         private System.Windows.Forms.Label displayLabel;
         private System.Windows.Forms.Button controlButton;
         private System.Windows.Forms.Button resetButton;
-        private System.Windows.Forms.Button minimizeButton;
+        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label seperatorLabel;
         private System.Windows.Forms.Timer timerStopwatch;
     }
