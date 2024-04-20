@@ -126,6 +126,12 @@
     <Compile Include="Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmptyCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmptyCell.Designer.cs">
+      <DependentUpon>EmptyCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="CloseButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,11 +196,20 @@
     <Compile Include="StudyTechnique.Designer.cs">
       <DependentUpon>StudyTechnique.cs</DependentUpon>
     </Compile>
+    <Compile Include="CellDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CellDay.Designer.cs">
+      <DependentUpon>CellDay.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmptyCell.resx">
+      <DependentUpon>EmptyCell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
@@ -235,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudyTechnique.resx">
       <DependentUpon>StudyTechnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CellDay.resx">
+      <DependentUpon>CellDay.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

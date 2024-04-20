@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -20,7 +21,9 @@ namespace Trackgenda
         private StudyDashboard studyDashboardForm = new StudyDashboard();
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
-        private Rectangle originalSizeForm;
+        private static DateTime currentDT = DateTime.Now;
+        private static int currentYear = currentDT.Year;
+        private static int currentMonth = currentDT.Month;
         // Add Size Gripper to Form
         private const int WM_NCHITTEST = 0x84;
         private const int HTLEFT = 10;
@@ -86,7 +89,7 @@ namespace Trackgenda
             this.Select();
             currentTimeTimer.Start();
             studyDashboardForm.MdiParent = this;
-            originalSizeForm = new Rectangle(this.Location.X,this.Location.Y,this.Size.Width,this.Size.Height);
+            displayDays();
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -187,26 +190,6 @@ namespace Trackgenda
             }
         }
 
-        private void CalendarForm_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void resizeControl(Rectangle r,Control c)
-        {
-            float xRatio = (float)r.Width / (float)(originalSizeForm.Width);
-            float yRatio = (float)r.Width / (float)(originalSizeForm.Height);
-
-            int newX = (int)(r.Width * xRatio);
-            int newY = (int)(r.Height * yRatio);
-
-            int newWidth = (int)(r.Width * xRatio);
-            int newHeight = (int)(r.Height * yRatio);
-
-            c.Location = new Point(newX, newY);
-            c.Size = new Size(newWidth, newHeight);
-        }
-
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -253,9 +236,64 @@ namespace Trackgenda
                 dashboardButton.Text = "Calendar";
             } else
             {
-                tabControl1.SelectedTab = calendarTab;
+                tabControl1.SelectedTab = monthlyCalendarTab;
                 dashboardButton.Text = "Dashboard";
             }
+        }
+
+        private void displayDays()
+        {
+            DateTime startMonth = new DateTime(currentYear, currentMonth, 1);
+            int amtDays = DateTime.DaysInMonth(currentYear, currentMonth);
+            int dayOfWeek = Convert.ToInt32(startMonth.DayOfWeek.ToString("d")) + 1;
+            dateLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(currentMonth)} {currentYear}";
+
+            int cellsUsed = 0;
+            for (int i = 1; i < dayOfWeek; i++)
+            {
+                cellsUsed++;
+                EmptyCell cd = new EmptyCell();
+                monthlyPanel.Controls.Add(cd);
+            }
+
+            for (int i = 1; i <= amtDays; i++)
+            {
+                cellsUsed++;
+                CellDay ucd = new CellDay();
+                ucd.days(i);
+                monthlyPanel.Controls.Add(ucd);
+            }
+
+            for (int i = 0; i < 42 - cellsUsed; i++)
+            {
+                EmptyCell cd = new EmptyCell();
+                cd.Width = 202;
+                monthlyPanel.Controls.Add(cd);
+            }
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            monthlyPanel.Controls.Clear();
+            currentMonth++;
+            if (currentMonth > 12)
+            {
+                currentMonth = 1;
+                currentYear++;
+            }
+            displayDays();
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            monthlyPanel.Controls.Clear();
+            currentMonth--;
+            if (currentMonth == 0)
+            {
+                currentMonth = 12;
+                currentYear--;
+            }
+            displayDays();
         }
     }
 }
