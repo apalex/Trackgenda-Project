@@ -112,10 +112,13 @@ namespace Trackgenda
             {
                 if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text))
                 {
-                    MessageBox.Show("Account has been successfully made!");
-                    LoginForm loginForm = new LoginForm();
-                    loginForm.Show();
-                    this.Hide();
+                    if (dbConn.InsertDefaultSettings(dbConn.getUID(usernameTextBox.Text)))
+                    {
+                        MessageBox.Show("Account has been successfully made!");
+                        LoginForm loginForm = new LoginForm();
+                        loginForm.Show();
+                        this.Hide();
+                    }
                 } else
                 {
                     MessageBox.Show("An error has occured, please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

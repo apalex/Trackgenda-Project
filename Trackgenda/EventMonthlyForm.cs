@@ -53,6 +53,7 @@ namespace Trackgenda
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            dbConn.CloseConnection();
             this.Close();
         }
 
@@ -82,6 +83,7 @@ namespace Trackgenda
         {
             if (dbConn.addMonthlyEvent(uid,date,descTextBox.Text))
             {
+                dbConn.CloseConnection();
                 MessageBox.Show("Event successfully added!");
                 this.Close();
             } else

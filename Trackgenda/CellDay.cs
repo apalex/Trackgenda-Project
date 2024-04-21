@@ -80,6 +80,7 @@ namespace Trackgenda
                 event2Label.Text = dbConn.getEventDesc(uid, 1, date);
                 event3Label.Text = dbConn.getEventDesc(uid, 2, date);
             }
+            dbConn.CloseConnection();
         }
 
         public void days(int amtDay)

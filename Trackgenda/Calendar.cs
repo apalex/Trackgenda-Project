@@ -18,6 +18,7 @@ namespace Trackgenda
         private bool sidePanelShow = true;
         private bool studyDashboardShow = false;
         private bool dashBoardShow = false;
+        private bool backgroundDashboardShow = false;
         private StudyDashboard studyDashboardForm = new StudyDashboard();
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
@@ -341,6 +342,15 @@ namespace Trackgenda
                 currentYear--;
             }
             displayDays();
+        }
+
+        private void backgroundButton_Click(object sender, EventArgs e)
+        {
+            backgroundDashboardShow = !backgroundDashboardShow;
+            if (backgroundDashboardShow)
+            {
+
+            }
         }
     }
 }

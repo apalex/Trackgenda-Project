@@ -55,7 +55,6 @@ namespace Trackgenda
                     int uid = dbConn.getUID(usernameTextBox.Text);
                     if (uid != 0)
                     {
-                        MessageBox.Show("Login Successful!");
                         dbConn.CloseConnection();
                         ProgressBarForm progressBarForm = new ProgressBarForm(uid);
                         progressBarForm.Show();

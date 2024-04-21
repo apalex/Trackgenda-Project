@@ -118,6 +118,31 @@ namespace Trackgenda
             return false;
         }
 
+        public bool InsertDefaultSettings(int uid)
+        {
+            query = $"INSERT INTO user_settings (uid,backcolor,forecolor,backgroundimage) VALUES ({uid},'Color.White','Color.Black','');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+                return false;
+            }
+        }
+
         // Login
         public bool IsLogin(string username, string password)
         {
