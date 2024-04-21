@@ -34,6 +34,8 @@ namespace Trackgenda
         private const int HTBOTTOM = 15;
         private const int HTBOTTOMLEFT = 16;
         private const int HTBOTTOMRIGHT = 17;
+        // Bitmap Month Emoji's
+        private Bitmap monthImage;
 
         public CalendarForm(int uid)
         {
@@ -247,6 +249,7 @@ namespace Trackgenda
             int amtDays = DateTime.DaysInMonth(currentYear, currentMonth);
             int dayOfWeek = Convert.ToInt32(startMonth.DayOfWeek.ToString("d")) + 1;
             dateLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(currentMonth)} {currentYear}";
+            changeImage(currentMonth);
 
             int cellsUsed = 0;
             for (int i = 1; i < dayOfWeek; i++)
@@ -259,7 +262,7 @@ namespace Trackgenda
             for (int i = 1; i <= amtDays; i++)
             {
                 cellsUsed++;
-                CellDay ucd = new CellDay();
+                CellDay ucd = new CellDay(uid, currentMonth, i,currentYear);
                 ucd.days(i);
                 monthlyPanel.Controls.Add(ucd);
             }
@@ -270,6 +273,50 @@ namespace Trackgenda
                 cd.Width = 202;
                 monthlyPanel.Controls.Add(cd);
             }
+        }
+
+        private void changeImage(int month)
+        {
+            switch (month)
+            {
+                case 1:
+                    monthImage = Properties.Resources.january;
+                    break;
+                case  2:
+                    monthImage = Properties.Resources.february;
+                    break;
+                case 3:
+                    monthImage = Properties.Resources.march;
+                    break;
+                case 4:
+                    monthImage = Properties.Resources.april;
+                    break;
+                case 5:
+                    monthImage = Properties.Resources.may;
+                    break;
+                case 6:
+                    monthImage = Properties.Resources.june;
+                    break;
+                case 7:
+                    monthImage = Properties.Resources.july;
+                    break;
+                case 8:
+                    monthImage = Properties.Resources.august;
+                    break;
+                case 9:
+                    monthImage = Properties.Resources.september;
+                    break;
+                case 10:
+                    monthImage = Properties.Resources.october;
+                    break;
+                case 11:
+                    monthImage = Properties.Resources.november;
+                    break;
+                case 12:
+                    monthImage = Properties.Resources.december;
+                    break;
+            }
+            monthPictureBox.Image = monthImage;
         }
 
         private void nextButton_Click(object sender, EventArgs e)

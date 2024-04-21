@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.indexDay = new System.Windows.Forms.Label();
+            this.event1Label = new System.Windows.Forms.Label();
+            this.event2Label = new System.Windows.Forms.Label();
+            this.event3Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // indexDay
@@ -41,15 +44,49 @@
             this.indexDay.TabIndex = 0;
             this.indexDay.Text = "0";
             // 
-            // UserControlDays
+            // event1Label
+            // 
+            this.event1Label.AutoSize = true;
+            this.event1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event1Label.Location = new System.Drawing.Point(81, 30);
+            this.event1Label.Name = "event1Label";
+            this.event1Label.Size = new System.Drawing.Size(0, 25);
+            this.event1Label.TabIndex = 1;
+            // 
+            // event2Label
+            // 
+            this.event2Label.AutoSize = true;
+            this.event2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event2Label.Location = new System.Drawing.Point(81, 91);
+            this.event2Label.Name = "event2Label";
+            this.event2Label.Size = new System.Drawing.Size(0, 25);
+            this.event2Label.TabIndex = 2;
+            // 
+            // event3Label
+            // 
+            this.event3Label.AutoSize = true;
+            this.event3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event3Label.Location = new System.Drawing.Point(81, 145);
+            this.event3Label.Name = "event3Label";
+            this.event3Label.Size = new System.Drawing.Size(0, 25);
+            this.event3Label.TabIndex = 3;
+            // 
+            // CellDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.event3Label);
+            this.Controls.Add(this.event2Label);
+            this.Controls.Add(this.event1Label);
             this.Controls.Add(this.indexDay);
             this.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
-            this.Name = "UserControlDays";
+            this.Name = "CellDay";
             this.Size = new System.Drawing.Size(302, 202);
+            this.Load += new System.EventHandler(this.CellDay_Load);
+            this.Click += new System.EventHandler(this.CellDay_Click);
+            this.MouseLeave += new System.EventHandler(this.CellDay_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.CellDay_MouseHover);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,5 +95,8 @@
         #endregion
 
         private System.Windows.Forms.Label indexDay;
+        private System.Windows.Forms.Label event1Label;
+        private System.Windows.Forms.Label event2Label;
+        private System.Windows.Forms.Label event3Label;
     }
 }

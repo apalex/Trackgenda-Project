@@ -140,6 +140,12 @@
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="DraggeableForms.cs" />
+    <Compile Include="EventMonthlyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventMonthlyForm.Designer.cs">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FactForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     <EmbeddedResource Include="CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventMonthlyForm.resx">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FactForm.resx">
       <DependentUpon>FactForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +291,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TG-ezgif.com-video-to-gif-converter.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\april.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\august.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\december.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\february.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\january.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\july.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\june.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\march.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\november.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\october.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\september.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

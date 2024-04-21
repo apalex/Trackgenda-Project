@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Trackgenda
 {
@@ -184,6 +187,60 @@ namespace Trackgenda
                 MessageBox.Show(E.ToString());
             }
             return false;
+        }
+
+        // Monthly Calendar
+        public bool addMonthlyEvent(int uid, string date, string eventDesc)
+        {
+            query = $"INSERT INTO monthly_event (uid,mevent_date,mevent_desc) VALUES ('{uid}','{date}','{eventDesc}');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+        }
+
+        public int getEventLength(int uid,string date)
+        {
+            int numEvents = 0;
+            query = $"SELECT COUNT(mevent_date) FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' GROUP BY uid;";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                numEvents = reader.GetInt32(0);
+                reader.Close();
+                return numEvents;
+            }
+            reader.Close();
+            return numEvents;
+        }
+
+        public string getEventDesc(int uid,int index,string date)
+        {
+            string eventDesc = "";
+            query = $"SELECT mevent_desc FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' ORDER BY meventid LIMIT 1 OFFSET {index};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                eventDesc = Convert.ToString(reader);
+                return eventDesc;
+            }
+            return eventDesc;
         }
     }
 }

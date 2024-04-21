@@ -34,10 +34,12 @@ namespace Trackgenda
             {
                 controlButton.Text = "Stop";
                 stopWatch.Start();
+                resetButton.Enabled = false;
             } else
             {
                 controlButton.Text = "Resume";
                 stopWatch.Stop();
+                resetButton.Enabled = true;
             }
         }
 
