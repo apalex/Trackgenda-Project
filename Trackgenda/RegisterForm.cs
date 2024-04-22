@@ -35,7 +35,7 @@ namespace Trackgenda
             dbConn.CloseConnection();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -110,15 +110,13 @@ namespace Trackgenda
             // Registration
             if (error.Length == 0)
             {
-                if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text))
+                if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text) && dbConn.InsertDefaultSettings(dbConn.getUID(usernameTextBox.Text)))
                 {
-                    if (dbConn.InsertDefaultSettings(dbConn.getUID(usernameTextBox.Text)))
-                    {
-                        MessageBox.Show("Account has been successfully made!");
-                        LoginForm loginForm = new LoginForm();
-                        loginForm.Show();
-                        this.Hide();
-                    }
+                    MessageBox.Show("Account has been successfully made!");
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    dbConn.CloseConnection();
+                    this.Close();
                 } else
                 {
                     MessageBox.Show("An error has occured, please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

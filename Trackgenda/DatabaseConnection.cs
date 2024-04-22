@@ -76,7 +76,6 @@ namespace Trackgenda
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    conn.Close();
                     return true;
                 }
                 catch (Exception E)
@@ -120,14 +119,13 @@ namespace Trackgenda
 
         public bool InsertDefaultSettings(int uid)
         {
-            query = $"INSERT INTO user_settings (uid,backcolor,forecolor,backgroundimage) VALUES ({uid},'Color.White','Color.Black','');";
+            query = $"INSERT INTO user_settings (uid,theme,backgroundimage) VALUES ('{uid}','Light','');";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    conn.Close();
                     return true;
                 }
                 catch (Exception E)
@@ -224,7 +222,6 @@ namespace Trackgenda
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    conn.Close();
                     return true;
                 }
                 catch (Exception E)

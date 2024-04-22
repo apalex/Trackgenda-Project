@@ -51,6 +51,11 @@ namespace Trackgenda
             set { year = value; }
         }
 
+        private void EventMonthlyForm_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             dbConn.CloseConnection();
@@ -74,8 +79,6 @@ namespace Trackgenda
             {
                 descTextBox.ReadOnly = true;
                 addButton.Enabled = false;
-                MessageBox.Show("Maximum of 3 events reached!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
             }
         }
 

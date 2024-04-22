@@ -33,6 +33,7 @@
             this.descTextBox = new System.Windows.Forms.TextBox();
             this.dateLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
+            this.maximumLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
@@ -61,7 +62,7 @@
             // 
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
-            this.dateLabel.Location = new System.Drawing.Point(149, 42);
+            this.dateLabel.Location = new System.Drawing.Point(147, 28);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(158, 50);
             this.dateLabel.TabIndex = 29;
@@ -76,7 +77,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(179, 159);
+            this.addButton.Location = new System.Drawing.Point(179, 138);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(90, 39);
             this.addButton.TabIndex = 30;
@@ -84,11 +85,23 @@
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // maximumLabel
+            // 
+            this.maximumLabel.AutoSize = true;
+            this.maximumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maximumLabel.ForeColor = System.Drawing.Color.Red;
+            this.maximumLabel.Location = new System.Drawing.Point(66, 78);
+            this.maximumLabel.Name = "maximumLabel";
+            this.maximumLabel.Size = new System.Drawing.Size(349, 25);
+            this.maximumLabel.TabIndex = 31;
+            this.maximumLabel.Text = "Maximum amount of 3 events reached!";
+            // 
             // EventMonthlyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(450, 210);
+            this.ClientSize = new System.Drawing.Size(450, 184);
+            this.Controls.Add(this.maximumLabel);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.descTextBox);
@@ -99,6 +112,7 @@
             this.Name = "EventMonthlyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.EventMonthlyForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EventMonthlyForm_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +124,6 @@
         private System.Windows.Forms.TextBox descTextBox;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Label maximumLabel;
     }
 }

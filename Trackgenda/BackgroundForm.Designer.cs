@@ -29,8 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BackgroundForm));
+            this.imageButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.gifButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // imageButton
+            // 
+            this.imageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imageButton.BackColor = System.Drawing.Color.White;
+            this.imageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imageButton.Location = new System.Drawing.Point(14, 55);
+            this.imageButton.Name = "imageButton";
+            this.imageButton.Size = new System.Drawing.Size(170, 70);
+            this.imageButton.TabIndex = 28;
+            this.imageButton.Text = "Choose Image";
+            this.imageButton.UseVisualStyleBackColor = false;
+            this.imageButton.Click += new System.EventHandler(this.imageButton_Click);
             // 
             // exitButton
             // 
@@ -39,29 +59,72 @@
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.Black;
-            this.exitButton.Location = new System.Drawing.Point(740, 0);
+            this.exitButton.Location = new System.Drawing.Point(136, 0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(60, 40);
-            this.exitButton.TabIndex = 27;
+            this.exitButton.TabIndex = 29;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // gifButton
+            // 
+            this.gifButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gifButton.BackColor = System.Drawing.Color.White;
+            this.gifButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gifButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gifButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gifButton.Location = new System.Drawing.Point(13, 136);
+            this.gifButton.Name = "gifButton";
+            this.gifButton.Size = new System.Drawing.Size(170, 70);
+            this.gifButton.TabIndex = 30;
+            this.gifButton.Text = "Choose GIF";
+            this.gifButton.UseVisualStyleBackColor = false;
+            this.gifButton.Click += new System.EventHandler(this.gifButton_Click);
+            // 
+            // resetButton
+            // 
+            this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resetButton.BackColor = System.Drawing.Color.White;
+            this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Location = new System.Drawing.Point(13, 217);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(170, 70);
+            this.resetButton.TabIndex = 31;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // BackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(196, 299);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.gifButton);
             this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.imageButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BackgroundForm";
             this.Text = "BackgroundForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackgroundForm_MouseDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button imageButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button gifButton;
+        private System.Windows.Forms.Button resetButton;
     }
 }

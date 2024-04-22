@@ -24,6 +24,7 @@ namespace Trackgenda
 
         private void XButton_Click(object sender, EventArgs e)
         {
+            dbConn.CloseConnection();
             Application.Exit();
         }
 

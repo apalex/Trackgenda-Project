@@ -208,6 +208,12 @@
     <Compile Include="CellDay.Designer.cs">
       <DependentUpon>CellDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="TODOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TODOForm.Designer.cs">
+      <DependentUpon>TODOForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CellDay.resx">
       <DependentUpon>CellDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TODOForm.resx">
+      <DependentUpon>TODOForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

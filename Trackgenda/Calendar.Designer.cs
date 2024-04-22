@@ -40,7 +40,7 @@
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new System.Windows.Forms.Button();
-            this.eventsButton = new System.Windows.Forms.Button();
+            this.todoButton = new System.Windows.Forms.Button();
             this.studyButton = new System.Windows.Forms.Button();
             this.stopwatchButton = new System.Windows.Forms.Button();
             this.notesButton = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.settingsTab = new System.Windows.Forms.TabPage();
             this.calendarWeeklyTab = new System.Windows.Forms.TabPage();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -97,10 +98,13 @@
             // 
             // currentTimeLabel
             // 
-            this.currentTimeLabel.Location = new System.Drawing.Point(185, 15);
+            this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentTimeLabel.Location = new System.Drawing.Point(1648, 9);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(78, 36);
+            this.currentTimeLabel.Size = new System.Drawing.Size(86, 30);
             this.currentTimeLabel.TabIndex = 4;
+            this.currentTimeLabel.Text = "Timer";
+            this.currentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // minimizeButton
             // 
@@ -167,11 +171,11 @@
             // logoLabel
             // 
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoLabel.Location = new System.Drawing.Point(60, 15);
+            this.logoLabel.Location = new System.Drawing.Point(55, 15);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(132, 26);
+            this.logoLabel.Size = new System.Drawing.Size(128, 26);
             this.logoLabel.TabIndex = 3;
-            this.logoLabel.Text = "Trackgenda |";
+            this.logoLabel.Text = "Trackgenda";
             // 
             // sidePanel
             // 
@@ -179,7 +183,7 @@
             this.sidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sidePanel.Controls.Add(this.pictureBox1);
             this.sidePanel.Controls.Add(this.dashboardButton);
-            this.sidePanel.Controls.Add(this.eventsButton);
+            this.sidePanel.Controls.Add(this.todoButton);
             this.sidePanel.Controls.Add(this.studyButton);
             this.sidePanel.Controls.Add(this.stopwatchButton);
             this.sidePanel.Controls.Add(this.notesButton);
@@ -223,21 +227,22 @@
             this.dashboardButton.UseVisualStyleBackColor = false;
             this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
-            // eventsButton
+            // todoButton
             // 
-            this.eventsButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.eventsButton.BackColor = System.Drawing.Color.White;
-            this.eventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eventsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventsButton.Image = ((System.Drawing.Image)(resources.GetObject("eventsButton.Image")));
-            this.eventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.eventsButton.Location = new System.Drawing.Point(10, 231);
-            this.eventsButton.Margin = new System.Windows.Forms.Padding(10);
-            this.eventsButton.Name = "eventsButton";
-            this.eventsButton.Size = new System.Drawing.Size(200, 60);
-            this.eventsButton.TabIndex = 14;
-            this.eventsButton.Text = "Events";
-            this.eventsButton.UseVisualStyleBackColor = false;
+            this.todoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.todoButton.BackColor = System.Drawing.Color.White;
+            this.todoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.todoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todoButton.Image = ((System.Drawing.Image)(resources.GetObject("todoButton.Image")));
+            this.todoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.todoButton.Location = new System.Drawing.Point(10, 231);
+            this.todoButton.Margin = new System.Windows.Forms.Padding(10);
+            this.todoButton.Name = "todoButton";
+            this.todoButton.Size = new System.Drawing.Size(200, 60);
+            this.todoButton.TabIndex = 14;
+            this.todoButton.Text = "TODO";
+            this.todoButton.UseVisualStyleBackColor = false;
+            this.todoButton.Click += new System.EventHandler(this.todoButton_Click);
             // 
             // studyButton
             // 
@@ -409,6 +414,7 @@
             // monthlyCalendarTab
             // 
             this.monthlyCalendarTab.BackColor = System.Drawing.Color.White;
+            this.monthlyCalendarTab.Controls.Add(this.refreshButton);
             this.monthlyCalendarTab.Controls.Add(this.monthPictureBox);
             this.monthlyCalendarTab.Controls.Add(this.dateLabel);
             this.monthlyCalendarTab.Controls.Add(this.label6);
@@ -559,6 +565,7 @@
             // 
             // dashboardTab
             // 
+            this.dashboardTab.BackColor = System.Drawing.Color.White;
             this.dashboardTab.Controls.Add(this.label3);
             this.dashboardTab.Location = new System.Drawing.Point(4, 29);
             this.dashboardTab.Name = "dashboardTab";
@@ -566,7 +573,6 @@
             this.dashboardTab.Size = new System.Drawing.Size(1906, 995);
             this.dashboardTab.TabIndex = 1;
             this.dashboardTab.Text = "tabPage2";
-            this.dashboardTab.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -579,23 +585,39 @@
             // 
             // settingsTab
             // 
+            this.settingsTab.BackColor = System.Drawing.Color.White;
             this.settingsTab.Location = new System.Drawing.Point(4, 29);
             this.settingsTab.Name = "settingsTab";
             this.settingsTab.Padding = new System.Windows.Forms.Padding(3);
             this.settingsTab.Size = new System.Drawing.Size(1906, 995);
             this.settingsTab.TabIndex = 2;
             this.settingsTab.Text = "tabPage1";
-            this.settingsTab.UseVisualStyleBackColor = true;
             // 
             // calendarWeeklyTab
             // 
+            this.calendarWeeklyTab.BackColor = System.Drawing.Color.White;
             this.calendarWeeklyTab.Location = new System.Drawing.Point(4, 29);
             this.calendarWeeklyTab.Name = "calendarWeeklyTab";
             this.calendarWeeklyTab.Padding = new System.Windows.Forms.Padding(3);
             this.calendarWeeklyTab.Size = new System.Drawing.Size(1906, 995);
             this.calendarWeeklyTab.TabIndex = 3;
             this.calendarWeeklyTab.Text = "tabPage1";
-            this.calendarWeeklyTab.UseVisualStyleBackColor = true;
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshButton.BackColor = System.Drawing.Color.White;
+            this.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshButton.ForeColor = System.Drawing.Color.Black;
+            this.refreshButton.Location = new System.Drawing.Point(263, 302);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(120, 50);
+            this.refreshButton.TabIndex = 11;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // CalendarForm
             // 
@@ -604,8 +626,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidePanel);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -640,7 +662,7 @@
         private System.Windows.Forms.Timer currentTimeTimer;
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button eventsButton;
+        private System.Windows.Forms.Button todoButton;
         private System.Windows.Forms.Button studyButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button logoutButton;
@@ -668,5 +690,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TabPage calendarWeeklyTab;
         private System.Windows.Forms.PictureBox monthPictureBox;
+        private System.Windows.Forms.Button refreshButton;
     }
 }

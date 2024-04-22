@@ -34,7 +34,7 @@ namespace Trackgenda
             dbConn.CloseConnection();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace Trackgenda
                                 dbConn.CloseConnection();
                                 LoginForm loginForm = new LoginForm();
                                 loginForm.Show();
-                                this.Hide();
+                                this.Close();
                             }
                             else
                             {

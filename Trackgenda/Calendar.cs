@@ -20,6 +20,7 @@ namespace Trackgenda
         private bool dashBoardShow = false;
         private bool backgroundDashboardShow = false;
         private StudyDashboard studyDashboardForm = new StudyDashboard();
+        private BackgroundForm backgroundForm = new BackgroundForm();
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
         private static DateTime currentDT = DateTime.Now;
@@ -93,6 +94,7 @@ namespace Trackgenda
             currentTimeTimer.Start();
             studyDashboardForm.MdiParent = this;
             displayDays();
+            // monthlyCalendarTab.BackColor = Color.Black;
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -263,7 +265,7 @@ namespace Trackgenda
             for (int i = 1; i <= amtDays; i++)
             {
                 cellsUsed++;
-                CellDay ucd = new CellDay(uid, currentMonth, i,currentYear);
+                CellDay ucd = new CellDay(uid,currentMonth,i,currentYear);
                 ucd.days(i);
                 monthlyPanel.Controls.Add(ucd);
             }
@@ -349,8 +351,25 @@ namespace Trackgenda
             backgroundDashboardShow = !backgroundDashboardShow;
             if (backgroundDashboardShow)
             {
-
+                backgroundForm.Show();
+            } else
+            {
+                backgroundForm.Close();
             }
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            // monthlyCalendarTab.Controls.Clear();
+            // monthlyCalendarTab.Update();
+            // monthlyCalendarTab.Refresh();
+            // displayDays();
+        }
+
+        private void todoButton_Click(object sender, EventArgs e)
+        {
+            TODOForm form = new TODOForm();
+            form.Show();
         }
     }
 }
