@@ -302,5 +302,42 @@ namespace Trackgenda
             }
             return false;
         }
+
+        public bool insertBackgroundImage(int uid,string path)
+        {
+            query = $"UPDATE user_settings SET backgroundimage = '{path}' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
+
+        public string getBackgroundPath(int uid)
+        {
+            string backgroundPath = "";
+            query = $"SELECT backgroundimage FROM user_settings WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                backgroundPath = Convert.ToString(reader);
+                return backgroundPath;
+            }
+            return backgroundPath;
+        }
     }
 }

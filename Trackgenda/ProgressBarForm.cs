@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Trackgenda
@@ -6,6 +7,7 @@ namespace Trackgenda
     public partial class ProgressBarForm : Form
     {
         private int uid;
+
         public ProgressBarForm(int uid)
         {
             this.uid = uid;

@@ -45,7 +45,6 @@ namespace Trackgenda
             this.uid = uid;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            backgroundForm = new BackgroundForm(uid);
             dbConn = new DatabaseConnection();
             dbConn.OpenConnection();
             InitializeComponent();
@@ -375,21 +374,17 @@ namespace Trackgenda
         private void backgroundButton_Click(object sender, EventArgs e)
         {
             backgroundDashboardShow = !backgroundDashboardShow;
+            backgroundForm = new BackgroundForm(uid);
             if (backgroundDashboardShow)
             {
-                backgroundForm.Show();
+                if (backgroundForm.ShowDialog() == DialogResult.OK)
+                {
+                    //this.Close();
+                }
             } else
             {
                 backgroundForm.Close();
             }
-        }
-
-        private void refreshButton_Click(object sender, EventArgs e)
-        {
-            // monthlyCalendarTab.Controls.Clear();
-            // monthlyCalendarTab.Update();
-            // monthlyCalendarTab.Refresh();
-            // displayDays();
         }
 
         private void todoButton_Click(object sender, EventArgs e)
@@ -456,6 +451,7 @@ namespace Trackgenda
             logoutButton.BackColor = Color.White;
             exitButton.BackColor = Color.White;
             exitButton.ForeColor = Color.Black;
+            checkFileBackground();
         }
 
         private void changeDarkMode()
@@ -500,6 +496,37 @@ namespace Trackgenda
             logoutButton.BackColor = Color.FromArgb(59, 59, 59);
             exitButton.BackColor = Color.FromArgb(59, 59, 59);
             exitButton.ForeColor = Color.Black;
+            checkFileBackground();
+        }
+
+        private void checkFileBackground()
+        {
+            if (dbConn.getBackgroundPath(uid).Length > 0)
+            {
+                Bitmap image = (Bitmap)Image.FromFile(dbConn.getBackgroundPath(uid));
+                image = new Bitmap(image, monthlyCalendarTab.Width, monthlyCalendarTab.Height);
+                monthlyCalendarTab.BackgroundImage = image;
+                monthlyCalendarTab.BackColor = Color.Transparent;
+                dashboardTab.BackgroundImage = image;
+                dashboardTab.BackColor = Color.Transparent;
+                settingsTab.BackgroundImage= image;
+                settingsTab.BackColor = Color.Transparent;
+                calendarWeeklyTab.BackgroundImage = image;
+                calendarWeeklyTab.BackColor = Color.Transparent;
+            } else
+            {
+                if (checkThemeMode() == "Light")
+                {
+                    monthlyCalendarTab.BackColor = Color.White;
+                    dashboardTab.BackColor = Color.White;
+                    settingsTab.BackColor = Color.White;
+                    calendarWeeklyTab.BackColor = Color.White;
+                }
+                else
+                {
+
+                }
+            }
         }
     }
 }
