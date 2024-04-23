@@ -110,7 +110,8 @@ namespace Trackgenda
             // Registration
             if (error.Length == 0)
             {
-                if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text) && dbConn.InsertDefaultSettings(dbConn.getUID(usernameTextBox.Text)))
+                if (dbConn.InsertUser(firstNameTextBox.Text,lastNameTextBox.Text,emailTextBox.Text,usernameTextBox.Text,passwordTextBox.Text) && 
+                    dbConn.InsertDefaultSettings(dbConn.getUID(usernameTextBox.Text)))
                 {
                     MessageBox.Show("Account has been successfully made!");
                     LoginForm loginForm = new LoginForm();

@@ -12,9 +12,20 @@ namespace Trackgenda
 {
     public partial class BackgroundForm : Form
     {
-        public BackgroundForm()
+        private int uid;
+        private DatabaseConnection dbConn;
+        public BackgroundForm(int uid)
         {
+            this.uid = uid;
+            dbConn = new DatabaseConnection();
+            dbConn.OpenConnection();
             InitializeComponent();
+        }
+
+        public int UID
+        { 
+            get { return uid; }
+            set { this.uid = value; }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -24,7 +35,13 @@ namespace Trackgenda
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-
+            if (dbConn.resetBackgroundImage(UID))
+            {
+                MessageBox.Show("Successfully Reset Background");
+            } else
+            {
+                MessageBox.Show("Error Resetting Background", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BackgroundForm_MouseDown(object sender, MouseEventArgs e)
@@ -43,6 +60,11 @@ namespace Trackgenda
         private void gifButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackgroundForm_Load(object sender, EventArgs e)
+        {
+            UID = uid;
         }
     }
 }

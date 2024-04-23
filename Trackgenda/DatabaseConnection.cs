@@ -66,6 +66,20 @@ namespace Trackgenda
             return conn;
         }
 
+        public string getUserTheme(int uid)
+        {
+            string theme = "";
+            query = $"SELECT theme FROM user_settings WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                theme = Convert.ToString(reader);
+                return theme;
+            }
+            return theme;
+        }
+
         // Registration
         public bool InsertUser(string firstName,string lastName, string email,string username, string password)
         {
@@ -263,6 +277,30 @@ namespace Trackgenda
                 return eventDesc;
             }
             return eventDesc;
+        }
+
+        // Change Background
+        public bool resetBackgroundImage(int uid)
+        {
+            query = $"UPDATE user_settings SET backgroundimage = '' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
         }
     }
 }

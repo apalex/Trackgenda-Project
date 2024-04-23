@@ -20,7 +20,8 @@ namespace Trackgenda
         private bool dashBoardShow = false;
         private bool backgroundDashboardShow = false;
         private StudyDashboard studyDashboardForm = new StudyDashboard();
-        private BackgroundForm backgroundForm = new BackgroundForm();
+        private BackgroundForm backgroundForm;
+        private DatabaseConnection dbConn;
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
         private static DateTime currentDT = DateTime.Now;
@@ -44,6 +45,9 @@ namespace Trackgenda
             this.uid = uid;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            backgroundForm = new BackgroundForm(uid);
+            dbConn = new DatabaseConnection();
+            dbConn.OpenConnection();
             InitializeComponent();
         }
 
@@ -94,6 +98,7 @@ namespace Trackgenda
             currentTimeTimer.Start();
             studyDashboardForm.MdiParent = this;
             displayDays();
+            changeThemeMode();
             // monthlyCalendarTab.BackColor = Color.Black;
         }
 
@@ -109,7 +114,14 @@ namespace Trackgenda
 
         private void XButton_MouseLeave(object sender, EventArgs e)
         {
-            XButton.BackColor = Color.White;
+            if (checkThemeMode() == "Light")
+            {
+                XButton.BackColor = Color.White;
+            }
+            else
+            {
+                XButton.BackColor = Color.FromArgb(39,39,39);
+            }
         }
 
         private void maximizeButton_MouseHover(object sender, EventArgs e)
@@ -119,7 +131,14 @@ namespace Trackgenda
 
         private void maximizeButton_MouseLeave(object sender, EventArgs e)
         {
-            maximizeButton.BackColor = Color.White;
+            if (checkThemeMode() == "Light")
+            {
+                maximizeButton.BackColor = Color.White;
+            }
+            else
+            {
+                maximizeButton.BackColor = Color.FromArgb(39, 39, 39);
+            }
         }
 
         private void minimizeButton_MouseHover(object sender, EventArgs e)
@@ -129,7 +148,14 @@ namespace Trackgenda
 
         private void minimizeButton_MouseLeave(object sender, EventArgs e)
         {
-            minimizeButton.BackColor = Color.White;
+            if (checkThemeMode() == "Light")
+            {
+                minimizeButton.BackColor = Color.White;
+            }
+            else
+            {
+                minimizeButton.BackColor = Color.FromArgb(39, 39, 39);
+            }
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -370,6 +396,110 @@ namespace Trackgenda
         {
             TODOForm form = new TODOForm();
             form.Show();
+        }
+
+        private string checkThemeMode()
+        {
+            return dbConn.getUserTheme(uid);
+        }
+
+        private void changeThemeMode()
+        {
+            if (checkThemeMode() == "Light")
+            {
+                changeLightMode();
+            } else
+            {
+                changeDarkMode();
+            }
+        }
+
+        private void changeLightMode()
+        {
+            // Upper Bar
+            hamburgerPictureBox.BackColor = Color.White;
+            logoLabel.BackColor = Color.White;
+            logoLabel.ForeColor = Color.Black;
+            upperBar.BackColor = Color.White;
+            upperBar.ForeColor = Color.Black;
+            currentTimeLabel.BackColor = Color.White;
+            currentTimeLabel.ForeColor = Color.Black;
+            minimizeButton.BackColor = Color.White;
+            minimizeButton.ForeColor = Color.Black;
+            maximizeButton.BackColor = Color.White;
+            maximizeButton.ForeColor = Color.Black;
+            XButton.BackColor = Color.White;
+            XButton.ForeColor = Color.Black;
+            // Side Panel
+            sidePanel.ForeColor = Color.Black;
+            sidePanel.BackColor = Color.White;
+            sideLogoPicture.BackColor = Color.White;
+            dashboardButton.BackColor = Color.White;
+            dashboardButton.ForeColor = Color.Black;
+            todoButton.BackColor = Color.White;
+            todoButton.ForeColor = Color.Black;
+            studyButton.ForeColor = Color.Black;
+            studyButton.BackColor = Color.White;
+            stopwatchButton.BackColor = Color.White;
+            stopwatchButton.ForeColor = Color.Black;
+            notesButton.BackColor = Color.White;
+            notesButton.ForeColor = Color.Black;
+            motivationalButton.BackColor = Color.White;
+            motivationalButton.ForeColor = Color.Black;
+            factButton.BackColor = Color.White;
+            factButton.ForeColor = Color.Black;
+            backgroundButton.ForeColor = Color.Black;
+            backgroundButton.BackColor = Color.White;
+            settingsButton.BackColor = Color.White;
+            settingsButton.ForeColor = Color.Black;
+            logoutButton.ForeColor = Color.Black;
+            logoutButton.BackColor = Color.White;
+            exitButton.BackColor = Color.White;
+            exitButton.ForeColor = Color.Black;
+        }
+
+        private void changeDarkMode()
+        {
+            // Upper Bar
+            hamburgerPictureBox.BackColor = Color.FromArgb(39, 39, 39);
+            logoLabel.BackColor = Color.FromArgb(39, 39, 39);
+            logoLabel.ForeColor = Color.Black;
+            upperBar.BackColor = Color.FromArgb(39, 39, 39);
+            upperBar.ForeColor = Color.Black;
+            currentTimeLabel.BackColor = Color.FromArgb(39, 39, 39);
+            currentTimeLabel.ForeColor = Color.Black;
+            minimizeButton.BackColor = Color.FromArgb(39, 39, 39);
+            minimizeButton.ForeColor = Color.Black;
+            maximizeButton.BackColor = Color.FromArgb(39, 39, 39);
+            maximizeButton.ForeColor = Color.Black;
+            XButton.BackColor = Color.FromArgb(39, 39, 39);
+            XButton.ForeColor = Color.Black;
+            // Side Panel
+            sidePanel.ForeColor = Color.Black;
+            sidePanel.BackColor = Color.FromArgb(39, 39, 39);
+            sideLogoPicture.BackColor = Color.FromArgb(39, 39, 39);
+            dashboardButton.BackColor = Color.FromArgb(59,59,59);
+            dashboardButton.ForeColor = Color.Black;
+            todoButton.BackColor = Color.FromArgb(59, 59, 59);
+            todoButton.ForeColor = Color.Black;
+            studyButton.ForeColor = Color.Black;
+            studyButton.BackColor = Color.FromArgb(59, 59, 59);
+            stopwatchButton.BackColor = Color.FromArgb(59, 59, 59);
+            stopwatchButton.ForeColor = Color.Black;
+            notesButton.BackColor = Color.FromArgb(59, 59, 59);
+            notesButton.ForeColor = Color.Black;
+            motivationalButton.BackColor = Color.FromArgb(59, 59, 59);
+            motivationalButton.ForeColor = Color.Black;
+            factButton.BackColor = Color.FromArgb(59, 59, 59);
+            factButton.ForeColor = Color.Black;
+            backgroundButton.ForeColor = Color.Black;
+            backgroundButton.BackColor = Color.FromArgb(59, 59, 59);
+            settingsButton.BackColor = Color.FromArgb(59, 59, 59);
+            settingsButton.ForeColor = Color.Black;
+            logoutButton.ForeColor = Color.Black;
+            logoutButton.BackColor = Color.FromArgb(59, 59, 59);
+            exitButton.BackColor = Color.FromArgb(59, 59, 59);
+            exitButton.ForeColor = Color.Black;
         }
     }
 }

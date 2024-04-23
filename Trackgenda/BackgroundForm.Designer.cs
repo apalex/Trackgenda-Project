@@ -115,6 +115,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BackgroundForm";
             this.Text = "BackgroundForm";
+            this.Load += new System.EventHandler(this.BackgroundForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackgroundForm_MouseDown);
             this.ResumeLayout(false);
 

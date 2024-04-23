@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.upperBar = new System.Windows.Forms.Panel();
             this.currentTimeLabel = new System.Windows.Forms.Label();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.maximizeButton = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.hamburgerPictureBox = new System.Windows.Forms.PictureBox();
             this.logoLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sideLogoPicture = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.todoButton = new System.Windows.Forms.Button();
             this.studyButton = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.currentTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.monthlyCalendarTab = new System.Windows.Forms.TabPage();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.monthPictureBox = new System.Windows.Forms.PictureBox();
             this.dateLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,37 +70,38 @@
             this.label3 = new System.Windows.Forms.Label();
             this.settingsTab = new System.Windows.Forms.TabPage();
             this.calendarWeeklyTab = new System.Windows.Forms.TabPage();
-            this.refreshButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.monthlyCalendarTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.monthPictureBox)).BeginInit();
             this.dashboardTab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // upperBar
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.currentTimeLabel);
-            this.panel1.Controls.Add(this.minimizeButton);
-            this.panel1.Controls.Add(this.maximizeButton);
-            this.panel1.Controls.Add(this.XButton);
-            this.panel1.Controls.Add(this.hamburgerPictureBox);
-            this.panel1.Controls.Add(this.logoLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 51);
-            this.panel1.TabIndex = 2;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.upperBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.upperBar.Controls.Add(this.currentTimeLabel);
+            this.upperBar.Controls.Add(this.minimizeButton);
+            this.upperBar.Controls.Add(this.maximizeButton);
+            this.upperBar.Controls.Add(this.XButton);
+            this.upperBar.Controls.Add(this.hamburgerPictureBox);
+            this.upperBar.Controls.Add(this.logoLabel);
+            this.upperBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.upperBar.ForeColor = System.Drawing.Color.Black;
+            this.upperBar.Location = new System.Drawing.Point(0, 0);
+            this.upperBar.Name = "upperBar";
+            this.upperBar.Size = new System.Drawing.Size(1920, 51);
+            this.upperBar.TabIndex = 2;
+            this.upperBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // currentTimeLabel
             // 
             this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentTimeLabel.Location = new System.Drawing.Point(1648, 9);
+            this.currentTimeLabel.ForeColor = System.Drawing.Color.Black;
+            this.currentTimeLabel.Location = new System.Drawing.Point(1637, 15);
             this.currentTimeLabel.Name = "currentTimeLabel";
             this.currentTimeLabel.Size = new System.Drawing.Size(86, 30);
             this.currentTimeLabel.TabIndex = 4;
@@ -109,7 +111,7 @@
             // minimizeButton
             // 
             this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.BackColor = System.Drawing.Color.White;
+            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.Black;
@@ -126,7 +128,7 @@
             // maximizeButton
             // 
             this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizeButton.BackColor = System.Drawing.Color.White;
+            this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.Black;
@@ -143,7 +145,7 @@
             // XButton
             // 
             this.XButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.XButton.BackColor = System.Drawing.Color.White;
+            this.XButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.XButton.ForeColor = System.Drawing.Color.Black;
@@ -171,6 +173,7 @@
             // logoLabel
             // 
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoLabel.ForeColor = System.Drawing.Color.Black;
             this.logoLabel.Location = new System.Drawing.Point(55, 15);
             this.logoLabel.Name = "logoLabel";
             this.logoLabel.Size = new System.Drawing.Size(128, 26);
@@ -179,9 +182,9 @@
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.sidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sidePanel.Controls.Add(this.pictureBox1);
+            this.sidePanel.Controls.Add(this.sideLogoPicture);
             this.sidePanel.Controls.Add(this.dashboardButton);
             this.sidePanel.Controls.Add(this.todoButton);
             this.sidePanel.Controls.Add(this.studyButton);
@@ -194,26 +197,27 @@
             this.sidePanel.Controls.Add(this.logoutButton);
             this.sidePanel.Controls.Add(this.exitButton);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.ForeColor = System.Drawing.Color.Black;
             this.sidePanel.Location = new System.Drawing.Point(0, 51);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(220, 1029);
             this.sidePanel.TabIndex = 4;
             // 
-            // pictureBox1
+            // sideLogoPicture
             // 
-            this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.sideLogoPicture.Image = global::Trackgenda.Properties.Resources.TG;
+            this.sideLogoPicture.Location = new System.Drawing.Point(0, 30);
+            this.sideLogoPicture.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.sideLogoPicture.Name = "sideLogoPicture";
+            this.sideLogoPicture.Size = new System.Drawing.Size(219, 81);
+            this.sideLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sideLogoPicture.TabIndex = 15;
+            this.sideLogoPicture.TabStop = false;
             // 
             // dashboardButton
             // 
             this.dashboardButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dashboardButton.BackColor = System.Drawing.Color.White;
+            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Image")));
@@ -230,7 +234,7 @@
             // todoButton
             // 
             this.todoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.todoButton.BackColor = System.Drawing.Color.White;
+            this.todoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.todoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.todoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoButton.Image = ((System.Drawing.Image)(resources.GetObject("todoButton.Image")));
@@ -247,7 +251,7 @@
             // studyButton
             // 
             this.studyButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.studyButton.BackColor = System.Drawing.Color.White;
+            this.studyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.studyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studyButton.Image = ((System.Drawing.Image)(resources.GetObject("studyButton.Image")));
@@ -264,7 +268,7 @@
             // stopwatchButton
             // 
             this.stopwatchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.stopwatchButton.BackColor = System.Drawing.Color.White;
+            this.stopwatchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.stopwatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopwatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stopwatchButton.Image = ((System.Drawing.Image)(resources.GetObject("stopwatchButton.Image")));
@@ -281,7 +285,7 @@
             // notesButton
             // 
             this.notesButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.notesButton.BackColor = System.Drawing.Color.White;
+            this.notesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.notesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.notesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notesButton.Image = ((System.Drawing.Image)(resources.GetObject("notesButton.Image")));
@@ -297,7 +301,7 @@
             // motivationalButton
             // 
             this.motivationalButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.motivationalButton.BackColor = System.Drawing.Color.White;
+            this.motivationalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.motivationalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.motivationalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.motivationalButton.Image = ((System.Drawing.Image)(resources.GetObject("motivationalButton.Image")));
@@ -314,7 +318,7 @@
             // factButton
             // 
             this.factButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.factButton.BackColor = System.Drawing.Color.White;
+            this.factButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.factButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.factButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.factButton.Image = ((System.Drawing.Image)(resources.GetObject("factButton.Image")));
@@ -331,7 +335,7 @@
             // backgroundButton
             // 
             this.backgroundButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.backgroundButton.BackColor = System.Drawing.Color.White;
+            this.backgroundButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.backgroundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backgroundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backgroundButton.Image = ((System.Drawing.Image)(resources.GetObject("backgroundButton.Image")));
@@ -348,7 +352,7 @@
             // settingsButton
             // 
             this.settingsButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.settingsButton.BackColor = System.Drawing.Color.White;
+            this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
@@ -364,7 +368,7 @@
             // logoutButton
             // 
             this.logoutButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.logoutButton.BackColor = System.Drawing.Color.White;
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
@@ -381,7 +385,7 @@
             // exitButton
             // 
             this.exitButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.exitButton.BackColor = System.Drawing.Color.White;
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,7 +417,7 @@
             // 
             // monthlyCalendarTab
             // 
-            this.monthlyCalendarTab.BackColor = System.Drawing.Color.White;
+            this.monthlyCalendarTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.monthlyCalendarTab.Controls.Add(this.refreshButton);
             this.monthlyCalendarTab.Controls.Add(this.monthPictureBox);
             this.monthlyCalendarTab.Controls.Add(this.dateLabel);
@@ -433,6 +437,22 @@
             this.monthlyCalendarTab.Size = new System.Drawing.Size(1906, 995);
             this.monthlyCalendarTab.TabIndex = 0;
             this.monthlyCalendarTab.Text = "tabPage1";
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshButton.BackColor = System.Drawing.Color.White;
+            this.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshButton.ForeColor = System.Drawing.Color.Black;
+            this.refreshButton.Location = new System.Drawing.Point(263, 302);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(120, 50);
+            this.refreshButton.TabIndex = 11;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // monthPictureBox
             // 
@@ -603,22 +623,6 @@
             this.calendarWeeklyTab.TabIndex = 3;
             this.calendarWeeklyTab.Text = "tabPage1";
             // 
-            // refreshButton
-            // 
-            this.refreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refreshButton.BackColor = System.Drawing.Color.White;
-            this.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshButton.ForeColor = System.Drawing.Color.Black;
-            this.refreshButton.Location = new System.Drawing.Point(263, 302);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(120, 50);
-            this.refreshButton.TabIndex = 11;
-            this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = false;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
-            // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -626,7 +630,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidePanel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.upperBar);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -636,10 +640,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
-            this.panel1.ResumeLayout(false);
+            this.upperBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
             this.sidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.monthlyCalendarTab.ResumeLayout(false);
             this.monthlyCalendarTab.PerformLayout();
@@ -651,7 +655,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel upperBar;
         private System.Windows.Forms.Label logoLabel;
         private System.Windows.Forms.PictureBox hamburgerPictureBox;
         private System.Windows.Forms.Button XButton;
@@ -661,7 +665,7 @@
         private System.Windows.Forms.Label currentTimeLabel;
         private System.Windows.Forms.Timer currentTimeTimer;
         private System.Windows.Forms.Button dashboardButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox sideLogoPicture;
         private System.Windows.Forms.Button todoButton;
         private System.Windows.Forms.Button studyButton;
         private System.Windows.Forms.Button exitButton;
