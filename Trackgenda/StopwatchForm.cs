@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace Trackgenda
 {
     public partial class StopwatchForm : Form
     {
+        private int uid;
         private Stopwatch stopWatch;
+        private DatabaseConnection dbConn;
         private bool isStart = false;
-        public StopwatchForm()
+        public StopwatchForm(int uid)
         {
+            UID = uid;
             stopWatch = new Stopwatch();
+            dbConn = new DatabaseConnection();
+            dbConn.OpenConnection();
             InitializeComponent();
         }
-        
+
+        private int UID
+        {
+            get { return uid; }
+            set { uid = value; }
+        }
+
         private void StopwatchForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -46,6 +58,7 @@ namespace Trackgenda
         private void StopwatchForm_Load(object sender, EventArgs e)
         {
             this.Select();
+            changeThemeMode();
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -57,6 +70,59 @@ namespace Trackgenda
         private void timerStopwatch_Tick(object sender, EventArgs e)
         {
             timerLabel.Text = stopWatch.Elapsed.ToString();
+        }
+
+        private string checkThemeMode()
+        {
+            return dbConn.getUserTheme(uid);
+        }
+
+        private void changeThemeMode()
+        {
+            if (checkThemeMode() == "Light")
+            {
+                changeLightMode();
+            }
+            else
+            {
+                changeDarkMode();
+            }
+        }
+
+        private void changeLightMode()
+        {
+            this.BackColor = Color.Gainsboro;
+            this.ForeColor = Color.Black;
+            displayLabel.BackColor = Color.Gainsboro;
+            displayLabel.ForeColor = Color.Black;
+            seperatorLabel.BackColor = Color.Gainsboro;
+            seperatorLabel.ForeColor = Color.Black;
+            closeButton.BackColor = Color.White;
+            closeButton.ForeColor = Color.Black;
+            timerLabel.BackColor = Color.Gainsboro;
+            timerLabel.ForeColor = Color.Black;
+            controlButton.BackColor = Color.White;
+            controlButton.ForeColor = Color.Black;
+            resetButton.BackColor = Color.White;
+            resetButton.ForeColor = Color.Black;
+        }
+
+        private void changeDarkMode()
+        {
+            this.BackColor = Color.Gray;
+            this.ForeColor = Color.Black;
+            displayLabel.BackColor = Color.Gray;
+            displayLabel.ForeColor = Color.Black;
+            seperatorLabel.BackColor = Color.Gray;
+            seperatorLabel.ForeColor = Color.Black;
+            closeButton.BackColor = Color.DarkGray;
+            closeButton.ForeColor = Color.Black;
+            timerLabel.BackColor = Color.Gray;
+            timerLabel.ForeColor = Color.Black;
+            controlButton.BackColor = Color.DarkGray;
+            controlButton.ForeColor = Color.Black;
+            resetButton.BackColor = Color.DarkGray;
+            resetButton.ForeColor = Color.Black;
         }
     }
 }

@@ -53,10 +53,10 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.LightCoral;
+            this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.ForeColor = System.Drawing.Color.Black;
             this.closeButton.Location = new System.Drawing.Point(335, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(68, 40);
@@ -69,6 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(400, 250);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.quotelabel);

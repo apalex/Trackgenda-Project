@@ -1,20 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Trackgenda
 {
     public partial class TODOForm : Form
     {
-        public TODOForm()
+        private int uid;
+        private DatabaseConnection dbConn;
+        public TODOForm(int uid)
         {
+            UID = uid;
+            dbConn = new DatabaseConnection();
+            dbConn.OpenConnection();
             InitializeComponent();
+        }
+
+        private int UID
+        {
+            get { return uid; }
+            set { uid = value; }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -28,6 +33,52 @@ namespace Trackgenda
             {
                 DraggeableForms.Drag(this.Handle);
             }
+        }
+
+        private void TODOForm_Load(object sender, EventArgs e)
+        {
+            changeThemeMode();
+        }
+
+        private string checkThemeMode()
+        {
+            return dbConn.getUserTheme(uid);
+        }
+
+        private void changeThemeMode()
+        {
+            if (checkThemeMode() == "Light")
+            {
+                changeLightMode();
+            }
+            else
+            {
+                changeDarkMode();
+            }
+        }
+
+        private void changeLightMode()
+        {
+            this.BackColor = Color.Gainsboro;
+            this.ForeColor = Color.Black;
+            todoLabel.BackColor = Color.Gainsboro;
+            todoLabel.ForeColor = Color.Black;
+            textBox1.BackColor = Color.White;
+            textBox1.ForeColor = Color.Black;
+            exitButton.BackColor = Color.White;
+            exitButton.ForeColor = Color.Black;
+        }
+
+        private void changeDarkMode()
+        {
+            this.BackColor = Color.Gray;
+            this.ForeColor = Color.White;
+            todoLabel.BackColor = Color.Gray;
+            todoLabel.ForeColor = Color.Black;
+            textBox1.BackColor = Color.FromArgb(179, 179, 179);
+            textBox1.ForeColor = Color.Black;
+            exitButton.BackColor = Color.FromArgb(179, 179, 179);
+            exitButton.ForeColor = Color.Black;
         }
     }
 }

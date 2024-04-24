@@ -60,7 +60,7 @@
             // 
             // controlButton
             // 
-            this.controlButton.BackColor = System.Drawing.Color.White;
+            this.controlButton.BackColor = System.Drawing.Color.DarkGray;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.controlButton.Location = new System.Drawing.Point(320, 50);
@@ -73,7 +73,7 @@
             // 
             // resetButton
             // 
-            this.resetButton.BackColor = System.Drawing.Color.White;
+            this.resetButton.BackColor = System.Drawing.Color.DarkGray;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetButton.Location = new System.Drawing.Point(320, 102);
@@ -86,7 +86,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.Location = new System.Drawing.Point(367, 0);
             this.closeButton.Name = "closeButton";
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(420, 160);
             this.Controls.Add(this.seperatorLabel);
             this.Controls.Add(this.closeButton);

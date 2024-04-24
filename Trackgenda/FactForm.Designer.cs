@@ -50,6 +50,7 @@
             // 
             // factLabel
             // 
+            this.factLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.factLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.factLabel.Location = new System.Drawing.Point(30, 98);
             this.factLabel.Name = "factLabel";
@@ -69,6 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(400, 250);
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.factLabel);
