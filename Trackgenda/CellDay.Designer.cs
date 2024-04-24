@@ -38,6 +38,7 @@
             // 
             this.indexDay.AutoSize = true;
             this.indexDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.indexDay.ForeColor = System.Drawing.Color.White;
             this.indexDay.Location = new System.Drawing.Point(22, 23);
             this.indexDay.Name = "indexDay";
             this.indexDay.Size = new System.Drawing.Size(26, 29);
@@ -48,6 +49,7 @@
             // 
             this.event1Label.AutoSize = true;
             this.event1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event1Label.ForeColor = System.Drawing.Color.White;
             this.event1Label.Location = new System.Drawing.Point(81, 30);
             this.event1Label.Name = "event1Label";
             this.event1Label.Size = new System.Drawing.Size(0, 25);
@@ -57,6 +59,7 @@
             // 
             this.event2Label.AutoSize = true;
             this.event2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event2Label.ForeColor = System.Drawing.Color.White;
             this.event2Label.Location = new System.Drawing.Point(81, 91);
             this.event2Label.Name = "event2Label";
             this.event2Label.Size = new System.Drawing.Size(0, 25);
@@ -66,6 +69,7 @@
             // 
             this.event3Label.AutoSize = true;
             this.event3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event3Label.ForeColor = System.Drawing.Color.White;
             this.event3Label.Location = new System.Drawing.Point(81, 145);
             this.event3Label.Name = "event3Label";
             this.event3Label.Size = new System.Drawing.Size(0, 25);
@@ -75,6 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.event3Label);
             this.Controls.Add(this.event2Label);

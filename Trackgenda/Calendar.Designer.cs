@@ -81,7 +81,7 @@
             // 
             // upperBar
             // 
-            this.upperBar.BackColor = System.Drawing.Color.DimGray;
+            this.upperBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.upperBar.Controls.Add(this.currentTimeLabel);
             this.upperBar.Controls.Add(this.minimizeButton);
             this.upperBar.Controls.Add(this.maximizeButton);
@@ -100,7 +100,7 @@
             // 
             this.currentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentTimeLabel.ForeColor = System.Drawing.Color.Black;
+            this.currentTimeLabel.ForeColor = System.Drawing.Color.White;
             this.currentTimeLabel.Location = new System.Drawing.Point(1637, 15);
             this.currentTimeLabel.Name = "currentTimeLabel";
             this.currentTimeLabel.Size = new System.Drawing.Size(86, 30);
@@ -111,10 +111,10 @@
             // minimizeButton
             // 
             this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.ForeColor = System.Drawing.Color.Black;
+            this.minimizeButton.ForeColor = System.Drawing.Color.White;
             this.minimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeButton.Image")));
             this.minimizeButton.Location = new System.Drawing.Point(1740, 0);
             this.minimizeButton.Name = "minimizeButton";
@@ -128,10 +128,10 @@
             // maximizeButton
             // 
             this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maximizeButton.ForeColor = System.Drawing.Color.Black;
+            this.maximizeButton.ForeColor = System.Drawing.Color.White;
             this.maximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("maximizeButton.Image")));
             this.maximizeButton.Location = new System.Drawing.Point(1800, 0);
             this.maximizeButton.Name = "maximizeButton";
@@ -145,10 +145,10 @@
             // XButton
             // 
             this.XButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.XButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.XButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.XButton.ForeColor = System.Drawing.Color.Black;
+            this.XButton.ForeColor = System.Drawing.Color.White;
             this.XButton.Location = new System.Drawing.Point(1860, 0);
             this.XButton.Name = "XButton";
             this.XButton.Size = new System.Drawing.Size(60, 50);
@@ -173,7 +173,7 @@
             // logoLabel
             // 
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoLabel.ForeColor = System.Drawing.Color.Black;
+            this.logoLabel.ForeColor = System.Drawing.Color.White;
             this.logoLabel.Location = new System.Drawing.Point(55, 15);
             this.logoLabel.Name = "logoLabel";
             this.logoLabel.Size = new System.Drawing.Size(128, 26);
@@ -182,7 +182,7 @@
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.DimGray;
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.sidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sidePanel.Controls.Add(this.sideLogoPicture);
             this.sidePanel.Controls.Add(this.dashboardButton);
@@ -217,9 +217,10 @@
             // dashboardButton
             // 
             this.dashboardButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dashboardButton.BackColor = System.Drawing.Color.Gray;
+            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.ForeColor = System.Drawing.Color.White;
             this.dashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Image")));
             this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboardButton.Location = new System.Drawing.Point(10, 151);

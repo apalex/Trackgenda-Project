@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar;
 
 namespace Trackgenda
 {
@@ -9,6 +10,7 @@ namespace Trackgenda
         private int uid,month,day,year;
         private DatabaseConnection dbConn;
         private string date;
+        private string theme;
         public CellDay(int uid, int month, int day, int year)
         {
             UID = uid;
@@ -46,16 +48,32 @@ namespace Trackgenda
 
         private void CellDay_MouseHover(object sender, EventArgs e)
         {
-            this.BackColor = Color.Azure;
+            if (theme == "Light")
+            {
+                this.BackColor = Color.Azure;
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(179, 179, 179);
+            }
         }
 
         private void CellDay_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            if (theme == "Light")
+            {
+                this.BackColor = Color.Azure;
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(64, 64, 64);
+            }
         }
 
         private void CellDay_Load(object sender, EventArgs e)
         {
+            theme = checkThemeMode();
+            changeThemeMode();
             if (month > 9)
             {
                 date = $"{Month}/{Day}/{Year}";
@@ -92,6 +110,49 @@ namespace Trackgenda
         {
             EventMonthlyForm form = new EventMonthlyForm(UID,Month,Day,Year);
             form.Show();
+        }
+
+        private string checkThemeMode()
+        {
+            return dbConn.getUserTheme(uid);
+        }
+
+        private void changeThemeMode()
+        {
+            if (checkThemeMode() == "Light")
+            {
+                changeLightMode();
+            }
+            else
+            {
+                changeDarkMode();
+            }
+        }
+
+        private void changeLightMode()
+        {
+            this.BackColor = Color.White;
+            indexDay.BackColor = Color.White;
+            indexDay.ForeColor = Color.Black;
+            event1Label.BackColor = Color.White;
+            event1Label.ForeColor = Color.Black;
+            event2Label.BackColor = Color.White;
+            event2Label.ForeColor = Color.Black;
+            event3Label.BackColor = Color.White;
+            event3Label.ForeColor = Color.Black;
+        }
+
+        private void changeDarkMode()
+        {
+            this.BackColor = Color.FromArgb(64, 64, 64);
+            indexDay.BackColor = Color.FromArgb(64, 64, 64);
+            indexDay.ForeColor = Color.White;
+            event1Label.BackColor = Color.FromArgb(64, 64, 64); ;
+            event1Label.ForeColor = Color.White;
+            event2Label.BackColor = Color.FromArgb(64, 64, 64); ;
+            event2Label.ForeColor = Color.White;
+            event3Label.BackColor = Color.FromArgb(64, 64, 64); ;
+            event3Label.ForeColor = Color.White;
         }
     }
 }

@@ -77,7 +77,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(179, 138);
+            this.addButton.Location = new System.Drawing.Point(175, 148);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(90, 39);
             this.addButton.TabIndex = 30;
@@ -95,12 +95,13 @@
             this.maximumLabel.Size = new System.Drawing.Size(349, 25);
             this.maximumLabel.TabIndex = 31;
             this.maximumLabel.Text = "Maximum amount of 3 events reached!";
+            this.maximumLabel.Visible = false;
             // 
             // EventMonthlyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(450, 184);
+            this.ClientSize = new System.Drawing.Size(450, 199);
             this.Controls.Add(this.maximumLabel);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dateLabel);

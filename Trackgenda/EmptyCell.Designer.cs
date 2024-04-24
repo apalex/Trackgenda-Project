@@ -60,6 +60,7 @@
             // 
             // panel4
             // 
+            this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
@@ -79,6 +80,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
             this.Name = "EmptyCell";
             this.Size = new System.Drawing.Size(302, 200);
+            this.Load += new System.EventHandler(this.EmptyCell_Load);
             this.ResumeLayout(false);
 
         }

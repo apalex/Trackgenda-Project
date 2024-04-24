@@ -16,5 +16,18 @@ namespace Trackgenda
         {
             InitializeComponent();
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TODOForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                DraggeableForms.Drag(this.Handle);
+            }
+        }
     }
 }
