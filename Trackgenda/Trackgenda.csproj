@@ -126,6 +126,12 @@
     <Compile Include="Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CellWeekly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CellWeekly.Designer.cs">
+      <DependentUpon>CellWeekly.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmptyCell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CellWeekly.resx">
+      <DependentUpon>CellWeekly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmptyCell.resx">
       <DependentUpon>EmptyCell.cs</DependentUpon>

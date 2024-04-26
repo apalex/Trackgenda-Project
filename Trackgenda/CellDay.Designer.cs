@@ -54,6 +54,7 @@
             this.event1Label.Name = "event1Label";
             this.event1Label.Size = new System.Drawing.Size(0, 25);
             this.event1Label.TabIndex = 1;
+            this.event1Label.Click += new System.EventHandler(this.event1Label_Click);
             // 
             // event2Label
             // 
@@ -64,6 +65,7 @@
             this.event2Label.Name = "event2Label";
             this.event2Label.Size = new System.Drawing.Size(0, 25);
             this.event2Label.TabIndex = 2;
+            this.event2Label.Click += new System.EventHandler(this.event2Label_Click);
             // 
             // event3Label
             // 
@@ -74,6 +76,7 @@
             this.event3Label.Name = "event3Label";
             this.event3Label.Size = new System.Drawing.Size(0, 25);
             this.event3Label.TabIndex = 3;
+            this.event3Label.Click += new System.EventHandler(this.event3Label_Click);
             // 
             // CellDay
             // 

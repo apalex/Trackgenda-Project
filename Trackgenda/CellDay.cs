@@ -108,13 +108,54 @@ namespace Trackgenda
 
         private void CellDay_Click(object sender, EventArgs e)
         {
-            EventMonthlyForm form = new EventMonthlyForm(UID,Month,Day,Year);
+            EventMonthlyForm form = new EventMonthlyForm(UID,Month,Day,Year,false,-1);
             form.Show();
         }
 
         private string checkThemeMode()
         {
             return dbConn.getUserTheme(uid);
+        }
+
+        private void event1Label_Click(object sender, EventArgs e)
+        {
+            if (event1Label.Text.Length == 0)
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, false, -1);
+                form.Show();
+            } else
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, true, 0);
+                form.Show();
+            }
+        }
+
+        private void event2Label_Click(object sender, EventArgs e)
+        {
+            if (event2Label.Text.Length == 0)
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, false, -1);
+                form.Show();
+            }
+            else
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, true, 1);
+                form.Show();
+            }
+        }
+
+        private void event3Label_Click(object sender, EventArgs e)
+        {
+            if (event3Label.Text.Length == 0)
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, false, -1);
+                form.Show();
+            }
+            else
+            {
+                EventMonthlyForm form = new EventMonthlyForm(UID, Month, Day, Year, true, 2);
+                form.Show();
+            }
         }
 
         private void changeThemeMode()

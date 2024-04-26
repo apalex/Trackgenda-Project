@@ -81,7 +81,7 @@ namespace Trackgenda
         }
 
         // Registration
-        public bool InsertUser(string firstName,string lastName, string email,string username, string password)
+        public bool InsertUser(string firstName, string lastName, string email, string username, string password)
         {
             query = $"INSERT INTO user_info (first_name,last_name,u_email,username,u_password) VALUES ('{firstName}','{lastName}','{email}','{username}','{password}');";
             try
@@ -249,7 +249,7 @@ namespace Trackgenda
             }
         }
 
-        public int getEventLength(int uid,string date)
+        public int getEventLength(int uid, string date)
         {
             int numEvents = 0;
             query = $"SELECT COUNT(mevent_date) FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' GROUP BY uid;";
@@ -265,7 +265,7 @@ namespace Trackgenda
             return numEvents;
         }
 
-        public string getEventDesc(int uid,int index,string date)
+        public string getEventDesc(int uid, int index, string date)
         {
             string eventDesc = "";
             query = $"SELECT mevent_desc FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' ORDER BY meventid LIMIT 1 OFFSET {index};";
@@ -277,6 +277,29 @@ namespace Trackgenda
                 return eventDesc;
             }
             return eventDesc;
+        }
+
+        public bool setEventDesc(int uid, int index, string date, string newDesc)
+        {
+            query = $"UPDATE monthly_event SET mevent_desc = '{newDesc}' WHERE meventid = (SELECT meventid FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' ORDER BY meventid LIMIT 1 OFFSET {index});";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
         }
 
         // Change Background

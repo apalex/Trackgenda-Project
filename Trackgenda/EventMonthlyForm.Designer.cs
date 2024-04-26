@@ -34,6 +34,7 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.maximumLabel = new System.Windows.Forms.Label();
+            this.editButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exitButton
@@ -77,7 +78,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(175, 148);
+            this.addButton.Location = new System.Drawing.Point(181, 148);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(90, 39);
             this.addButton.TabIndex = 30;
@@ -97,11 +98,29 @@
             this.maximumLabel.Text = "Maximum amount of 3 events reached!";
             this.maximumLabel.Visible = false;
             // 
+            // editButton
+            // 
+            this.editButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.editButton.BackColor = System.Drawing.Color.White;
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.Black;
+            this.editButton.Location = new System.Drawing.Point(165, 148);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(133, 39);
+            this.editButton.TabIndex = 32;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Visible = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // EventMonthlyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(450, 199);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.maximumLabel);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dateLabel);
@@ -126,5 +145,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label maximumLabel;
+        private System.Windows.Forms.Button editButton;
     }
 }

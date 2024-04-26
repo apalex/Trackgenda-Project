@@ -37,8 +37,17 @@ namespace Trackgenda
         private const int HTBOTTOM = 15;
         private const int HTBOTTOMLEFT = 16;
         private const int HTBOTTOMRIGHT = 17;
-        // Bitmap Month Emoji's
+        // Bitmap Emoji's
         private Bitmap monthImage;
+        private Bitmap weekImage;
+        // Get Start of Week DateTime's
+        private static DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
+        private static DateTime monday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+        private static DateTime tuesday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Tuesday);
+        private static DateTime wednesday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Wednesday);
+        private static DateTime thursday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Thursday);
+        private static DateTime friday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Friday);
+        private static DateTime saturday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Saturday);
 
         public CalendarForm(int uid)
         {
@@ -96,7 +105,9 @@ namespace Trackgenda
             this.Select();
             currentTimeTimer.Start();
             studyDashboardForm.MdiParent = this;
+            tabControl1.SelectedIndex = 3;
             displayDays();
+            displayWeekly();
             changeThemeMode();
         }
 
@@ -179,19 +190,19 @@ namespace Trackgenda
 
         private void stopwatchButton_Click(object sender, EventArgs e)
         {
-            StopwatchForm form = new StopwatchForm();
+            StopwatchForm form = new StopwatchForm(uid);
             form.Show();
         }
 
         private void factButton_Click(object sender, EventArgs e)
         {
-            FactForm form = new FactForm();
+            FactForm form = new FactForm(uid);
             form.Show();
         }
 
         private void motivationalButton_Click(object sender, EventArgs e)
         {
-            MotivionalQuoteForm form = new MotivionalQuoteForm();
+            MotivionalQuoteForm form = new MotivionalQuoteForm(uid);
             form.Show();
         }
 
@@ -376,10 +387,7 @@ namespace Trackgenda
             backgroundForm = new BackgroundForm(uid);
             if (backgroundDashboardShow)
             {
-                if (backgroundForm.ShowDialog() == DialogResult.OK)
-                {
-                    //this.Close();
-                }
+                backgroundForm.Show();
             } else
             {
                 backgroundForm.Close();
@@ -388,7 +396,7 @@ namespace Trackgenda
 
         private void todoButton_Click(object sender, EventArgs e)
         {
-            TODOForm form = new TODOForm();
+            TODOForm form = new TODOForm(uid);
             form.Show();
         }
 
@@ -554,6 +562,116 @@ namespace Trackgenda
 
                 }
             }
+        }
+
+        private void displayWeekly()
+        {
+            updateDateLabels();
+            changeImageWeekly(sunday.Month);
+            int cellsUsed = 0;
+            for (int i = 0; i < 77; i++)
+            {
+                CellWeekly cw = new CellWeekly(uid, "", 5);
+                cellsUsed++;
+                string date = $"";
+                //if (i == 0 || i == 7 || i == 14 || i == 21 || i == 28 || i == 35 || i == 42 || i == 49 || i == 56 || i == 63 || i == 70 || i == 77)
+                //{
+                //    cw = new CellWeekly(uid, "", 5);
+                //}
+                weeklyPanel.Controls.Add(cw);
+            }
+        }
+
+        private void changeImageWeekly(int month)
+        {
+            switch (month)
+            {
+                case 1:
+                    weekImage = Properties.Resources.january;
+                    break;
+                case 2:
+                    weekImage = Properties.Resources.february;
+                    break;
+                case 3:
+                    weekImage = Properties.Resources.march;
+                    break;
+                case 4:
+                    weekImage = Properties.Resources.april;
+                    break;
+                case 5:
+                    weekImage = Properties.Resources.may;
+                    break;
+                case 6:
+                    weekImage = Properties.Resources.june;
+                    break;
+                case 7:
+                    weekImage = Properties.Resources.july;
+                    break;
+                case 8:
+                    weekImage = Properties.Resources.august;
+                    break;
+                case 9:
+                    weekImage = Properties.Resources.september;
+                    break;
+                case 10:
+                    weekImage = Properties.Resources.october;
+                    break;
+                case 11:
+                    weekImage = Properties.Resources.november;
+                    break;
+                case 12:
+                    weekImage = Properties.Resources.december;
+                    break;
+            }
+            weekPictureBox.Image = weekImage;
+        }
+
+        private void monthlyButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void weeklyButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void nextWeeklyButton_Click(object sender, EventArgs e)
+        {
+            weeklyPanel.Controls.Clear();
+            sunday = sunday.AddDays(7);
+            monday = monday.AddDays(7);
+            tuesday = tuesday.AddDays(7);
+            wednesday = wednesday.AddDays(7);
+            thursday = thursday.AddDays(7);
+            friday = friday.AddDays(7);
+            saturday = saturday.AddDays(7);
+            displayWeekly();
+        }
+
+        private void previousWeeklyButton_Click(object sender, EventArgs e)
+        {
+            weeklyPanel.Controls.Clear();
+            sunday = sunday.AddDays(-7);
+            monday = monday.AddDays(-7);
+            tuesday = tuesday.AddDays(-7);
+            wednesday = wednesday.AddDays(-7);
+            thursday = thursday.AddDays(-7);
+            friday = friday.AddDays(-7);
+            saturday = saturday.AddDays(-7);
+            displayWeekly();
+        }
+    
+        private void updateDateLabels()
+        {
+            sundayDateLabel.Text = $"{sunday.Month}/{sunday.Day}/{sunday.Year}";
+            mondayDateLabel.Text = $"{monday.Month}/{monday.Day}/{monday.Year}";
+            tuesdayDateLabel.Text = $"{tuesday.Month}/{tuesday.Day}/{tuesday.Year}";
+            wednesdayDateLabel.Text = $"{wednesday.Month}/{wednesday.Day}/{wednesday.Year}";
+            thursdayDateLabel.Text = $"{thursday.Month}/{thursday.Day}/{thursday.Year}";
+            fridayDateLabel.Text = $"{friday.Month}/{friday.Day}/{friday.Year}";
+            saturdayDateLabel.Text = $"{saturday.Month}/{saturday.Day}/{saturday.Year}";
+            weeklyDisplayLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(sunday.Month)} {sunday.Year}";
         }
     }
 }
