@@ -152,6 +152,12 @@
     <Compile Include="EventMonthlyForm.Designer.cs">
       <DependentUpon>EventMonthlyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventWeeklyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventWeeklyForm.Designer.cs">
+      <DependentUpon>EventWeeklyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FactForm.cs">
       <SubType>Form</SubType>
     </Compile>

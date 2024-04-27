@@ -9,8 +9,7 @@ namespace Trackgenda
     {
         private int uid,month,day,year;
         private DatabaseConnection dbConn;
-        private string date;
-        private string theme;
+        private string date, theme;
         public CellDay(int uid, int month, int day, int year)
         {
             UID = uid;
@@ -62,7 +61,7 @@ namespace Trackgenda
         {
             if (theme == "Light")
             {
-                this.BackColor = Color.Azure;
+                this.BackColor = Color.White;
             }
             else
             {

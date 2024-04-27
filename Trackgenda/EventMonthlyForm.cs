@@ -104,12 +104,17 @@ namespace Trackgenda
         private void EventMonthlyForm_Load(object sender, EventArgs e)
         {
             uid = UID;
-            if (month > 9)
-            {
-                date = $"{Month}/{Day}/{Year}";
-            } else
+            if (month < 9)
             {
                 date = $"0{Month}/{Day}/{Year}";
+            }
+            if (day < 9)
+            {
+                date = $"{Month}/0{Day}/{Year}";
+            }
+            if (day < 9 && month < 9)
+            {
+                date = $"0{Month}/0{Day}/{Year}";
             }
             dateLabel.Text = date;
 

@@ -39,6 +39,10 @@
             this.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
             this.Name = "CellWeekly";
             this.Size = new System.Drawing.Size(300, 100);
+            this.Load += new System.EventHandler(this.CellWeekly_Load);
+            this.Click += new System.EventHandler(this.CellWeekly_Click);
+            this.MouseLeave += new System.EventHandler(this.CellWeekly_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.CellWeekly_MouseHover);
             this.ResumeLayout(false);
 
         }

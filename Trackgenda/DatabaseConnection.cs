@@ -362,5 +362,18 @@ namespace Trackgenda
             }
             return backgroundPath;
         }
+
+        // Weekly Calendar
+        public string getWeeklyBackground(int uid)
+        {
+            query = $"SELECT wevent_background FROM weekly_event WHERE UID = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                return query;
+            }
+            return query;
+        }
     }
 }

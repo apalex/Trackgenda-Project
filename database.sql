@@ -26,3 +26,12 @@ CREATE TABLE IF NOT EXISTS user_settings (
 	backgroundimage VARCHAR(255) NOT NULL,
 	CONSTRAINT FK_USET_UID FOREIGN KEY (uid) REFERENCES user_info(uid)
 );
+
+CREATE TABLE IF NOT EXISTS weekly_event (
+	weventid INT AUTO_INCREMENT PRIMARY KEY,
+	uid INT NOT NULL.
+	wevent_date VARCHAR(255) NOT NULL,
+	wevent_desc VARCHAR(255) NOT NULL,
+	wevent_background VARCHAR(255) NOT NULL,
+	CONSTRAINT FK_WEVENT_UID FOREIGN KEY (uid) REFERENCES user_info(uid)
+);
