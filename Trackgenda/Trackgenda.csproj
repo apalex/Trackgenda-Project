@@ -231,6 +231,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CellWeekly.resx">
       <DependentUpon>CellWeekly.cs</DependentUpon>
@@ -243,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventMonthlyForm.resx">
       <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventWeeklyForm.resx">
+      <DependentUpon>EventWeeklyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FactForm.resx">
       <DependentUpon>FactForm.cs</DependentUpon>

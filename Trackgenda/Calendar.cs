@@ -569,78 +569,23 @@ namespace Trackgenda
             updateDateLabels();
             changeImageWeekly();
             int cellsUsed = 0;
+            DateTime[] daysOfWeek = { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
             for (int i = 0; i < 77; i++)
             {
                 cellsUsed++;
-                string date = "";
-                // All Sunday Cells
-                if (i == 0 || i % 7 == 0)
-                {
-                    date = dateAssign(sunday.Month, sunday.Day, sunday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date,i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Monday Cells
-                else if (i == 1 || i - 1 % 7 == 0)
-                {
-                    date = dateAssign(monday.Month, monday.Day, monday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Tuesday Cells
-                else if (i == 2 || i - 2 % 7 == 0)
-                {
-                    date = dateAssign(tuesday.Month, tuesday.Day, tuesday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Wednesday Cells
-                else if (i == 3 || i - 3 % 7 == 0)
-                {
-                    date = dateAssign(wednesday.Month, wednesday.Day, wednesday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Thursday Cells
-                else if (i == 4 || i - 4 % 7 == 0)
-                {
-                    date = dateAssign(thursday.Month, thursday.Day, thursday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Fruday Cells
-                else if (i == 5 || i - 5 % 7 == 0)
-                {
-                    date = dateAssign(friday.Month, friday.Day, friday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
-                // All Saturday Cells
-                else
-                {
-                    date = dateAssign(saturday.Month, saturday.Day, saturday.Year);
-                    CellWeekly cw = new CellWeekly(uid, date, i);
-                    weeklyPanel.Controls.Add(cw);
-                }
+                string date;
+                int dayIndex = i % 7;
+                date = dateAssign(daysOfWeek[dayIndex].Month, daysOfWeek[dayIndex].Day, daysOfWeek[dayIndex].Year);
+                CellWeekly cw = new CellWeekly(uid, date, i);
+                weeklyPanel.Controls.Add(cw);
             }
         }
 
-        private string dateAssign(int month,int day, int year)
+        private string dateAssign(int month, int day, int year)
         {
-            string date = "";
-            if (month < 9)
-            {
-                date = $"0{month}/{day}/{year}";
-            }
-            if (day < 9)
-            {
-                date = $"{month}/0{day}/{year}";
-            }
-            if (day < 9 && month < 9)
-            {
-                date = $"0{month}/0{day}/{year}";
-            }
-            return date;
+            string formattedMonth = (month < 10) ? $"0{month}" : $"{month}";
+            string formattedDay = (day < 10) ? $"0{day}" : $"{day}";
+            return $"{formattedMonth}/{formattedDay}/{year}";
         }
 
         private void changeImageWeekly()

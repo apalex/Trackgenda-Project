@@ -375,5 +375,78 @@ namespace Trackgenda
             }
             return query;
         }
+
+        public bool checkExistWeeklyEvent(int uid, string event_date)
+        {
+            query = $"SELECT * FROM weekly_event WHERE uid = {uid} AND wevent_date = '{event_date}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public string getWeeklyEventDesc(int uid, string date)
+        {
+            string eventDesc = "";
+            query = $"SELECT wevent_desc FROM weekly_event WHERE uid = {uid} AND wevent_date = '{date}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                eventDesc = Convert.ToString(reader);
+                return eventDesc;
+            }
+            return eventDesc;
+        }
+
+        public bool addWeeklyEvent(int uid, string date, string eventDesc, string eventBackground)
+        {
+            query = $"INSERT INTO weekly_event (uid,wevent_date,wevent_desc,wevent_background) VALUES ('{uid}','{date}','{eventDesc}','{eventBackground}');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+        }
+
+        public bool editWeeklyEvent(int uid,string newDesc, string background,string date)
+        {
+            query = $"UPDATE weekly_event SET wevent_desc = '{newDesc}',wevent_background = '{background}' WHERE uid = {uid} AND wevent_date = '{date}';";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
     }
 }

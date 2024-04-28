@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS user_settings (
 
 CREATE TABLE IF NOT EXISTS weekly_event (
 	weventid INT AUTO_INCREMENT PRIMARY KEY,
-	uid INT NOT NULL.
+	uid INT NOT NULL,
 	wevent_date VARCHAR(255) NOT NULL,
 	wevent_desc VARCHAR(255) NOT NULL,
 	wevent_background VARCHAR(255) NOT NULL,

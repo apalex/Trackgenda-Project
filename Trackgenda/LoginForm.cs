@@ -82,7 +82,7 @@ namespace Trackgenda
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.loginButton.Select();
+            this.Select();
         }
     }
 }

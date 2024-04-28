@@ -50,7 +50,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(38, 195);
+            this.usernameLabel.Location = new System.Drawing.Point(51, 195);
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(150, 33);
@@ -61,7 +61,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(38, 291);
+            this.passwordLabel.Location = new System.Drawing.Point(51, 291);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(143, 33);
@@ -70,7 +70,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(44, 332);
+            this.passwordTextBox.Location = new System.Drawing.Point(57, 332);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -79,7 +79,7 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(44, 237);
+            this.usernameTextBox.Location = new System.Drawing.Point(57, 237);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(332, 26);
@@ -87,14 +87,16 @@
             // 
             // loginButton
             // 
+            this.loginButton.BackColor = System.Drawing.Color.White;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(44, 389);
+            this.loginButton.Location = new System.Drawing.Point(57, 389);
             this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(334, 38);
+            this.loginButton.Size = new System.Drawing.Size(334, 43);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
-            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // registerLabel
@@ -124,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +137,7 @@
             // 
             this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.userPictureBox.Image = global::Trackgenda.Properties.Resources.Sample_User_Icon;
-            this.userPictureBox.Location = new System.Drawing.Point(185, 197);
+            this.userPictureBox.Location = new System.Drawing.Point(198, 197);
             this.userPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userPictureBox.Name = "userPictureBox";
             this.userPictureBox.Size = new System.Drawing.Size(45, 31);
@@ -147,7 +149,7 @@
             // 
             this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.lockPictureBox.Image = global::Trackgenda.Properties.Resources.Lock_icon;
-            this.lockPictureBox.Location = new System.Drawing.Point(185, 293);
+            this.lockPictureBox.Location = new System.Drawing.Point(198, 293);
             this.lockPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.Size = new System.Drawing.Size(45, 31);

@@ -28,7 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.eventDisplayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // eventDisplayLabel
+            // 
+            this.eventDisplayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.eventDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventDisplayLabel.Location = new System.Drawing.Point(32, 14);
+            this.eventDisplayLabel.Name = "eventDisplayLabel";
+            this.eventDisplayLabel.Size = new System.Drawing.Size(243, 69);
+            this.eventDisplayLabel.TabIndex = 0;
+            this.eventDisplayLabel.Text = "EVENT";
+            this.eventDisplayLabel.Click += new System.EventHandler(this.eventDisplayLabel_Click);
+            this.eventDisplayLabel.MouseLeave += new System.EventHandler(this.eventDisplayLabel_MouseLeave);
+            this.eventDisplayLabel.MouseHover += new System.EventHandler(this.eventDisplayLabel_MouseHover);
             // 
             // CellWeekly
             // 
@@ -36,7 +50,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
+            this.Controls.Add(this.eventDisplayLabel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CellWeekly";
             this.Size = new System.Drawing.Size(300, 100);
             this.Load += new System.EventHandler(this.CellWeekly_Load);
@@ -48,5 +63,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label eventDisplayLabel;
     }
 }
