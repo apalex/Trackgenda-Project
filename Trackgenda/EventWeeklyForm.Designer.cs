@@ -33,6 +33,7 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.descTextBox = new System.Windows.Forms.TextBox();
             this.controlButton = new System.Windows.Forms.Button();
+            this.colourComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // exitButton
@@ -52,6 +53,7 @@
             // 
             // dateLabel
             // 
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
             this.dateLabel.Location = new System.Drawing.Point(114, 42);
@@ -63,10 +65,11 @@
             // 
             // descTextBox
             // 
+            this.descTextBox.ForeColor = System.Drawing.Color.Black;
             this.descTextBox.Location = new System.Drawing.Point(50, 109);
             this.descTextBox.Multiline = true;
             this.descTextBox.Name = "descTextBox";
-            this.descTextBox.Size = new System.Drawing.Size(352, 101);
+            this.descTextBox.Size = new System.Drawing.Size(352, 92);
             this.descTextBox.TabIndex = 31;
             // 
             // controlButton
@@ -75,7 +78,8 @@
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.controlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlButton.Location = new System.Drawing.Point(170, 230);
+            this.controlButton.ForeColor = System.Drawing.Color.Black;
+            this.controlButton.Location = new System.Drawing.Point(157, 284);
             this.controlButton.Name = "controlButton";
             this.controlButton.Size = new System.Drawing.Size(115, 40);
             this.controlButton.TabIndex = 32;
@@ -83,13 +87,38 @@
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
+            // colourComboBox
+            // 
+            this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colourComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colourComboBox.ForeColor = System.Drawing.Color.Black;
+            this.colourComboBox.FormattingEnabled = true;
+            this.colourComboBox.Items.AddRange(new object[] {
+            "White",
+            "Silver",
+            "Gray",
+            "LightCoral",
+            "WhiteSmoke",
+            "Salmon",
+            "Gold",
+            "OliveDrab",
+            "YellowGreen",
+            "SkyBlue",
+            "Pink",
+            "MediumOrchid"});
+            this.colourComboBox.Location = new System.Drawing.Point(50, 227);
+            this.colourComboBox.Name = "colourComboBox";
+            this.colourComboBox.Size = new System.Drawing.Size(352, 28);
+            this.colourComboBox.TabIndex = 33;
+            // 
             // EventWeeklyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(450, 300);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(450, 375);
+            this.Controls.Add(this.colourComboBox);
             this.Controls.Add(this.controlButton);
             this.Controls.Add(this.descTextBox);
             this.Controls.Add(this.dateLabel);
@@ -112,5 +141,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TextBox descTextBox;
         private System.Windows.Forms.Button controlButton;
+        private System.Windows.Forms.ComboBox colourComboBox;
     }
 }

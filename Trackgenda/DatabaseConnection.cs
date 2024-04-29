@@ -364,16 +364,18 @@ namespace Trackgenda
         }
 
         // Weekly Calendar
-        public string getWeeklyBackground(int uid)
+        public string getWeeklyBackground(int uid, string event_date)
         {
-            query = $"SELECT wevent_background FROM weekly_event WHERE UID = {uid};";
+            string background = "";
+            query = $"SELECT wevent_background FROM weekly_event WHERE uid = {uid} AND wevent_date = '{event_date}';";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             var reader = cmd.ExecuteScalar();
             if (reader != null)
             {
-                return query;
+                background = Convert.ToString(reader);
+                return background;
             }
-            return query;
+            return background;
         }
 
         public bool checkExistWeeklyEvent(int uid, string event_date)

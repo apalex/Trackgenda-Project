@@ -40,7 +40,6 @@ namespace Trackgenda
 
         private void CellWeekly_MouseHover(object sender, EventArgs e)
         {
-            // Make a if else statement to check if exist in db, and if it does, then get the background color from db
             if (theme == "Light")
             {
                 this.BackColor = Color.Azure;
@@ -57,9 +56,15 @@ namespace Trackgenda
                 this.BackColor = Color.White;
             } else
             {
-                this.BackColor = Color.FromArgb(64, 64, 64);
+                if (dbConn.checkExistWeeklyEvent(UID, $"{Date} | {getTime()}"))
+                {
+                    this.BackColor = Color.FromName(dbConn.getWeeklyBackground(UID, $"{Date} | {getTime()}"));
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(64, 64, 64);
+                }
             }
-            //this.BackColor = Color.FromName(dbConn.getWeeklyBackground(uid));
         }
 
         private void CellWeekly_Click(object sender, EventArgs e)
@@ -79,7 +84,10 @@ namespace Trackgenda
             {
                 eventDisplayLabel.Text = "";
             }
-            //this.BackColor = Color.FromName(dbConn.getWeeklyBackground(uid));
+            if (dbConn.checkExistWeeklyEvent(UID,$"{date} | {getTime()}"))
+            {
+                this.BackColor = Color.FromName(dbConn.getWeeklyBackground(uid, $"{Date} | {getTime()}"));
+            }
             dbConn.CloseConnection();
         }
 
@@ -108,7 +116,6 @@ namespace Trackgenda
 
         private void eventDisplayLabel_MouseHover(object sender, EventArgs e)
         {
-            // Make a if else statement to check if exist in db, and if it does, then get the background color from db
             if (theme == "Light")
             {
                 this.BackColor = Color.Azure;
@@ -127,9 +134,15 @@ namespace Trackgenda
             }
             else
             {
-                this.BackColor = Color.FromArgb(64, 64, 64);
+                if (dbConn.checkExistWeeklyEvent(UID, $"{Date} | {getTime()}"))
+                {
+                    this.BackColor = Color.FromName(dbConn.getWeeklyBackground(UID, $"{Date} | {getTime()}"));
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(64, 64, 64);
+                }
             }
-            //this.BackColor = Color.FromName(dbConn.getWeeklyBackground(uid));
         }
 
         private void changeLightMode()
