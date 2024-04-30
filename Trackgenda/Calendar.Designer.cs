@@ -69,6 +69,12 @@
             this.dashboardTab = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.settingsTab = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.calendarWeeklyTab = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
@@ -102,6 +108,11 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.button3 = new System.Windows.Forms.Button();
             this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -126,9 +137,9 @@
             this.upperBar.Controls.Add(this.logoLabel);
             this.upperBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.upperBar.ForeColor = System.Drawing.Color.Black;
-            this.upperBar.Location = new System.Drawing.Point(220, 0);
+            this.upperBar.Location = new System.Drawing.Point(0, 0);
             this.upperBar.Name = "upperBar";
-            this.upperBar.Size = new System.Drawing.Size(1700, 51);
+            this.upperBar.Size = new System.Drawing.Size(1920, 51);
             this.upperBar.TabIndex = 2;
             this.upperBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -137,7 +148,7 @@
             this.currentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentTimeLabel.ForeColor = System.Drawing.Color.White;
-            this.currentTimeLabel.Location = new System.Drawing.Point(1417, 15);
+            this.currentTimeLabel.Location = new System.Drawing.Point(1637, 15);
             this.currentTimeLabel.Name = "currentTimeLabel";
             this.currentTimeLabel.Size = new System.Drawing.Size(86, 30);
             this.currentTimeLabel.TabIndex = 4;
@@ -152,7 +163,7 @@
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.White;
             this.minimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeButton.Image")));
-            this.minimizeButton.Location = new System.Drawing.Point(1520, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(1740, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(60, 50);
             this.minimizeButton.TabIndex = 3;
@@ -169,7 +180,7 @@
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.White;
             this.maximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("maximizeButton.Image")));
-            this.maximizeButton.Location = new System.Drawing.Point(1580, 0);
+            this.maximizeButton.Location = new System.Drawing.Point(1800, 0);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(60, 50);
             this.maximizeButton.TabIndex = 3;
@@ -185,7 +196,7 @@
             this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.XButton.ForeColor = System.Drawing.Color.White;
-            this.XButton.Location = new System.Drawing.Point(1640, 0);
+            this.XButton.Location = new System.Drawing.Point(1860, 0);
             this.XButton.Name = "XButton";
             this.XButton.Size = new System.Drawing.Size(60, 50);
             this.XButton.TabIndex = 3;
@@ -234,9 +245,9 @@
             this.sidePanel.Controls.Add(this.exitButton);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.ForeColor = System.Drawing.Color.Black;
-            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Location = new System.Drawing.Point(0, 51);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(220, 1080);
+            this.sidePanel.Size = new System.Drawing.Size(220, 1029);
             this.sidePanel.TabIndex = 4;
             // 
             // sideLogoPicture
@@ -493,6 +504,7 @@
             // 
             // monthPictureBox
             // 
+            this.monthPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.monthPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("monthPictureBox.Image")));
             this.monthPictureBox.Location = new System.Drawing.Point(1019, 0);
             this.monthPictureBox.Name = "monthPictureBox";
@@ -503,6 +515,7 @@
             // 
             // dateLabel
             // 
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.Location = new System.Drawing.Point(1047, 0);
             this.dateLabel.Name = "dateLabel";
@@ -514,6 +527,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1529, 49);
             this.label6.Name = "label6";
@@ -524,6 +538,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(1734, 49);
             this.label7.Name = "label7";
@@ -534,6 +549,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1314, 49);
             this.label8.Name = "label8";
@@ -544,6 +560,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(898, 49);
             this.label4.Name = "label4";
@@ -554,6 +571,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(1096, 49);
             this.label5.Name = "label5";
@@ -564,6 +582,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(693, 49);
             this.label2.Name = "label2";
@@ -574,6 +593,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(486, 49);
             this.label1.Name = "label1";
@@ -643,6 +663,17 @@
             // settingsTab
             // 
             this.settingsTab.BackColor = System.Drawing.Color.White;
+            this.settingsTab.Controls.Add(this.button3);
+            this.settingsTab.Controls.Add(this.radioButton2);
+            this.settingsTab.Controls.Add(this.radioButton1);
+            this.settingsTab.Controls.Add(this.button2);
+            this.settingsTab.Controls.Add(this.button1);
+            this.settingsTab.Controls.Add(this.textBox3);
+            this.settingsTab.Controls.Add(this.textBox4);
+            this.settingsTab.Controls.Add(this.textBox2);
+            this.settingsTab.Controls.Add(this.textBox1);
+            this.settingsTab.Controls.Add(this.label22);
+            this.settingsTab.Controls.Add(this.label21);
             this.settingsTab.Controls.Add(this.label9);
             this.settingsTab.Location = new System.Drawing.Point(4, 29);
             this.settingsTab.Name = "settingsTab";
@@ -651,14 +682,63 @@
             this.settingsTab.TabIndex = 2;
             this.settingsTab.Text = "tabPage1";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(276, 402);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 26);
+            this.textBox3.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(276, 339);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(200, 26);
+            this.textBox4.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(277, 157);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 26);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(277, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 26);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(677, 37);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(107, 32);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Theme";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(271, 283);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(260, 32);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Change Password";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(938, 274);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(272, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 20);
+            this.label9.Size = new System.Drawing.Size(197, 32);
             this.label9.TabIndex = 0;
-            this.label9.Text = "settings";
+            this.label9.Text = "Update Email";
             // 
             // calendarWeeklyTab
             // 
@@ -704,6 +784,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(404, 825);
             this.label20.Name = "label20";
@@ -714,6 +795,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(404, 760);
             this.label18.Name = "label18";
@@ -724,6 +806,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(404, 689);
             this.label19.Name = "label19";
@@ -734,6 +817,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(404, 620);
             this.label16.Name = "label16";
@@ -744,6 +828,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(404, 552);
             this.label17.Name = "label17";
@@ -754,6 +839,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(404, 486);
             this.label14.Name = "label14";
@@ -764,6 +850,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(404, 420);
             this.label15.Name = "label15";
@@ -774,6 +861,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(404, 356);
             this.label12.Name = "label12";
@@ -784,6 +872,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(404, 287);
             this.label13.Name = "label13";
@@ -794,6 +883,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(404, 222);
             this.label11.Name = "label11";
@@ -804,6 +894,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(410, 155);
             this.label10.Name = "label10";
@@ -814,6 +905,7 @@
             // saturdayDateLabel
             // 
             this.saturdayDateLabel.AutoSize = true;
+            this.saturdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.saturdayDateLabel.Location = new System.Drawing.Point(1742, 107);
             this.saturdayDateLabel.Name = "saturdayDateLabel";
             this.saturdayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -823,6 +915,7 @@
             // fridayDateLabel
             // 
             this.fridayDateLabel.AutoSize = true;
+            this.fridayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.fridayDateLabel.Location = new System.Drawing.Point(1538, 107);
             this.fridayDateLabel.Name = "fridayDateLabel";
             this.fridayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -832,6 +925,7 @@
             // thursdayDateLabel
             // 
             this.thursdayDateLabel.AutoSize = true;
+            this.thursdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.thursdayDateLabel.Location = new System.Drawing.Point(1337, 107);
             this.thursdayDateLabel.Name = "thursdayDateLabel";
             this.thursdayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -841,6 +935,7 @@
             // wednesdayDateLabel
             // 
             this.wednesdayDateLabel.AutoSize = true;
+            this.wednesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.wednesdayDateLabel.Location = new System.Drawing.Point(1138, 107);
             this.wednesdayDateLabel.Name = "wednesdayDateLabel";
             this.wednesdayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -850,6 +945,7 @@
             // tuesdayDateLabel
             // 
             this.tuesdayDateLabel.AutoSize = true;
+            this.tuesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.tuesdayDateLabel.Location = new System.Drawing.Point(935, 107);
             this.tuesdayDateLabel.Name = "tuesdayDateLabel";
             this.tuesdayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -859,6 +955,7 @@
             // mondayDateLabel
             // 
             this.mondayDateLabel.AutoSize = true;
+            this.mondayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.mondayDateLabel.Location = new System.Drawing.Point(731, 107);
             this.mondayDateLabel.Name = "mondayDateLabel";
             this.mondayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -868,6 +965,7 @@
             // sundayDateLabel
             // 
             this.sundayDateLabel.AutoSize = true;
+            this.sundayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.sundayDateLabel.Location = new System.Drawing.Point(529, 107);
             this.sundayDateLabel.Name = "sundayDateLabel";
             this.sundayDateLabel.Size = new System.Drawing.Size(89, 20);
@@ -924,6 +1022,7 @@
             // 
             // weekPictureBox
             // 
+            this.weekPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.weekPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("weekPictureBox.Image")));
             this.weekPictureBox.Location = new System.Drawing.Point(1021, 32);
             this.weekPictureBox.Name = "weekPictureBox";
@@ -934,6 +1033,7 @@
             // 
             // weeklyDisplayLabel
             // 
+            this.weeklyDisplayLabel.BackColor = System.Drawing.Color.Transparent;
             this.weeklyDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weeklyDisplayLabel.Location = new System.Drawing.Point(1049, 32);
             this.weeklyDisplayLabel.Name = "weeklyDisplayLabel";
@@ -945,6 +1045,7 @@
             // fridayLabel
             // 
             this.fridayLabel.AutoSize = true;
+            this.fridayLabel.BackColor = System.Drawing.Color.Transparent;
             this.fridayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayLabel.Location = new System.Drawing.Point(1542, 81);
             this.fridayLabel.Name = "fridayLabel";
@@ -955,6 +1056,7 @@
             // saturdayLabel
             // 
             this.saturdayLabel.AutoSize = true;
+            this.saturdayLabel.BackColor = System.Drawing.Color.Transparent;
             this.saturdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayLabel.Location = new System.Drawing.Point(1732, 81);
             this.saturdayLabel.Name = "saturdayLabel";
@@ -965,6 +1067,7 @@
             // thursdayLabel
             // 
             this.thursdayLabel.AutoSize = true;
+            this.thursdayLabel.BackColor = System.Drawing.Color.Transparent;
             this.thursdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayLabel.Location = new System.Drawing.Point(1325, 81);
             this.thursdayLabel.Name = "thursdayLabel";
@@ -975,6 +1078,7 @@
             // tuesdayLabel
             // 
             this.tuesdayLabel.AutoSize = true;
+            this.tuesdayLabel.BackColor = System.Drawing.Color.Transparent;
             this.tuesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayLabel.Location = new System.Drawing.Point(927, 81);
             this.tuesdayLabel.Name = "tuesdayLabel";
@@ -985,6 +1089,7 @@
             // wednesdayLabel
             // 
             this.wednesdayLabel.AutoSize = true;
+            this.wednesdayLabel.BackColor = System.Drawing.Color.Transparent;
             this.wednesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayLabel.Location = new System.Drawing.Point(1115, 81);
             this.wednesdayLabel.Name = "wednesdayLabel";
@@ -995,6 +1100,7 @@
             // mondayLabel
             // 
             this.mondayLabel.AutoSize = true;
+            this.mondayLabel.BackColor = System.Drawing.Color.Transparent;
             this.mondayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayLabel.Location = new System.Drawing.Point(728, 81);
             this.mondayLabel.Name = "mondayLabel";
@@ -1005,6 +1111,7 @@
             // sundayLabel
             // 
             this.sundayLabel.AutoSize = true;
+            this.sundayLabel.BackColor = System.Drawing.Color.Transparent;
             this.sundayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayLabel.Location = new System.Drawing.Point(528, 81);
             this.sundayLabel.Name = "sundayLabel";
@@ -1019,15 +1126,64 @@
             this.weeklyPanel.Size = new System.Drawing.Size(1465, 878);
             this.weeklyPanel.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(278, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 30);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(278, 459);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(199, 30);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Confirm";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(683, 105);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(69, 24);
+            this.radioButton1.TabIndex = 9;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Light";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(683, 159);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(68, 24);
+            this.radioButton2.TabIndex = 10;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Dark";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(683, 219);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(174, 30);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Change Theme";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.upperBar);
-            this.Controls.Add(this.sidePanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1095,7 +1251,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TabPage calendarWeeklyTab;
         private System.Windows.Forms.PictureBox monthPictureBox;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button nextWeeklyButton;
         private System.Windows.Forms.Button previousWeeklyButton;
         private System.Windows.Forms.PictureBox weekPictureBox;
@@ -1128,5 +1283,17 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

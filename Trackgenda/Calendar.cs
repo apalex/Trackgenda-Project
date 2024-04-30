@@ -458,19 +458,6 @@ namespace Trackgenda
             logoutButton.BackColor = Color.White;
             exitButton.BackColor = Color.White;
             exitButton.ForeColor = Color.Black;
-            // Calendar Monthly Tab
-            nextButton.BackColor = Color.White;
-            nextButton.ForeColor = Color.Black;
-            previousButton.BackColor = Color.White;
-            previousButton.ForeColor = Color.Black;
-            dateLabel.ForeColor = Color.Black;
-            label1.ForeColor = Color.Black;
-            label2.ForeColor = Color.Black;
-            label4.ForeColor = Color.Black;
-            label5.ForeColor = Color.Black;
-            label6.ForeColor = Color.Black;
-            label7.ForeColor = Color.Black;
-            label8.ForeColor = Color.Black;
             // Background Tabs
             checkFileBackground();
         }
@@ -517,50 +504,96 @@ namespace Trackgenda
             logoutButton.BackColor = Color.FromArgb(33, 33, 33);
             exitButton.BackColor = Color.FromArgb(33, 33, 33);
             exitButton.ForeColor = Color.White;
-            // Calendar Monthly Tab
-            nextButton.BackColor = Color.FromArgb(33, 33, 33);
-            nextButton.ForeColor = Color.White;
-            previousButton.BackColor = Color.FromArgb(33, 33, 33);
-            previousButton.ForeColor = Color.White;
-            dateLabel.ForeColor = Color.White;
-            label1.ForeColor = Color.White;
-            label2.ForeColor = Color.White;
-            label4.ForeColor = Color.White;
-            label5.ForeColor = Color.White;
-            label6.ForeColor = Color.White;
-            label7.ForeColor = Color.White;
-            label8.ForeColor = Color.White;
             // Background Tabs
             checkFileBackground();
         }
 
         private void checkFileBackground()
         {
-            if (dbConn.getBackgroundPath(uid).Length > 0)
+            string path = dbConn.getBackgroundPath(uid);
+            if (path.Length > 0)
             {
-                Bitmap image = (Bitmap)Image.FromFile(dbConn.getBackgroundPath(uid));
-                image = new Bitmap(image, monthlyCalendarTab.Width, monthlyCalendarTab.Height);
-                monthlyCalendarTab.BackgroundImage = image;
-                monthlyCalendarTab.BackColor = Color.Transparent;
-                dashboardTab.BackgroundImage = image;
-                dashboardTab.BackColor = Color.Transparent;
-                settingsTab.BackgroundImage= image;
-                settingsTab.BackColor = Color.Transparent;
-                calendarWeeklyTab.BackgroundImage = image;
-                calendarWeeklyTab.BackColor = Color.Transparent;
+                if (System.IO.Directory.Exists(path))
+                {
+                    Bitmap image = (Bitmap)Image.FromFile(dbConn.getBackgroundPath(uid));
+                    image = new Bitmap(image, monthlyCalendarTab.Width, monthlyCalendarTab.Height);
+                    monthlyCalendarTab.BackgroundImage = image;
+                    monthlyCalendarTab.BackColor = Color.Transparent;
+                    dashboardTab.BackgroundImage = image;
+                    dashboardTab.BackColor = Color.Transparent;
+                    settingsTab.BackgroundImage = image;
+                    settingsTab.BackColor = Color.Transparent;
+                    calendarWeeklyTab.BackgroundImage = image;
+                    calendarWeeklyTab.BackColor = Color.Transparent;
+                } else
+                {
+                    changeTabsTheme();
+                }
             } else
             {
-                if (checkThemeMode() == "Light")
-                {
-                    monthlyCalendarTab.BackColor = Color.White;
-                    dashboardTab.BackColor = Color.White;
-                    settingsTab.BackColor = Color.White;
-                    calendarWeeklyTab.BackColor = Color.White;
-                }
-                else
-                {
+                changeTabsTheme();
+            }
+        }
 
-                }
+        private void changeTabsTheme()
+        {
+            if (checkThemeMode() == "Light")
+            {
+                // Monthly
+                monthlyCalendarTab.BackColor = Color.White;
+                nextButton.BackColor = Color.White;
+                nextButton.ForeColor = Color.Black;
+                previousButton.BackColor = Color.White;
+                previousButton.ForeColor = Color.Black;
+                weeklyButton.BackColor = Color.White;
+                weeklyButton.ForeColor = Color.Black;
+                dateLabel.ForeColor = Color.Black;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
+                label6.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
+                label8.ForeColor = Color.Black;
+                // Dashboard
+                dashboardTab.BackColor = Color.White;
+                // Settings
+                settingsTab.BackColor = Color.White;
+                // Weekly
+                calendarWeeklyTab.BackColor = Color.White;
+                nextWeeklyButton.BackColor = Color.White;
+                nextWeeklyButton.ForeColor = Color.Black;
+                previousWeeklyButton.BackColor = Color.White;
+                previousWeeklyButton.ForeColor = Color.Black;
+                monthlyButton.BackColor = Color.White;
+                monthlyButton.ForeColor = Color.Black;
+            } else
+            {
+                // Monthly
+                nextButton.BackColor = Color.FromArgb(33, 33, 33);
+                nextButton.ForeColor = Color.White;
+                previousButton.BackColor = Color.FromArgb(33, 33, 33);
+                previousButton.ForeColor = Color.White;
+                dateLabel.ForeColor = Color.White;
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+                label5.ForeColor = Color.White;
+                label6.ForeColor = Color.White;
+                label7.ForeColor = Color.White;
+                label8.ForeColor = Color.White;
+                // Dashboard
+                dashboardTab.BackColor = Color.White;
+                // Settings
+                settingsTab.BackColor = Color.White;
+                // Weekly
+                calendarWeeklyTab.BackColor = Color.White;
+                nextWeeklyButton.BackColor = Color.White;
+                nextWeeklyButton.ForeColor = Color.Black;
+                previousWeeklyButton.BackColor = Color.White;
+                previousWeeklyButton.ForeColor = Color.Black;
+                monthlyButton.BackColor = Color.White;
+                monthlyButton.ForeColor = Color.Black;
             }
         }
 
@@ -679,5 +712,6 @@ namespace Trackgenda
             saturdayDateLabel.Text = $"{saturday.Month}/{saturday.Day}/{saturday.Year}";
             weeklyDisplayLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(sunday.Month)} {sunday.Year}";
         }
+
     }
 }

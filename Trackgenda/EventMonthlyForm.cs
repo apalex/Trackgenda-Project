@@ -98,18 +98,7 @@ namespace Trackgenda
         private void EventMonthlyForm_Load(object sender, EventArgs e)
         {
             uid = UID;
-            if (month < 9)
-            {
-                date = $"0{Month}/{Day}/{Year}";
-            }
-            if (day < 9)
-            {
-                date = $"{Month}/0{Day}/{Year}";
-            }
-            if (day < 9 && month < 9)
-            {
-                date = $"0{Month}/0{Day}/{Year}";
-            }
+            date = $"{Month:D2}/{Day:D2}/{Year}";
             dateLabel.Text = date;
 
             // Set a maximum of 3 events that can be saved in one cell
