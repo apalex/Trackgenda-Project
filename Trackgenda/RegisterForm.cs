@@ -183,6 +183,7 @@ namespace Trackgenda
             {
                 passwordTextBox.Text = "";
                 passwordTextBox.ForeColor = Color.Black;
+                passwordTextBox.PasswordChar = '*';
             }
         }
 
@@ -192,6 +193,7 @@ namespace Trackgenda
             {
                 confirmTextBox.Text = "";
                 confirmTextBox.ForeColor = Color.Black;
+                confirmTextBox.PasswordChar = '*';
             }
         }
 
@@ -237,6 +239,7 @@ namespace Trackgenda
             {
                 passwordTextBox.Text = "Password";
                 passwordTextBox.ForeColor = Color.DarkGray;
+                passwordTextBox.PasswordChar = '\0';
             }
         }
 
@@ -246,6 +249,7 @@ namespace Trackgenda
             {
                 confirmTextBox.Text = "Password";
                 confirmTextBox.ForeColor = Color.DarkGray;
+                confirmTextBox.PasswordChar = '\0';
             }
         }
 

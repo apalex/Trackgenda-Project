@@ -450,5 +450,103 @@ namespace Trackgenda
             }
             return false;
         }
+
+        // Settings
+        public bool checkExistEmail(int uid, string email)
+        {
+            query = $"SELECT * FROM user_info WHERE uid = {uid} AND u_email = '{email}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public bool updateEmail(int uid, string email)
+        {
+            query = $"UPDATE user_info SET u_email = '{email}' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
+
+        public bool checkPassword(int uid, string password)
+        {
+            query = $"SELECT * FROM user_info WHERE uid = {uid} AND u_password = '{password}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public bool updatePassword(int uid, string password)
+        {
+            query = $"UPDATE user_info SET u_password = '{password}' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
+
+        public bool changeTheme(int uid, string theme)
+        {
+            query = $"UPDATE user_settings SET theme = '{theme}' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
     }
 }

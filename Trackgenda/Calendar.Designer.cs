@@ -69,10 +69,15 @@
             this.dashboardTab = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.settingsTab = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.changeThemeButton = new System.Windows.Forms.Button();
+            this.darkRadioButton = new System.Windows.Forms.RadioButton();
+            this.lightRadioButton = new System.Windows.Forms.RadioButton();
+            this.confirmPasswordTextBox = new System.Windows.Forms.Button();
+            this.updateEmailButton = new System.Windows.Forms.Button();
+            this.newPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.currentPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.newEmailTextBox = new System.Windows.Forms.TextBox();
+            this.currentEmailTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -108,11 +113,6 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
             this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -412,6 +412,7 @@
             this.settingsButton.TabIndex = 17;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = false;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // logoutButton
             // 
@@ -663,15 +664,15 @@
             // settingsTab
             // 
             this.settingsTab.BackColor = System.Drawing.Color.White;
-            this.settingsTab.Controls.Add(this.button3);
-            this.settingsTab.Controls.Add(this.radioButton2);
-            this.settingsTab.Controls.Add(this.radioButton1);
-            this.settingsTab.Controls.Add(this.button2);
-            this.settingsTab.Controls.Add(this.button1);
-            this.settingsTab.Controls.Add(this.textBox3);
-            this.settingsTab.Controls.Add(this.textBox4);
-            this.settingsTab.Controls.Add(this.textBox2);
-            this.settingsTab.Controls.Add(this.textBox1);
+            this.settingsTab.Controls.Add(this.changeThemeButton);
+            this.settingsTab.Controls.Add(this.darkRadioButton);
+            this.settingsTab.Controls.Add(this.lightRadioButton);
+            this.settingsTab.Controls.Add(this.confirmPasswordTextBox);
+            this.settingsTab.Controls.Add(this.updateEmailButton);
+            this.settingsTab.Controls.Add(this.newPasswordTextBox);
+            this.settingsTab.Controls.Add(this.currentPasswordTextBox);
+            this.settingsTab.Controls.Add(this.newEmailTextBox);
+            this.settingsTab.Controls.Add(this.currentEmailTextBox);
             this.settingsTab.Controls.Add(this.label22);
             this.settingsTab.Controls.Add(this.label21);
             this.settingsTab.Controls.Add(this.label9);
@@ -682,33 +683,105 @@
             this.settingsTab.TabIndex = 2;
             this.settingsTab.Text = "tabPage1";
             // 
-            // textBox3
+            // changeThemeButton
             // 
-            this.textBox3.Location = new System.Drawing.Point(276, 402);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 26);
-            this.textBox3.TabIndex = 6;
+            this.changeThemeButton.Location = new System.Drawing.Point(683, 219);
+            this.changeThemeButton.Name = "changeThemeButton";
+            this.changeThemeButton.Size = new System.Drawing.Size(174, 30);
+            this.changeThemeButton.TabIndex = 11;
+            this.changeThemeButton.Text = "Change Theme";
+            this.changeThemeButton.UseVisualStyleBackColor = true;
+            this.changeThemeButton.Click += new System.EventHandler(this.changeThemeButton_Click);
             // 
-            // textBox4
+            // darkRadioButton
             // 
-            this.textBox4.Location = new System.Drawing.Point(276, 339);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 26);
-            this.textBox4.TabIndex = 5;
+            this.darkRadioButton.AutoSize = true;
+            this.darkRadioButton.Location = new System.Drawing.Point(683, 159);
+            this.darkRadioButton.Name = "darkRadioButton";
+            this.darkRadioButton.Size = new System.Drawing.Size(68, 24);
+            this.darkRadioButton.TabIndex = 10;
+            this.darkRadioButton.TabStop = true;
+            this.darkRadioButton.Text = "Dark";
+            this.darkRadioButton.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // lightRadioButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 4;
+            this.lightRadioButton.AutoSize = true;
+            this.lightRadioButton.Location = new System.Drawing.Point(683, 105);
+            this.lightRadioButton.Name = "lightRadioButton";
+            this.lightRadioButton.Size = new System.Drawing.Size(69, 24);
+            this.lightRadioButton.TabIndex = 9;
+            this.lightRadioButton.TabStop = true;
+            this.lightRadioButton.Text = "Light";
+            this.lightRadioButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // confirmPasswordTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(277, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 3;
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(278, 459);
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(199, 30);
+            this.confirmPasswordTextBox.TabIndex = 8;
+            this.confirmPasswordTextBox.Text = "Confirm";
+            this.confirmPasswordTextBox.UseVisualStyleBackColor = true;
+            this.confirmPasswordTextBox.Click += new System.EventHandler(this.confirmPasswordTextBox_Click);
+            // 
+            // updateEmailButton
+            // 
+            this.updateEmailButton.Location = new System.Drawing.Point(278, 214);
+            this.updateEmailButton.Name = "updateEmailButton";
+            this.updateEmailButton.Size = new System.Drawing.Size(199, 30);
+            this.updateEmailButton.TabIndex = 7;
+            this.updateEmailButton.Text = "Update";
+            this.updateEmailButton.UseVisualStyleBackColor = true;
+            this.updateEmailButton.Click += new System.EventHandler(this.updateEmailButton_Click);
+            // 
+            // newPasswordTextBox
+            // 
+            this.newPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.newPasswordTextBox.Location = new System.Drawing.Point(276, 402);
+            this.newPasswordTextBox.Name = "newPasswordTextBox";
+            this.newPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.newPasswordTextBox.TabIndex = 6;
+            this.newPasswordTextBox.Text = "New Password";
+            this.newPasswordTextBox.Enter += new System.EventHandler(this.newPasswordTextBox_Enter);
+            this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
+            // 
+            // currentPasswordTextBox
+            // 
+            this.currentPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.currentPasswordTextBox.Location = new System.Drawing.Point(276, 339);
+            this.currentPasswordTextBox.Name = "currentPasswordTextBox";
+            this.currentPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.currentPasswordTextBox.TabIndex = 5;
+            this.currentPasswordTextBox.Text = "Current Password";
+            this.currentPasswordTextBox.Enter += new System.EventHandler(this.currentPasswordTextBox_Enter);
+            this.currentPasswordTextBox.Leave += new System.EventHandler(this.currentPasswordTextBox_Leave);
+            // 
+            // newEmailTextBox
+            // 
+            this.newEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.newEmailTextBox.Location = new System.Drawing.Point(277, 157);
+            this.newEmailTextBox.Name = "newEmailTextBox";
+            this.newEmailTextBox.Size = new System.Drawing.Size(200, 30);
+            this.newEmailTextBox.TabIndex = 4;
+            this.newEmailTextBox.Text = "New Email";
+            this.newEmailTextBox.Enter += new System.EventHandler(this.newEmailTextBox_Enter);
+            this.newEmailTextBox.Leave += new System.EventHandler(this.newEmailTextBox_Leave);
+            // 
+            // currentEmailTextBox
+            // 
+            this.currentEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.currentEmailTextBox.Location = new System.Drawing.Point(277, 94);
+            this.currentEmailTextBox.Name = "currentEmailTextBox";
+            this.currentEmailTextBox.Size = new System.Drawing.Size(200, 30);
+            this.currentEmailTextBox.TabIndex = 3;
+            this.currentEmailTextBox.Text = "Current Email";
+            this.currentEmailTextBox.Enter += new System.EventHandler(this.currentEmailTextBox_Enter);
+            this.currentEmailTextBox.Leave += new System.EventHandler(this.currentEmailTextBox_Leave);
             // 
             // label22
             // 
@@ -1126,55 +1199,6 @@
             this.weeklyPanel.Size = new System.Drawing.Size(1465, 878);
             this.weeklyPanel.TabIndex = 11;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(278, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(278, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 30);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Confirm";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(683, 105);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 24);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Light";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(683, 159);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 24);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Dark";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(683, 219);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 30);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Change Theme";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1286,14 +1310,14 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox newPasswordTextBox;
+        private System.Windows.Forms.TextBox currentPasswordTextBox;
+        private System.Windows.Forms.TextBox newEmailTextBox;
+        private System.Windows.Forms.TextBox currentEmailTextBox;
+        private System.Windows.Forms.Button changeThemeButton;
+        private System.Windows.Forms.RadioButton darkRadioButton;
+        private System.Windows.Forms.RadioButton lightRadioButton;
+        private System.Windows.Forms.Button confirmPasswordTextBox;
+        private System.Windows.Forms.Button updateEmailButton;
     }
 }

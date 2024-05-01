@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -513,9 +517,9 @@ namespace Trackgenda
             string path = dbConn.getBackgroundPath(uid);
             if (path.Length > 0)
             {
-                if (System.IO.Directory.Exists(path))
+                if (File.Exists(path))
                 {
-                    Bitmap image = (Bitmap)Image.FromFile(dbConn.getBackgroundPath(uid));
+                    Bitmap image = (Bitmap)Image.FromFile(path);
                     image = new Bitmap(image, monthlyCalendarTab.Width, monthlyCalendarTab.Height);
                     monthlyCalendarTab.BackgroundImage = image;
                     monthlyCalendarTab.BackColor = Color.Transparent;
@@ -713,5 +717,182 @@ namespace Trackgenda
             weeklyDisplayLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(sunday.Month)} {sunday.Year}";
         }
 
+        private void currentEmailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (currentEmailTextBox.Text == "Current Email")
+            {
+                currentEmailTextBox.Text = "";
+                currentEmailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void currentEmailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (currentEmailTextBox.Text == "")
+            {
+                currentEmailTextBox.Text = "Current Email";
+                currentEmailTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void newEmailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (newEmailTextBox.Text == "New Email")
+            {
+                newEmailTextBox.Text = "";
+                newEmailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void newEmailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (newEmailTextBox.Text == "")
+            {
+                newEmailTextBox.Text = "New Email";
+                newEmailTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void currentPasswordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (currentPasswordTextBox.Text == "Current Password")
+            {
+                currentPasswordTextBox.Text = "";
+                currentPasswordTextBox.ForeColor = Color.Black;
+                currentPasswordTextBox.PasswordChar = '*';
+            }
+        }
+
+        private void currentPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (currentPasswordTextBox.Text == "")
+            {
+                currentPasswordTextBox.Text = "Current Password";
+                currentPasswordTextBox.ForeColor = Color.DarkGray;
+                currentPasswordTextBox.PasswordChar = '\0';
+            }
+        }
+
+        private void newPasswordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (newPasswordTextBox.Text == "New Password")
+            {
+                newPasswordTextBox.Text = "";
+                newPasswordTextBox.ForeColor = Color.Black;
+                newPasswordTextBox.PasswordChar = '*';
+            }
+        }
+
+        private void newPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (newPasswordTextBox.Text == "")
+            {
+                newPasswordTextBox.Text = "New Password";
+                newPasswordTextBox.ForeColor = Color.DarkGray;
+                newPasswordTextBox.PasswordChar = '\0';
+            }
+        }
+
+        private void updateEmailButton_Click(object sender, EventArgs e)
+        {
+            string error = "";
+            if (!dbConn.checkExistEmail(uid,currentEmailTextBox.Text))
+            {
+                error += "Please enter your current Email!";
+            }
+            if (!isValidEmailAddress(newEmailTextBox.Text))
+            {
+                error += "\nPlease enter a valid new Email!";
+            }
+            if (error.Length == 0)
+            {
+                if (dbConn.updateEmail(uid,newEmailTextBox.Text))
+                {
+                    MessageBox.Show("Email has been successfully updated!");
+                    CalendarForm form = new CalendarForm(uid);
+                    form.Show();
+                    dbConn.CloseConnection();
+                    this.Close();
+                }
+            } else
+            {
+                MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private bool isValidEmailAddress(string email)
+        {
+            try
+            {
+                MailAddress mailAddress = new MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void confirmPasswordTextBox_Click(object sender, EventArgs e)
+        {
+            string error = "";
+            if (!dbConn.checkPassword(uid, currentPasswordTextBox.Text))
+            {
+                error += "Please enter your current Password correctly";
+            }
+            if (!Regex.Match(newPasswordTextBox.Text, "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$").Success)
+            {
+                if (newPasswordTextBox.TextLength == 0)
+                {
+                    error += "\nNew Password is required";
+                }
+                else
+                {
+                    error += "\nPassword minimum eight characters, at least one uppercase \nletter, one lowercase letter, one number \nand one special character";
+                }
+            }
+            if (error.Length == 0)
+            {
+                if (dbConn.updatePassword(uid, newPasswordTextBox.Text))
+                {
+                    MessageBox.Show("Password has been successfully updated!");
+                    CalendarForm form = new CalendarForm(uid);
+                    form.Show();
+                    dbConn.CloseConnection();
+                    this.Close();
+                }
+            } else
+            {
+                MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void changeThemeButton_Click(object sender, EventArgs e)
+        {
+            if (lightRadioButton.Checked)
+            {
+                dbConn.changeTheme(uid, "Light");
+                dbConn.CloseConnection();
+                CalendarForm form = new CalendarForm(uid);
+                form.Show();
+                this.Close();
+            } else if (darkRadioButton.Checked)
+            {
+                dbConn.changeTheme(uid, "Dark");
+                dbConn.CloseConnection();
+                CalendarForm form = new CalendarForm(uid);
+                form.Show();
+                this.Close();
+
+            } else
+            {
+                MessageBox.Show("Please select a theme!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = settingsTab;
+        }
     }
 }
