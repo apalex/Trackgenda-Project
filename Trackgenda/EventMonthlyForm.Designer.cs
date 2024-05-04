@@ -35,6 +35,7 @@
             this.addButton = new System.Windows.Forms.Button();
             this.maximumLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
+            this.colourComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // exitButton
@@ -61,6 +62,7 @@
             // 
             // dateLabel
             // 
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
             this.dateLabel.Location = new System.Drawing.Point(147, 28);
@@ -78,7 +80,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(181, 148);
+            this.addButton.Location = new System.Drawing.Point(181, 194);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(90, 39);
             this.addButton.TabIndex = 30;
@@ -89,6 +91,7 @@
             // maximumLabel
             // 
             this.maximumLabel.AutoSize = true;
+            this.maximumLabel.BackColor = System.Drawing.Color.Transparent;
             this.maximumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maximumLabel.ForeColor = System.Drawing.Color.Red;
             this.maximumLabel.Location = new System.Drawing.Point(66, 78);
@@ -106,7 +109,7 @@
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(165, 148);
+            this.editButton.Location = new System.Drawing.Point(165, 194);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(133, 39);
             this.editButton.TabIndex = 32;
@@ -115,11 +118,36 @@
             this.editButton.Visible = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
+            // colourComboBox
+            // 
+            this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colourComboBox.FormattingEnabled = true;
+            this.colourComboBox.Items.AddRange(new object[] {
+            "Theme",
+            "White",
+            "Silver",
+            "Gray",
+            "LightCoral",
+            "WhiteSmoke",
+            "Salmon",
+            "Gold",
+            "OliveDrab",
+            "YellowGreen",
+            "SkyBlue",
+            "Pink",
+            "MediumOrchid"});
+            this.colourComboBox.Location = new System.Drawing.Point(42, 148);
+            this.colourComboBox.Name = "colourComboBox";
+            this.colourComboBox.Size = new System.Drawing.Size(373, 28);
+            this.colourComboBox.TabIndex = 33;
+            // 
             // EventMonthlyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(450, 199);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(450, 245);
+            this.Controls.Add(this.colourComboBox);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.maximumLabel);
             this.Controls.Add(this.addButton);
@@ -146,5 +174,6 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label maximumLabel;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.ComboBox colourComboBox;
     }
 }

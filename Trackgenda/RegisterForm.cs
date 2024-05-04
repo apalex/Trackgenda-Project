@@ -255,7 +255,7 @@ namespace Trackgenda
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-            this.Select();
+            closeButton1.Select();
         }
     }
 }

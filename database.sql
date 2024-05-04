@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS monthly_event (
 	uid INT NOT NULL,
 	mevent_date VARCHAR(255) NOT NULL,
 	mevent_desc VARCHAR(255) NOT NULL,
+	mevent_background VARCHAR(255) NOT NULL,
 	CONSTRAINT FK_MEVENT_UID FOREIGN KEY (uid) REFERENCES user_info(uid)
 );
 

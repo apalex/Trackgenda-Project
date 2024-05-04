@@ -227,9 +227,9 @@ namespace Trackgenda
         }
 
         // Monthly Calendar
-        public bool addMonthlyEvent(int uid, string date, string eventDesc)
+        public bool addMonthlyEvent(int uid, string date, string eventDesc, string background)
         {
-            query = $"INSERT INTO monthly_event (uid,mevent_date,mevent_desc) VALUES ('{uid}','{date}','{eventDesc}');";
+            query = $"INSERT INTO monthly_event (uid,mevent_date,mevent_desc,mevent_background) VALUES ('{uid}','{date}','{eventDesc}','{background}');";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -279,9 +279,9 @@ namespace Trackgenda
             return eventDesc;
         }
 
-        public bool setEventDesc(int uid, int index, string date, string newDesc)
+        public bool setEventDesc(int uid, int index, string date, string newDesc, string background)
         {
-            query = $"UPDATE monthly_event SET mevent_desc = '{newDesc}' WHERE meventid = (SELECT meventid FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' ORDER BY meventid LIMIT 1 OFFSET {index});";
+            query = $"UPDATE monthly_event SET mevent_desc = '{newDesc}', mevent_background = '{background}' WHERE meventid = (SELECT meventid FROM monthly_event WHERE uid = {uid} AND mevent_date = '{date}' ORDER BY meventid LIMIT 1 OFFSET {index});";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -300,6 +300,34 @@ namespace Trackgenda
                 MessageBox.Show(E.ToString());
             }
             return false;
+        }
+
+        public bool checkExistMonthlyEvent(int uid, string event_date)
+        {
+            query = $"SELECT * FROM monthly_event WHERE uid = {uid} AND mevent_date = '{event_date}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public string getMonthlyBackground(int uid, string event_date)
+        {
+            string background = "";
+            query = $"SELECT mevent_background FROM monthly_event WHERE uid = {uid} AND mevent_date = '{event_date}';";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                background = Convert.ToString(reader);
+                return background;
+            }
+            return background;
         }
 
         // Change Background

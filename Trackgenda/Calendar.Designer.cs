@@ -146,6 +146,7 @@
             // currentTimeLabel
             // 
             this.currentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentTimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentTimeLabel.ForeColor = System.Drawing.Color.White;
             this.currentTimeLabel.Location = new System.Drawing.Point(1637, 15);
@@ -219,6 +220,7 @@
             // 
             // logoLabel
             // 
+            this.logoLabel.BackColor = System.Drawing.Color.Transparent;
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoLabel.ForeColor = System.Drawing.Color.White;
             this.logoLabel.Location = new System.Drawing.Point(55, 15);
@@ -466,7 +468,7 @@
             // 
             // monthlyCalendarTab
             // 
-            this.monthlyCalendarTab.BackColor = System.Drawing.Color.White;
+            this.monthlyCalendarTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.monthlyCalendarTab.Controls.Add(this.weeklyButton);
             this.monthlyCalendarTab.Controls.Add(this.monthPictureBox);
             this.monthlyCalendarTab.Controls.Add(this.dateLabel);
@@ -979,7 +981,7 @@
             // 
             this.saturdayDateLabel.AutoSize = true;
             this.saturdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.saturdayDateLabel.Location = new System.Drawing.Point(1742, 107);
+            this.saturdayDateLabel.Location = new System.Drawing.Point(1738, 107);
             this.saturdayDateLabel.Name = "saturdayDateLabel";
             this.saturdayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.saturdayDateLabel.TabIndex = 30;
@@ -999,7 +1001,7 @@
             // 
             this.thursdayDateLabel.AutoSize = true;
             this.thursdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.thursdayDateLabel.Location = new System.Drawing.Point(1337, 107);
+            this.thursdayDateLabel.Location = new System.Drawing.Point(1333, 107);
             this.thursdayDateLabel.Name = "thursdayDateLabel";
             this.thursdayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.thursdayDateLabel.TabIndex = 28;
@@ -1009,7 +1011,7 @@
             // 
             this.wednesdayDateLabel.AutoSize = true;
             this.wednesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.wednesdayDateLabel.Location = new System.Drawing.Point(1138, 107);
+            this.wednesdayDateLabel.Location = new System.Drawing.Point(1133, 107);
             this.wednesdayDateLabel.Name = "wednesdayDateLabel";
             this.wednesdayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.wednesdayDateLabel.TabIndex = 27;
@@ -1019,7 +1021,7 @@
             // 
             this.tuesdayDateLabel.AutoSize = true;
             this.tuesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tuesdayDateLabel.Location = new System.Drawing.Point(935, 107);
+            this.tuesdayDateLabel.Location = new System.Drawing.Point(932, 107);
             this.tuesdayDateLabel.Name = "tuesdayDateLabel";
             this.tuesdayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.tuesdayDateLabel.TabIndex = 26;
@@ -1029,7 +1031,7 @@
             // 
             this.mondayDateLabel.AutoSize = true;
             this.mondayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mondayDateLabel.Location = new System.Drawing.Point(731, 107);
+            this.mondayDateLabel.Location = new System.Drawing.Point(730, 107);
             this.mondayDateLabel.Name = "mondayDateLabel";
             this.mondayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.mondayDateLabel.TabIndex = 25;
@@ -1039,7 +1041,7 @@
             // 
             this.sundayDateLabel.AutoSize = true;
             this.sundayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.sundayDateLabel.Location = new System.Drawing.Point(529, 107);
+            this.sundayDateLabel.Location = new System.Drawing.Point(527, 107);
             this.sundayDateLabel.Name = "sundayDateLabel";
             this.sundayDateLabel.Size = new System.Drawing.Size(89, 20);
             this.sundayDateLabel.TabIndex = 24;
@@ -1206,8 +1208,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidePanel);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.upperBar);
+            this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

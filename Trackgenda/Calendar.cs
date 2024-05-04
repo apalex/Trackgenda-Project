@@ -364,7 +364,7 @@ namespace Trackgenda
         private void nextButton_Click(object sender, EventArgs e)
         {
             monthlyPanel.Controls.Clear();
-            currentMonth++;
+            currentMonth = ++currentMonth;
             if (currentMonth > 12)
             {
                 currentMonth = 1;
@@ -376,7 +376,7 @@ namespace Trackgenda
         private void previousButton_Click(object sender, EventArgs e)
         {
             monthlyPanel.Controls.Clear();
-            currentMonth--;
+            currentMonth = --currentMonth;
             if (currentMonth == 0)
             {
                 currentMonth = 12;
@@ -424,11 +424,9 @@ namespace Trackgenda
         {
             // Upper Bar
             hamburgerPictureBox.BackColor = Color.White;
-            logoLabel.BackColor = Color.White;
             logoLabel.ForeColor = Color.Black;
             upperBar.BackColor = Color.White;
             upperBar.ForeColor = Color.Black;
-            currentTimeLabel.BackColor = Color.White;
             currentTimeLabel.ForeColor = Color.Black;
             minimizeButton.BackColor = Color.White;
             minimizeButton.ForeColor = Color.Black;
@@ -470,11 +468,9 @@ namespace Trackgenda
         {
             // Upper Bar
             hamburgerPictureBox.BackColor = Color.FromArgb(18, 18, 18);
-            logoLabel.BackColor = Color.FromArgb(18, 18, 18);
             logoLabel.ForeColor = Color.White;
             upperBar.BackColor = Color.FromArgb(18, 18, 18);
             upperBar.ForeColor = Color.Black;
-            currentTimeLabel.BackColor = Color.FromArgb(18, 18, 18);
             currentTimeLabel.ForeColor = Color.White;
             minimizeButton.BackColor = Color.FromArgb(179, 179, 179);
             minimizeButton.ForeColor = Color.White;
@@ -571,13 +567,42 @@ namespace Trackgenda
                 previousWeeklyButton.ForeColor = Color.Black;
                 monthlyButton.BackColor = Color.White;
                 monthlyButton.ForeColor = Color.Black;
+                weeklyDisplayLabel.ForeColor = Color.Black;
+                sundayLabel.ForeColor = Color.Black;
+                sundayDateLabel.ForeColor = Color.Black;
+                mondayLabel.ForeColor = Color.Black;
+                mondayDateLabel.ForeColor = Color.Black;
+                tuesdayLabel.ForeColor = Color.Black;
+                tuesdayDateLabel.ForeColor = Color.Black;
+                wednesdayLabel.ForeColor = Color.Black;
+                wednesdayDateLabel.ForeColor = Color.Black;
+                thursdayLabel.ForeColor = Color.Black;
+                thursdayDateLabel.ForeColor = Color.Black;
+                fridayLabel.ForeColor = Color.Black;
+                fridayDateLabel.ForeColor = Color.Black;
+                saturdayLabel.ForeColor = Color.Black;
+                saturdayDateLabel.ForeColor = Color.Black;
+                label10.ForeColor = Color.Black;
+                label11.ForeColor = Color.Black;
+                label12.ForeColor = Color.Black;
+                label13.ForeColor = Color.Black;
+                label14.ForeColor = Color.Black;
+                label15.ForeColor = Color.Black;
+                label16.ForeColor = Color.Black;
+                label17.ForeColor = Color.Black;
+                label18.ForeColor = Color.Black;
+                label19.ForeColor = Color.Black;
+                label20.ForeColor = Color.Black;
             } else
             {
                 // Monthly
+                monthlyCalendarTab.BackColor = Color.FromArgb(24, 24, 24);
                 nextButton.BackColor = Color.FromArgb(33, 33, 33);
                 nextButton.ForeColor = Color.White;
                 previousButton.BackColor = Color.FromArgb(33, 33, 33);
                 previousButton.ForeColor = Color.White;
+                weeklyButton.BackColor = Color.FromArgb(33, 33, 33);
+                weeklyButton.ForeColor = Color.White;
                 dateLabel.ForeColor = Color.White;
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
@@ -591,13 +616,39 @@ namespace Trackgenda
                 // Settings
                 settingsTab.BackColor = Color.White;
                 // Weekly
-                calendarWeeklyTab.BackColor = Color.White;
-                nextWeeklyButton.BackColor = Color.White;
-                nextWeeklyButton.ForeColor = Color.Black;
-                previousWeeklyButton.BackColor = Color.White;
-                previousWeeklyButton.ForeColor = Color.Black;
-                monthlyButton.BackColor = Color.White;
-                monthlyButton.ForeColor = Color.Black;
+                calendarWeeklyTab.BackColor = Color.FromArgb(24, 24, 24);
+                nextWeeklyButton.BackColor = Color.FromArgb(33, 33, 33);
+                nextWeeklyButton.ForeColor = Color.White;
+                previousWeeklyButton.BackColor = Color.FromArgb(33, 33, 33);
+                previousWeeklyButton.ForeColor = Color.White;
+                monthlyButton.BackColor = Color.FromArgb(33, 33, 33);
+                monthlyButton.ForeColor = Color.White;
+                weeklyDisplayLabel.ForeColor = Color.White;
+                sundayLabel.ForeColor = Color.White;
+                sundayDateLabel.ForeColor = Color.White;
+                mondayLabel.ForeColor = Color.White;
+                mondayDateLabel.ForeColor = Color.White;
+                tuesdayLabel.ForeColor = Color.White;
+                tuesdayDateLabel.ForeColor = Color.White;
+                wednesdayLabel.ForeColor = Color.White;
+                wednesdayDateLabel.ForeColor = Color.White;
+                thursdayLabel.ForeColor = Color.White;
+                thursdayDateLabel.ForeColor = Color.White;
+                fridayLabel.ForeColor = Color.White;
+                fridayDateLabel.ForeColor = Color.White;
+                saturdayLabel.ForeColor = Color.White;
+                saturdayDateLabel.ForeColor = Color.White;
+                label10.ForeColor = Color.White;
+                label11.ForeColor = Color.White;
+                label12.ForeColor = Color.White;
+                label13.ForeColor = Color.White;
+                label14.ForeColor = Color.White;
+                label15.ForeColor = Color.White;
+                label16.ForeColor = Color.White;
+                label17.ForeColor = Color.White;
+                label18.ForeColor = Color.White;
+                label19.ForeColor = Color.White;
+                label20.ForeColor = Color.White;
             }
         }
 
@@ -707,13 +758,13 @@ namespace Trackgenda
     
         private void updateDateLabels()
         {
-            sundayDateLabel.Text = $"{sunday.Month}/{sunday.Day}/{sunday.Year}";
-            mondayDateLabel.Text = $"{monday.Month}/{monday.Day}/{monday.Year}";
-            tuesdayDateLabel.Text = $"{tuesday.Month}/{tuesday.Day}/{tuesday.Year}";
-            wednesdayDateLabel.Text = $"{wednesday.Month}/{wednesday.Day}/{wednesday.Year}";
-            thursdayDateLabel.Text = $"{thursday.Month}/{thursday.Day}/{thursday.Year}";
-            fridayDateLabel.Text = $"{friday.Month}/{friday.Day}/{friday.Year}";
-            saturdayDateLabel.Text = $"{saturday.Month}/{saturday.Day}/{saturday.Year}";
+            sundayDateLabel.Text = $"{sunday.Month:00}/{sunday.Day:00}/{sunday.Year}";
+            mondayDateLabel.Text = $"{monday.Month:00}/{monday.Day:00}/{monday.Year}";
+            tuesdayDateLabel.Text = $"{tuesday.Month:00}/{tuesday.Day:00}/{tuesday.Year}";
+            wednesdayDateLabel.Text = $"{wednesday.Month:00}/{wednesday.Day:00}/{wednesday.Year}";
+            thursdayDateLabel.Text = $"{thursday.Month:00}/{thursday.Day:00}/{thursday.Year}";
+            fridayDateLabel.Text = $"{friday.Month:00}/{friday.Day:00}/{friday.Year}";
+            saturdayDateLabel.Text = $"{saturday.Month:00}/{saturday.Day:00}/{saturday.Year}";
             weeklyDisplayLabel.Text = $"{DateTimeFormatInfo.CurrentInfo.GetMonthName(sunday.Month)} {sunday.Year}";
         }
 

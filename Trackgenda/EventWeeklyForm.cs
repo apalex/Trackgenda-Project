@@ -50,6 +50,7 @@ namespace Trackgenda
             {
                 controlButton.Text = "Edit";
             }
+            colourComboBox.SelectedIndex = 0;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -69,14 +70,7 @@ namespace Trackgenda
         private void controlButton_Click(object sender, EventArgs e)
         {
             List<Form> forms = new List<Form>();
-            string color;
-            if (colourComboBox.SelectedIndex == -1)
-            {
-                color = this.BackColor.Name;
-            } else
-            {
-                color = (string)colourComboBox.SelectedItem.ToString();
-            }
+            string color = (string)colourComboBox.SelectedItem.ToString();
             if (controlButton.Text == "Edit")
             {
                 if (dbConn.editWeeklyEvent(UID, descTextBox.Text, color, Date))
@@ -137,15 +131,17 @@ namespace Trackgenda
             exitButton.ForeColor = Color.Black;
             controlButton.BackColor = Color.White;
             controlButton.ForeColor = Color.Black;
+            dateLabel.ForeColor = Color.Black;
         }
 
         private void changeDarkMode()
         {
-            this.BackColor = Color.Gray;
+            this.BackColor = Color.FromArgb(40, 40, 40);
             exitButton.BackColor = Color.FromArgb(64, 64, 64);
             exitButton.ForeColor = Color.White;
             controlButton.BackColor = Color.FromArgb(64, 64, 64);
             controlButton.ForeColor = Color.White;
+            dateLabel.ForeColor = Color.White;
         }
     }
 }

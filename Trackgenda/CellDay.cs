@@ -10,6 +10,8 @@ namespace Trackgenda
         private int uid,month,day,year;
         private DatabaseConnection dbConn;
         private string date, theme;
+        private bool backgroundExists;
+        private string colour;
         public CellDay(int uid, int month, int day, int year)
         {
             UID = uid;
@@ -47,25 +49,53 @@ namespace Trackgenda
 
         private void CellDay_MouseHover(object sender, EventArgs e)
         {
-            if (theme == "Light")
+            if (colour.Contains("Theme"))
             {
-                this.BackColor = Color.Azure;
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
             }
-            else
+            if (!backgroundExists)
             {
-                this.BackColor = Color.FromArgb(179, 179, 179);
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
             }
         }
 
         private void CellDay_MouseLeave(object sender, EventArgs e)
         {
-            if (theme == "Light")
+            if (colour.Contains("Theme"))
             {
-                this.BackColor = Color.White;
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.White;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(64, 64, 64);
+                }
             }
-            else
+            if (!backgroundExists)
             {
-                this.BackColor = Color.FromArgb(64, 64, 64);
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.White;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(64, 64, 64);
+                }
             }
         }
 
@@ -73,14 +103,9 @@ namespace Trackgenda
         {
             theme = checkThemeMode();
             changeThemeMode();
-            if (month > 9)
-            {
-                date = $"{Month}/{Day}/{Year}";
-            }
-            else
-            {
-                date = $"0{Month}/{Day}/{Year}";
-            }
+            date = $"{Month:00}/{Day:00}/{Year}";
+            backgroundExists = dbConn.checkExistMonthlyEvent(UID, $"{date}");
+            colour = (Color.FromName(dbConn.getMonthlyBackground(uid, $"{date}"))).ToString();
 
             if (dbConn.getEventLength(uid,date) == 1)
             {
@@ -96,6 +121,13 @@ namespace Trackgenda
                 event1Label.Text = dbConn.getEventDesc(uid, 0, date);
                 event2Label.Text = dbConn.getEventDesc(uid, 1, date);
                 event3Label.Text = dbConn.getEventDesc(uid, 2, date);
+            }
+            if (dbConn.checkExistMonthlyEvent(UID, $"{date}"))
+            {
+                if (!colour.Contains("Theme"))
+                {
+                    this.BackColor = Color.FromName(dbConn.getMonthlyBackground(uid, $"{date}"));
+                }
             }
             dbConn.CloseConnection();
         }
@@ -143,6 +175,110 @@ namespace Trackgenda
             }
         }
 
+        private void indexDay_MouseHover(object sender, EventArgs e)
+        {
+            if (colour.Contains("Theme"))
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+            if (!backgroundExists)
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+        }
+
+        private void event1Label_MouseHover(object sender, EventArgs e)
+        {
+            if (colour.Contains("Theme"))
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+            if (!backgroundExists)
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+        }
+
+        private void event2Label_MouseHover(object sender, EventArgs e)
+        {
+            if (colour.Contains("Theme"))
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+            if (!backgroundExists)
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+        }
+
+        private void event3Label_MouseHover(object sender, EventArgs e)
+        {
+            if (colour.Contains("Theme"))
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+            if (!backgroundExists)
+            {
+                if (theme == "Light")
+                {
+                    this.BackColor = Color.Azure;
+                }
+                else
+                {
+                    this.BackColor = Color.FromArgb(179, 179, 179);
+                }
+            }
+        }
+
         private void event3Label_Click(object sender, EventArgs e)
         {
             if (event3Label.Text.Length == 0)
@@ -172,26 +308,18 @@ namespace Trackgenda
         private void changeLightMode()
         {
             this.BackColor = Color.White;
-            indexDay.BackColor = Color.White;
             indexDay.ForeColor = Color.Black;
-            event1Label.BackColor = Color.White;
             event1Label.ForeColor = Color.Black;
-            event2Label.BackColor = Color.White;
             event2Label.ForeColor = Color.Black;
-            event3Label.BackColor = Color.White;
             event3Label.ForeColor = Color.Black;
         }
 
         private void changeDarkMode()
         {
             this.BackColor = Color.FromArgb(64, 64, 64);
-            indexDay.BackColor = Color.FromArgb(64, 64, 64);
             indexDay.ForeColor = Color.White;
-            event1Label.BackColor = Color.FromArgb(64, 64, 64); ;
             event1Label.ForeColor = Color.White;
-            event2Label.BackColor = Color.FromArgb(64, 64, 64); ;
             event2Label.ForeColor = Color.White;
-            event3Label.BackColor = Color.FromArgb(64, 64, 64); ;
             event3Label.ForeColor = Color.White;
         }
     }

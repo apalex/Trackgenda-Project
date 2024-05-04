@@ -94,6 +94,7 @@
             this.colourComboBox.ForeColor = System.Drawing.Color.Black;
             this.colourComboBox.FormattingEnabled = true;
             this.colourComboBox.Items.AddRange(new object[] {
+            "Theme",
             "White",
             "Silver",
             "Gray",
