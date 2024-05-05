@@ -456,6 +456,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.monthlyCalendarTab);
             this.tabControl1.Controls.Add(this.dashboardTab);
             this.tabControl1.Controls.Add(this.settingsTab);
@@ -491,7 +494,6 @@
             // 
             // weeklyButton
             // 
-            this.weeklyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.weeklyButton.BackColor = System.Drawing.Color.White;
             this.weeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.weeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -606,7 +608,6 @@
             // 
             // nextButton
             // 
-            this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nextButton.BackColor = System.Drawing.Color.White;
             this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -622,7 +623,6 @@
             // 
             // previousButton
             // 
-            this.previousButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.previousButton.BackColor = System.Drawing.Color.White;
             this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -687,7 +687,7 @@
             // 
             // changeThemeButton
             // 
-            this.changeThemeButton.Location = new System.Drawing.Point(683, 219);
+            this.changeThemeButton.Location = new System.Drawing.Point(659, 214);
             this.changeThemeButton.Name = "changeThemeButton";
             this.changeThemeButton.Size = new System.Drawing.Size(174, 30);
             this.changeThemeButton.TabIndex = 11;
@@ -788,6 +788,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(677, 37);
             this.label22.Name = "label22";
@@ -798,6 +799,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(271, 283);
             this.label21.Name = "label21";
@@ -808,6 +810,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(272, 37);
             this.label9.Name = "label9";
@@ -1049,7 +1052,6 @@
             // 
             // monthlyButton
             // 
-            this.monthlyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.monthlyButton.BackColor = System.Drawing.Color.White;
             this.monthlyButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.monthlyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1065,7 +1067,6 @@
             // 
             // nextWeeklyButton
             // 
-            this.nextWeeklyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nextWeeklyButton.BackColor = System.Drawing.Color.White;
             this.nextWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextWeeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1081,7 +1082,6 @@
             // 
             // previousWeeklyButton
             // 
-            this.previousWeeklyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.previousWeeklyButton.BackColor = System.Drawing.Color.White;
             this.previousWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.previousWeeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

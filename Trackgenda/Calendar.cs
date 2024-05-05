@@ -559,6 +559,11 @@ namespace Trackgenda
                 dashboardTab.BackColor = Color.White;
                 // Settings
                 settingsTab.BackColor = Color.White;
+                label9.ForeColor = Color.Black;
+                label21.ForeColor = Color.Black;
+                label22.ForeColor = Color.Black;
+                lightRadioButton.ForeColor = Color.Black;
+                darkRadioButton.ForeColor = Color.Black;
                 // Weekly
                 calendarWeeklyTab.BackColor = Color.White;
                 nextWeeklyButton.BackColor = Color.White;
@@ -614,7 +619,12 @@ namespace Trackgenda
                 // Dashboard
                 dashboardTab.BackColor = Color.White;
                 // Settings
-                settingsTab.BackColor = Color.White;
+                settingsTab.BackColor = Color.FromArgb(24, 24, 24);
+                label9.ForeColor = Color.White;
+                label21.ForeColor = Color.White;
+                label22.ForeColor = Color.White;
+                lightRadioButton.ForeColor = Color.White;
+                darkRadioButton.ForeColor = Color.White;
                 // Weekly
                 calendarWeeklyTab.BackColor = Color.FromArgb(24, 24, 24);
                 nextWeeklyButton.BackColor = Color.FromArgb(33, 33, 33);
@@ -944,6 +954,7 @@ namespace Trackgenda
         private void settingsButton_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = settingsTab;
+            exitButton.Select();
         }
     }
 }
