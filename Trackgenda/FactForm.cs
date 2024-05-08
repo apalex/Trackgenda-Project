@@ -80,11 +80,8 @@ namespace Trackgenda
 
         private void changeLightMode()
         {
-            this.BackColor = Color.Gainsboro;
-            this.ForeColor = Color.Black;
-            displayLabel.BackColor = Color.Gainsboro;
+            this.BackColor = Color.WhiteSmoke;
             displayLabel.ForeColor = Color.Black;
-            factLabel.BackColor = Color.Gainsboro;
             factLabel.ForeColor = Color.Black;
             closeButton.BackColor = Color.LightCoral;
             closeButton.ForeColor = Color.White;
@@ -93,10 +90,7 @@ namespace Trackgenda
         private void changeDarkMode()
         {
             this.BackColor = Color.Gray;
-            this.ForeColor = Color.Black;
-            displayLabel.BackColor = Color.Gray;
             displayLabel.ForeColor = Color.Black;
-            factLabel.BackColor = Color.Gray;
             factLabel.ForeColor = Color.Black;
             closeButton.BackColor = Color.DarkGray;
             closeButton.ForeColor = Color.Black;

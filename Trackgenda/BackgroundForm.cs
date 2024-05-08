@@ -126,7 +126,6 @@ namespace Trackgenda
         private void changeLightMode()
         {
             this.BackColor = Color.WhiteSmoke;
-            this.ForeColor = Color.Black;
             exitButton.BackColor = Color.White;
             exitButton.ForeColor = Color.Black;
             imageButton.BackColor = Color.White;

@@ -36,6 +36,7 @@
             // 
             // displayLabel
             // 
+            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayLabel.Location = new System.Drawing.Point(62, 47);
             this.displayLabel.Name = "displayLabel";
@@ -45,6 +46,7 @@
             // 
             // quotelabel
             // 
+            this.quotelabel.BackColor = System.Drawing.Color.Transparent;
             this.quotelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quotelabel.Location = new System.Drawing.Point(30, 98);
             this.quotelabel.Name = "quotelabel";

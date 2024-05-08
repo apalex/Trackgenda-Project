@@ -41,6 +41,7 @@
             // 
             // timerLabel
             // 
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.Location = new System.Drawing.Point(6, 61);
             this.timerLabel.Name = "timerLabel";
@@ -51,6 +52,7 @@
             // displayLabel
             // 
             this.displayLabel.AutoSize = true;
+            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayLabel.Location = new System.Drawing.Point(12, 6);
             this.displayLabel.Name = "displayLabel";
@@ -100,6 +102,7 @@
             // 
             this.seperatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.seperatorLabel.BackColor = System.Drawing.Color.Transparent;
             this.seperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.seperatorLabel.Location = new System.Drawing.Point(0, 37);
             this.seperatorLabel.Name = "seperatorLabel";

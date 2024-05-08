@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -595,6 +596,82 @@ namespace Trackgenda
         public bool addNote(int uid, string details)
         {
             query = $"INSERT INTO notes (uid,note_details) VALUES ('{uid}','{details}');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+        }
+
+        public string getNoteDesc(int uid, int index)
+        {
+            string noteDesc = "";
+            query = $"SELECT note_details FROM notes WHERE uid = {uid} ORDER BY noteid LIMIT 1 OFFSET {index};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteScalar();
+            if (reader != null)
+            {
+                noteDesc = Convert.ToString(reader);
+                return noteDesc;
+            }
+            return noteDesc;
+        }
+
+        public int getNoteCount(int uid)
+        {
+            int numEvents = 0;
+            query = $"SELECT COUNT(noteid) FROM notes WHERE uid = {uid} GROUP BY uid;";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                numEvents = reader.GetInt32(0);
+                reader.Close();
+                return numEvents;
+            }
+            reader.Close();
+            return numEvents;
+        }
+
+        public bool updateNote(int uid, int index, string note)
+        {
+            note = note.Replace("'","''");
+            query = $"UPDATE notes SET note_details = '{note}' WHERE noteid = (SELECT noteid FROM (SELECT noteid FROM notes WHERE uid = {uid} ORDER BY noteid LIMIT 1 OFFSET {index}) AS subquery);";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
+
+        public bool deleteNote(int uid, int index)
+        {
+            query = $"DELETE FROM notes WHERE noteid = (SELECT noteid FROM (SELECT noteid FROM notes WHERE uid = {uid} ORDER BY noteid LIMIT 1 OFFSET {index}) AS subquery);";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
