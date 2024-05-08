@@ -576,5 +576,42 @@ namespace Trackgenda
             }
             return false;
         }
+
+        // Notes
+        public bool checkExistNote(int uid)
+        {
+            query = $"SELECT * FROM notes WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public bool addNote(int uid, string details)
+        {
+            query = $"INSERT INTO notes (uid,note_details) VALUES ('{uid}','{details}');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+        }
     }
 }

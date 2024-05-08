@@ -345,8 +345,9 @@
             this.notesButton.Name = "notesButton";
             this.notesButton.Size = new System.Drawing.Size(200, 60);
             this.notesButton.TabIndex = 20;
-            this.notesButton.Text = "Notes";
+            this.notesButton.Text = "Notebook";
             this.notesButton.UseVisualStyleBackColor = false;
+            this.notesButton.Click += new System.EventHandler(this.notesButton_Click);
             // 
             // motivationalButton
             // 

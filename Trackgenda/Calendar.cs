@@ -22,9 +22,9 @@ namespace Trackgenda
         private bool sidePanelShow = true;
         private bool studyDashboardShow = false;
         private bool dashBoardShow = false;
-        private bool backgroundDashboardShow = false;
         private StudyDashboard studyDashboardForm = new StudyDashboard();
         private BackgroundForm backgroundForm;
+        private NotesForm notesForm;
         private DatabaseConnection dbConn;
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
@@ -387,15 +387,8 @@ namespace Trackgenda
 
         private void backgroundButton_Click(object sender, EventArgs e)
         {
-            backgroundDashboardShow = !backgroundDashboardShow;
             backgroundForm = new BackgroundForm(uid);
-            if (backgroundDashboardShow)
-            {
-                backgroundForm.Show();
-            } else
-            {
-                backgroundForm.Close();
-            }
+            backgroundForm.Show();
         }
 
         private void todoButton_Click(object sender, EventArgs e)
@@ -955,6 +948,12 @@ namespace Trackgenda
         {
             tabControl1.SelectedTab = settingsTab;
             exitButton.Select();
+        }
+
+        private void notesButton_Click(object sender, EventArgs e)
+        {
+            notesForm = new NotesForm(uid);
+            notesForm.Show();
         }
     }
 }
