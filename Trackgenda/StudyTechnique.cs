@@ -12,9 +12,20 @@ namespace Trackgenda
 {
     public partial class StudyTechnique : Form
     {
-        private int uid, study, shortbreak, longbreak, count;
+        private int uid, study, shortbreak, longbreak, totalSeconds, phaseCount;
         private string technique;
+        private bool isStart = false;
         private DatabaseConnection dbConn;
+        private TimeSpan studySeconds;
+        private Phase currentPhase;
+        private int cycleCounter = -1;
+
+        private enum Phase
+        {
+            Study,
+            ShortBreak,
+            LongBreak
+        }
 
         public StudyTechnique(int uid, string technique, int study, int shortbreak, int longbreak)
         {
@@ -52,33 +63,25 @@ namespace Trackgenda
             set { longbreak = value; }
         }
 
-        private int Count
+        private string Technique
         {
-            get { return count; }
-            set { count = value; }
+            get { return technique; }
+            set { technique = value; }
         }
+
 
         private void StudyTechnique_Load(object sender, EventArgs e)
         {
             changeThemeMode();
             exitButton.Select();
             displayLabel.Text = $"{Technique}";
-            if (Technique == "Pomodoro")
-            {
-                Count = 4;
-                Pomodoro();
-
-            }
-            else if (Technique == "52/17")
-            {
-                Count = 2;
-                FiftyTwoSeventeen();
-            }
-            else
-            {
-                Count = 4;
-                Personal();
-            }
+            SetPhase(Phase.Study);
+            int temp = Study * 60;
+            timeLabel.Text = string.Format("{0:D2}m:{1:D2}s",
+                temp / 60,
+                temp % 60
+                );
+            mainTimer.Enabled = false;
         }
 
         private void StudyTechnique_MouseDown(object sender, MouseEventArgs e)
@@ -89,30 +92,136 @@ namespace Trackgenda
             }
         }
 
-        private string Technique
-        {
-            get { return technique; }
-            set { technique = value; }
-        }
-
         private void Pomodoro()
         {
-            timeLabel.Text = $"{study}";
+            if (phaseCount % 8 == 0 && phaseCount != 0)
+            {
+                SetPhase(Phase.LongBreak);
+                totalSeconds = Longbreak * 60;
+            }
+            else if (phaseCount % 2 == 0)
+            {
+                SetPhase(Phase.ShortBreak);
+                totalSeconds = Shortbreak * 60;
+            }
+            else
+            {
+                SetPhase(Phase.Study);
+                totalSeconds = Study * 60;
+            }
         }
 
         private void FiftyTwoSeventeen()
         {
-
-        }
-
-        private void Personal()
-        {
-
+            if (cycleCounter % 2 == 0)
+            {
+                SetPhase(Phase.Study);
+                totalSeconds = Study * 60;
+            }
+            else
+            {
+                SetPhase(Phase.LongBreak);
+                totalSeconds = Longbreak * 60;
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            dbConn.CloseConnection();
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            controlButton.Text = "Start";
+            studySeconds = TimeSpan.FromSeconds(Study * 60);
+            totalSeconds = Study * 60;
+            timeLabel.Text = string.Format("{0:D2}m:{1:D2}s",
+                studySeconds.Minutes,
+                studySeconds.Seconds
+                );
+            cycleCounter = 0;
+        }
+
+        private void mainTimer_Tick(object sender, EventArgs e)
+        {
+            --totalSeconds;
+            if (totalSeconds < 0)
+            {
+                NextPhase();
+            }
+            updateTimeLabel();
+        }
+
+        private void NextPhase()
+        {
+            phaseCount++;
+            cycleCounter++;
+
+            if (Technique != "52/17")
+            {
+                Pomodoro();
+            }
+            else
+            {
+                FiftyTwoSeventeen();
+            }
+        }
+
+
+        private void SetPhase(Phase phase)
+        {
+            currentPhase = phase;
+
+            if (Technique != "52/17")
+            {
+                switch (currentPhase)
+                {
+                    case Phase.Study:
+                        label1.Text = "Study";
+                        break;
+                    case Phase.ShortBreak:
+                        label1.Text = "Short Break";
+                        break;
+                    case Phase.LongBreak:
+                        label1.Text = "Long Break";
+                        break;
+                }
+            } else
+            {
+                switch (currentPhase)
+                {
+                    case Phase.Study:
+                        label1.Text = "Study";
+                        break;
+                    case Phase.LongBreak:
+                        label1.Text = "Break";
+                        break;
+                }
+            }
+        }
+
+        private void updateTimeLabel()
+        {
+            timeLabel.Text = string.Format("{0:D2}m:{1:D2}s", totalSeconds / 60, totalSeconds % 60);
+        }
+
+        private void controlButton_Click(object sender, EventArgs e)
+        {
+            isStart = !isStart;
+            mainTimer.Enabled = true;
+            if (isStart)
+            {
+                controlButton.Text = "Stop";
+                mainTimer.Start();
+                resetButton.Enabled = false;
+            }
+            else
+            {
+                controlButton.Text = "Resume";
+                mainTimer.Stop();
+                resetButton.Enabled = true;
+            }
         }
 
         private string checkThemeMode()
@@ -137,6 +246,7 @@ namespace Trackgenda
             this.BackColor = Color.WhiteSmoke;
             displayLabel.ForeColor = Color.Black;
             timeLabel.ForeColor = Color.Black;
+            label1.ForeColor = Color.Black;
             controlButton.BackColor = Color.White;
             controlButton.ForeColor = Color.Black;
             resetButton.BackColor = Color.White;
@@ -150,6 +260,7 @@ namespace Trackgenda
             this.BackColor = Color.FromArgb(40, 40, 40);
             displayLabel.ForeColor = Color.White;
             timeLabel.ForeColor = Color.White;
+            label1.ForeColor = Color.White;
             controlButton.BackColor = Color.FromArgb(64, 64, 64);
             controlButton.ForeColor = Color.White;
             resetButton.BackColor = Color.FromArgb(64, 64, 64);

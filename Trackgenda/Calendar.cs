@@ -540,6 +540,7 @@ namespace Trackgenda
                 label9.ForeColor = Color.Black;
                 label21.ForeColor = Color.Black;
                 label22.ForeColor = Color.Black;
+                label23.ForeColor = Color.Black;
                 lightRadioButton.ForeColor = Color.Black;
                 darkRadioButton.ForeColor = Color.Black;
                 // Weekly
@@ -601,6 +602,7 @@ namespace Trackgenda
                 label9.ForeColor = Color.White;
                 label21.ForeColor = Color.White;
                 label22.ForeColor = Color.White;
+                label23.ForeColor = Color.White;
                 lightRadioButton.ForeColor = Color.White;
                 darkRadioButton.ForeColor = Color.White;
                 // Weekly
@@ -939,6 +941,92 @@ namespace Trackgenda
         {
             notesForm = new NotesForm(uid);
             notesForm.Show();
+        }
+
+        private void studyTextBox_Enter(object sender, EventArgs e)
+        {
+            if (studyTextBox.Text == "Study Time")
+            {
+                studyTextBox.Text = "";
+                studyTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void studyTextBox_Leave(object sender, EventArgs e)
+        {
+            if (studyTextBox.Text == "")
+            {
+                studyTextBox.Text = "Study Time";
+                studyTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void shortTextBox_Enter(object sender, EventArgs e)
+        {
+            if (shortTextBox.Text == "Short Break")
+            {
+                shortTextBox.Text = "";
+                shortTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void shortTextBox_Leave(object sender, EventArgs e)
+        {
+            if (shortTextBox.Text == "")
+            {
+                shortTextBox.Text = "Study Time";
+                shortTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void longTextBox_Leave(object sender, EventArgs e)
+        {
+            if (longTextBox.Text == "")
+            {
+                longTextBox.Text = "Study Time";
+                longTextBox.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void longTextBox_Enter(object sender, EventArgs e)
+        {
+            if (longTextBox.Text == "Long Break")
+            {
+                longTextBox.Text = "";
+                longTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void confirmStudyButton_Click(object sender, EventArgs e)
+        {
+            if (studyTextBox.TextLength > 0 && shortTextBox.TextLength > 0 && longTextBox.TextLength > 0)
+            {
+                if (int.TryParse(studyTextBox.Text, out _) && int.TryParse(shortTextBox.Text, out _) && int.TryParse(longTextBox.Text, out _))
+                {
+                    // Insert New Record if not Exist
+                    if (!dbConn.checkExistStudy(uid))
+                    {
+                        if (dbConn.addPersonalStudy(uid,Int32.Parse(studyTextBox.Text),Int32.Parse(shortTextBox.Text),Int32.Parse(longTextBox.Text)))
+                        {
+                            MessageBox.Show("Personal Study Time Successfully Set!");
+                        }
+                    }
+                    // Update existing Record if Exist
+                    else
+                    {
+                        if (dbConn.updatePersonalStudy(uid, Int32.Parse(studyTextBox.Text), Int32.Parse(shortTextBox.Text), Int32.Parse(longTextBox.Text)))
+                        {
+                            MessageBox.Show("Personal Study Time Successfully Set!");
+                        }
+                    }
+                } else
+                {
+                    MessageBox.Show("Please make sure to enter only number's with no decimal's!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            } else
+            {
+                MessageBox.Show("Please enter all times for personal study!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

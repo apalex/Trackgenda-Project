@@ -113,6 +113,11 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.confirmStudyButton = new System.Windows.Forms.Button();
+            this.shortTextBox = new System.Windows.Forms.TextBox();
+            this.studyTextBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.longTextBox = new System.Windows.Forms.TextBox();
             this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -667,6 +672,11 @@
             // settingsTab
             // 
             this.settingsTab.BackColor = System.Drawing.Color.White;
+            this.settingsTab.Controls.Add(this.longTextBox);
+            this.settingsTab.Controls.Add(this.confirmStudyButton);
+            this.settingsTab.Controls.Add(this.shortTextBox);
+            this.settingsTab.Controls.Add(this.studyTextBox);
+            this.settingsTab.Controls.Add(this.label23);
             this.settingsTab.Controls.Add(this.changeThemeButton);
             this.settingsTab.Controls.Add(this.darkRadioButton);
             this.settingsTab.Controls.Add(this.lightRadioButton);
@@ -1202,6 +1212,63 @@
             this.weeklyPanel.Size = new System.Drawing.Size(1465, 878);
             this.weeklyPanel.TabIndex = 11;
             // 
+            // confirmStudyButton
+            // 
+            this.confirmStudyButton.Location = new System.Drawing.Point(659, 523);
+            this.confirmStudyButton.Name = "confirmStudyButton";
+            this.confirmStudyButton.Size = new System.Drawing.Size(199, 30);
+            this.confirmStudyButton.TabIndex = 15;
+            this.confirmStudyButton.Text = "Set";
+            this.confirmStudyButton.UseVisualStyleBackColor = true;
+            this.confirmStudyButton.Click += new System.EventHandler(this.confirmStudyButton_Click);
+            // 
+            // shortTextBox
+            // 
+            this.shortTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shortTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.shortTextBox.Location = new System.Drawing.Point(658, 402);
+            this.shortTextBox.Name = "shortTextBox";
+            this.shortTextBox.Size = new System.Drawing.Size(200, 30);
+            this.shortTextBox.TabIndex = 14;
+            this.shortTextBox.Text = "Short Break";
+            this.shortTextBox.Enter += new System.EventHandler(this.shortTextBox_Enter);
+            this.shortTextBox.Leave += new System.EventHandler(this.shortTextBox_Leave);
+            // 
+            // studyTextBox
+            // 
+            this.studyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studyTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.studyTextBox.Location = new System.Drawing.Point(658, 339);
+            this.studyTextBox.Name = "studyTextBox";
+            this.studyTextBox.Size = new System.Drawing.Size(200, 30);
+            this.studyTextBox.TabIndex = 13;
+            this.studyTextBox.Text = "Study Time";
+            this.studyTextBox.Enter += new System.EventHandler(this.studyTextBox_Enter);
+            this.studyTextBox.Leave += new System.EventHandler(this.studyTextBox_Leave);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(653, 283);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(221, 32);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "Personal Study";
+            // 
+            // longTextBox
+            // 
+            this.longTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.longTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.longTextBox.Location = new System.Drawing.Point(658, 459);
+            this.longTextBox.Name = "longTextBox";
+            this.longTextBox.Size = new System.Drawing.Size(200, 30);
+            this.longTextBox.TabIndex = 16;
+            this.longTextBox.Text = "Long Break";
+            this.longTextBox.Enter += new System.EventHandler(this.longTextBox_Enter);
+            this.longTextBox.Leave += new System.EventHandler(this.longTextBox_Leave);
+            // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1322,5 +1389,10 @@
         private System.Windows.Forms.RadioButton lightRadioButton;
         private System.Windows.Forms.Button confirmPasswordTextBox;
         private System.Windows.Forms.Button updateEmailButton;
+        private System.Windows.Forms.TextBox longTextBox;
+        private System.Windows.Forms.Button confirmStudyButton;
+        private System.Windows.Forms.TextBox shortTextBox;
+        private System.Windows.Forms.TextBox studyTextBox;
+        private System.Windows.Forms.Label label23;
     }
 }

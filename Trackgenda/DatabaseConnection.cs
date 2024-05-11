@@ -690,5 +690,113 @@ namespace Trackgenda
                 return false;
             }
         }
+
+        // Personal Study
+        public bool checkExistStudy(int uid)
+        {
+            query = $"SELECT * FROM personal_study WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+            return false;
+        }
+
+        public bool addPersonalStudy(int uid, int study, int shortbreak, int longbreak)
+        {
+            query = $"INSERT INTO personal_study (uid,study,shortbreak,longbreak) VALUES ('{uid}','{study}', '{shortbreak}', '{longbreak}');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    return false;
+                }
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+        }
+
+        public bool updatePersonalStudy(int uid, int study, int shortbreak, int longbreak)
+        {
+            query = $"UPDATE personal_study SET study = '{study}', shortbreak = '{shortbreak}', longbreak = '{longbreak}' WHERE uid = {uid};";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            return false;
+        }
+
+        public int getStudyTime(int uid)
+        {
+            int study = 0;
+            query = $"SELECT study FROM personal_study WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                study = reader.GetInt32(0);
+                reader.Close();
+                return study;
+            }
+            reader.Close();
+            return study;
+        }
+
+        public int getShortBreak(int uid)
+        {
+            int shortbreak = 0;
+            query = $"SELECT shortbreak FROM personal_study WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                shortbreak = reader.GetInt32(0);
+                reader.Close();
+                return shortbreak;
+            }
+            reader.Close();
+            return shortbreak;
+        }
+
+        public int getLongBreak(int uid)
+        {
+            int longbreak = 0;
+            query = $"SELECT longbreak FROM personal_study WHERE uid = {uid};";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                longbreak = reader.GetInt32(0);
+                reader.Close();
+                return longbreak;
+            }
+            reader.Close();
+            return longbreak;
+        }
     }
 }

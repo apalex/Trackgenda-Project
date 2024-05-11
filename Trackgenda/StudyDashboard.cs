@@ -32,6 +32,7 @@ namespace Trackgenda
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            dbConn.CloseConnection();
         }
 
         private void fiftyTwoSeventeenRuleButton_Click(object sender, EventArgs e)
@@ -39,11 +40,22 @@ namespace Trackgenda
             StudyTechnique form = new StudyTechnique(uid,"52/17", 52, 0, 17);
             this.Close();
             form.Show();
+            dbConn.CloseConnection();
         }
 
         private void personalButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (dbConn.checkExistStudy(uid))
+            {
+                StudyTechnique form = new StudyTechnique(uid, "Personal", dbConn.getStudyTime(uid), dbConn.getShortBreak(uid), dbConn.getLongBreak(uid));
+                this.Close();
+                form.Show();
+                dbConn.CloseConnection();
+
+            } else
+            {
+                MessageBox.Show("Please set your Personal Study time's first in the Settings Tab!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void pomodoroButton_Click(object sender, EventArgs e)
@@ -51,6 +63,7 @@ namespace Trackgenda
             StudyTechnique form = new StudyTechnique(uid,"Pomodoro", 25, 5, 15);
             this.Close();
             form.Show();
+            dbConn.CloseConnection();
         }
 
         private string checkThemeMode()

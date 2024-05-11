@@ -52,9 +52,9 @@
             // timerLabel
             // 
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerLabel.Location = new System.Drawing.Point(480, 209);
+            this.timerLabel.Location = new System.Drawing.Point(483, 209);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(70, 38);
+            this.timerLabel.Size = new System.Drawing.Size(68, 38);
             this.timerLabel.TabIndex = 1;
             // 
             // progressBar
@@ -62,12 +62,12 @@
             this.progressBar.BackColor = System.Drawing.Color.White;
             this.progressBar.Location = new System.Drawing.Point(0, 250);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(617, 37);
+            this.progressBar.Size = new System.Drawing.Size(665, 37);
             this.progressBar.TabIndex = 2;
             // 
             // timer1
             // 
-            this.timer1.Interval = 50;
+            this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1

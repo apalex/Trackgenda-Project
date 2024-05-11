@@ -27,6 +27,7 @@ namespace Trackgenda
                 timerLabel.Text = progressBar.Value.ToString() + "%";
             } else
             {
+                timerLabel.Text = "100%";
                 timer1.Stop();
                 CalendarForm calendar = new CalendarForm(this.uid);
                 calendar.Show();
