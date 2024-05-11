@@ -20,9 +20,7 @@ namespace Trackgenda
     {
         private int uid;
         private bool sidePanelShow = true;
-        private bool studyDashboardShow = false;
         private bool dashBoardShow = false;
-        private StudyDashboard studyDashboardForm = new StudyDashboard();
         private BackgroundForm backgroundForm;
         private NotesForm notesForm;
         private DatabaseConnection dbConn;
@@ -61,12 +59,6 @@ namespace Trackgenda
             dbConn = new DatabaseConnection();
             dbConn.OpenConnection();
             InitializeComponent();
-        }
-
-        public bool StudyDashboardShow
-        {
-            get { return studyDashboardShow;}
-            set { studyDashboardShow = value;}
         }
 
         protected override CreateParams CreateParams
@@ -108,7 +100,6 @@ namespace Trackgenda
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
             this.Select();
             currentTimeTimer.Start();
-            studyDashboardForm.MdiParent = this;
             tabControl1.SelectedIndex = 3;
             displayDays();
             displayWeekly();
@@ -224,14 +215,8 @@ namespace Trackgenda
 
         private void studyButton_Click(object sender, EventArgs e)
         {
-            studyDashboardShow = !studyDashboardShow;
-            if (studyDashboardShow == true)
-            {
-                studyDashboardForm.Show();
-            } else
-            {
-                studyDashboardForm.Hide();
-            }
+            StudyDashboard form = new StudyDashboard(uid);
+            form.Show();
         }
 
         protected override void WndProc(ref Message m)

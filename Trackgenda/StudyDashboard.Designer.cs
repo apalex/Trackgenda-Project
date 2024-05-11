@@ -104,6 +104,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudyDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.StudyDashboard_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StudyDashboard_MouseDown);
             this.ResumeLayout(false);
 
         }

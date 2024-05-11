@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyTechnique));
-            this.studyButton = new System.Windows.Forms.Button();
             this.fire4 = new System.Windows.Forms.PictureBox();
             this.fire3 = new System.Windows.Forms.PictureBox();
             this.fire2 = new System.Windows.Forms.PictureBox();
@@ -40,31 +39,15 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.displayLabel = new System.Windows.Forms.Label();
-            this.longBreakButton = new System.Windows.Forms.Button();
-            this.shortBreakButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fire4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fire3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fire2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fire1)).BeginInit();
             this.SuspendLayout();
             // 
-            // studyButton
-            // 
-            this.studyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.studyButton.BackColor = System.Drawing.Color.White;
-            this.studyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studyButton.ForeColor = System.Drawing.Color.Black;
-            this.studyButton.Location = new System.Drawing.Point(28, 193);
-            this.studyButton.Name = "studyButton";
-            this.studyButton.Size = new System.Drawing.Size(130, 45);
-            this.studyButton.TabIndex = 35;
-            this.studyButton.Text = "Study";
-            this.studyButton.UseVisualStyleBackColor = false;
-            // 
             // fire4
             // 
+            this.fire4.BackColor = System.Drawing.Color.Transparent;
             this.fire4.Image = ((System.Drawing.Image)(resources.GetObject("fire4.Image")));
             this.fire4.Location = new System.Drawing.Point(300, 5);
             this.fire4.Name = "fire4";
@@ -76,6 +59,7 @@
             // 
             // fire3
             // 
+            this.fire3.BackColor = System.Drawing.Color.Transparent;
             this.fire3.Image = ((System.Drawing.Image)(resources.GetObject("fire3.Image")));
             this.fire3.Location = new System.Drawing.Point(260, 5);
             this.fire3.Name = "fire3";
@@ -87,6 +71,7 @@
             // 
             // fire2
             // 
+            this.fire2.BackColor = System.Drawing.Color.Transparent;
             this.fire2.Image = ((System.Drawing.Image)(resources.GetObject("fire2.Image")));
             this.fire2.Location = new System.Drawing.Point(220, 5);
             this.fire2.Name = "fire2";
@@ -98,6 +83,7 @@
             // 
             // fire1
             // 
+            this.fire1.BackColor = System.Drawing.Color.Transparent;
             this.fire1.Image = ((System.Drawing.Image)(resources.GetObject("fire1.Image")));
             this.fire1.Location = new System.Drawing.Point(180, 5);
             this.fire1.Name = "fire1";
@@ -111,20 +97,20 @@
             // 
             this.seperatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.seperatorLabel.BackColor = System.Drawing.Color.Transparent;
             this.seperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.seperatorLabel.Location = new System.Drawing.Point(0, 41);
             this.seperatorLabel.Name = "seperatorLabel";
-            this.seperatorLabel.Size = new System.Drawing.Size(480, 10);
+            this.seperatorLabel.Size = new System.Drawing.Size(480, 1);
             this.seperatorLabel.TabIndex = 30;
             // 
             // resetButton
             // 
-            this.resetButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.resetButton.BackColor = System.Drawing.Color.White;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(338, 128);
+            this.resetButton.Location = new System.Drawing.Point(338, 134);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(130, 45);
             this.resetButton.TabIndex = 29;
@@ -133,12 +119,11 @@
             // 
             // controlButton
             // 
-            this.controlButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.controlButton.BackColor = System.Drawing.Color.White;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.controlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlButton.Location = new System.Drawing.Point(338, 64);
+            this.controlButton.Location = new System.Drawing.Point(338, 70);
             this.controlButton.Name = "controlButton";
             this.controlButton.Size = new System.Drawing.Size(130, 45);
             this.controlButton.TabIndex = 28;
@@ -147,9 +132,9 @@
             // 
             // timeLabel
             // 
-            this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(14, 65);
+            this.timeLabel.Location = new System.Drawing.Point(14, 71);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(298, 108);
             this.timeLabel.TabIndex = 27;
@@ -167,53 +152,24 @@
             this.exitButton.TabIndex = 26;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // displayLabel
             // 
+            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(12, 9);
+            this.displayLabel.Location = new System.Drawing.Point(12, 6);
             this.displayLabel.Name = "displayLabel";
             this.displayLabel.Size = new System.Drawing.Size(199, 40);
             this.displayLabel.TabIndex = 25;
             this.displayLabel.Text = "TEXT HERE";
-            // 
-            // longBreakButton
-            // 
-            this.longBreakButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.longBreakButton.BackColor = System.Drawing.Color.White;
-            this.longBreakButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.longBreakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.longBreakButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.longBreakButton.ForeColor = System.Drawing.Color.Black;
-            this.longBreakButton.Location = new System.Drawing.Point(338, 193);
-            this.longBreakButton.Name = "longBreakButton";
-            this.longBreakButton.Size = new System.Drawing.Size(130, 45);
-            this.longBreakButton.TabIndex = 24;
-            this.longBreakButton.Text = "Long Break";
-            this.longBreakButton.UseVisualStyleBackColor = false;
-            // 
-            // shortBreakButton
-            // 
-            this.shortBreakButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.shortBreakButton.BackColor = System.Drawing.Color.White;
-            this.shortBreakButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortBreakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shortBreakButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shortBreakButton.ForeColor = System.Drawing.Color.Black;
-            this.shortBreakButton.Location = new System.Drawing.Point(182, 193);
-            this.shortBreakButton.Name = "shortBreakButton";
-            this.shortBreakButton.Size = new System.Drawing.Size(130, 45);
-            this.shortBreakButton.TabIndex = 23;
-            this.shortBreakButton.Text = "Short Break";
-            this.shortBreakButton.UseVisualStyleBackColor = false;
             // 
             // StudyTechnique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(480, 250);
-            this.Controls.Add(this.studyButton);
+            this.ClientSize = new System.Drawing.Size(480, 213);
             this.Controls.Add(this.fire4);
             this.Controls.Add(this.fire3);
             this.Controls.Add(this.fire2);
@@ -224,12 +180,13 @@
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.displayLabel);
-            this.Controls.Add(this.longBreakButton);
-            this.Controls.Add(this.shortBreakButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudyTechnique";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudyTechnique";
+            this.Load += new System.EventHandler(this.StudyTechnique_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StudyTechnique_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.fire4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fire3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fire2)).EndInit();
@@ -239,8 +196,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button studyButton;
         private System.Windows.Forms.PictureBox fire4;
         private System.Windows.Forms.PictureBox fire3;
         private System.Windows.Forms.PictureBox fire2;
@@ -251,7 +206,5 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label displayLabel;
-        private System.Windows.Forms.Button longBreakButton;
-        private System.Windows.Forms.Button shortBreakButton;
     }
 }
