@@ -39,7 +39,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userPictureBox = new System.Windows.Forms.PictureBox();
             this.lockPictureBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.closeButton1 = new Trackgenda.CloseButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
@@ -50,7 +49,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(51, 195);
+            this.usernameLabel.Location = new System.Drawing.Point(51, 225);
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(150, 33);
@@ -61,7 +60,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(51, 291);
+            this.passwordLabel.Location = new System.Drawing.Point(51, 321);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(143, 33);
@@ -70,7 +69,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(57, 332);
+            this.passwordTextBox.Location = new System.Drawing.Point(57, 362);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -79,7 +78,7 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(57, 237);
+            this.usernameTextBox.Location = new System.Drawing.Point(57, 267);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(332, 26);
@@ -90,7 +89,7 @@
             this.loginButton.BackColor = System.Drawing.Color.White;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(57, 389);
+            this.loginButton.Location = new System.Drawing.Point(57, 419);
             this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(334, 43);
@@ -103,7 +102,7 @@
             // 
             this.registerLabel.AutoSize = true;
             this.registerLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registerLabel.Location = new System.Drawing.Point(72, 489);
+            this.registerLabel.Location = new System.Drawing.Point(72, 519);
             this.registerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registerLabel.Name = "registerLabel";
             this.registerLabel.Size = new System.Drawing.Size(284, 20);
@@ -115,7 +114,7 @@
             // 
             this.forgotPasswordLabel.AutoSize = true;
             this.forgotPasswordLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.forgotPasswordLabel.Location = new System.Drawing.Point(105, 454);
+            this.forgotPasswordLabel.Location = new System.Drawing.Point(105, 484);
             this.forgotPasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.forgotPasswordLabel.Name = "forgotPasswordLabel";
             this.forgotPasswordLabel.Size = new System.Drawing.Size(218, 20);
@@ -126,7 +125,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
-            this.pictureBox1.Location = new System.Drawing.Point(129, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(120, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +136,7 @@
             // 
             this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.userPictureBox.Image = global::Trackgenda.Properties.Resources.Sample_User_Icon;
-            this.userPictureBox.Location = new System.Drawing.Point(198, 197);
+            this.userPictureBox.Location = new System.Drawing.Point(198, 227);
             this.userPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userPictureBox.Name = "userPictureBox";
             this.userPictureBox.Size = new System.Drawing.Size(45, 31);
@@ -149,23 +148,13 @@
             // 
             this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.lockPictureBox.Image = global::Trackgenda.Properties.Resources.Lock_icon;
-            this.lockPictureBox.Location = new System.Drawing.Point(198, 293);
+            this.lockPictureBox.Location = new System.Drawing.Point(198, 323);
             this.lockPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.Size = new System.Drawing.Size(45, 31);
             this.lockPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lockPictureBox.TabIndex = 5;
             this.lockPictureBox.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(185, 541);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // closeButton1
             // 
@@ -180,7 +169,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 615);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.registerLabel);
@@ -219,7 +207,6 @@
         private System.Windows.Forms.Label forgotPasswordLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private CloseButton closeButton1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -20,7 +20,6 @@ namespace Trackgenda
     {
         private int uid;
         private bool sidePanelShow = true;
-        private bool dashBoardShow = false;
         private BackgroundForm backgroundForm;
         private NotesForm notesForm;
         private DatabaseConnection dbConn;
@@ -100,7 +99,7 @@ namespace Trackgenda
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
             this.Select();
             currentTimeTimer.Start();
-            tabControl1.SelectedIndex = 3;
+            tabControl1.SelectedTab = calendarWeeklyTab;
             displayDays();
             displayWeekly();
             changeThemeMode();
@@ -258,16 +257,7 @@ namespace Trackgenda
 
         private void dashboardButton_Click(object sender, EventArgs e)
         {
-            dashBoardShow = !dashBoardShow;
-            if (dashBoardShow == true)
-            {
-                tabControl1.SelectedTab = dashboardTab;
-                dashboardButton.Text = "Calendar";
-            } else
-            {
-                tabControl1.SelectedTab = monthlyCalendarTab;
-                dashboardButton.Text = "Dashboard";
-            }
+            tabControl1.SelectedTab = calendarWeeklyTab;
         }
 
         private void displayDays()
@@ -497,8 +487,6 @@ namespace Trackgenda
                     image = new Bitmap(image, monthlyCalendarTab.Width, monthlyCalendarTab.Height);
                     monthlyCalendarTab.BackgroundImage = image;
                     monthlyCalendarTab.BackColor = Color.Transparent;
-                    dashboardTab.BackgroundImage = image;
-                    dashboardTab.BackColor = Color.Transparent;
                     settingsTab.BackgroundImage = image;
                     settingsTab.BackColor = Color.Transparent;
                     calendarWeeklyTab.BackgroundImage = image;
@@ -533,8 +521,6 @@ namespace Trackgenda
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                // Dashboard
-                dashboardTab.BackColor = Color.White;
                 // Settings
                 settingsTab.BackColor = Color.White;
                 label9.ForeColor = Color.Black;
@@ -595,8 +581,6 @@ namespace Trackgenda
                 label6.ForeColor = Color.White;
                 label7.ForeColor = Color.White;
                 label8.ForeColor = Color.White;
-                // Dashboard
-                dashboardTab.BackColor = Color.White;
                 // Settings
                 settingsTab.BackColor = Color.FromArgb(24, 24, 24);
                 label9.ForeColor = Color.White;
@@ -712,12 +696,12 @@ namespace Trackgenda
 
         private void monthlyButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 0;
+            tabControl1.SelectedTab = monthlyCalendarTab;
         }
 
         private void weeklyButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 3;
+            tabControl1.SelectedTab = calendarWeeklyTab;
         }
 
         private void nextWeeklyButton_Click(object sender, EventArgs e)

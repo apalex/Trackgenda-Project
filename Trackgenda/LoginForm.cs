@@ -72,14 +72,6 @@ namespace Trackgenda
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dbConn.CloseConnection();
-            ProgressBarForm progressBarForm = new ProgressBarForm(1);
-            progressBarForm.Show();
-            this.Hide();
-        }
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
             closeButton1.Select();
