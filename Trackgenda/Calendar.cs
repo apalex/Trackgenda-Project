@@ -396,6 +396,7 @@ namespace Trackgenda
             // Upper Bar
             hamburgerPictureBox.BackColor = Color.White;
             logoLabel.ForeColor = Color.Black;
+            label3.ForeColor = Color.Black;
             upperBar.BackColor = Color.White;
             upperBar.ForeColor = Color.Black;
             currentTimeLabel.ForeColor = Color.Black;
@@ -440,6 +441,7 @@ namespace Trackgenda
             // Upper Bar
             hamburgerPictureBox.BackColor = Color.FromArgb(18, 18, 18);
             logoLabel.ForeColor = Color.White;
+            label3.ForeColor = Color.White;
             upperBar.BackColor = Color.FromArgb(18, 18, 18);
             upperBar.ForeColor = Color.Black;
             currentTimeLabel.ForeColor = Color.White;
