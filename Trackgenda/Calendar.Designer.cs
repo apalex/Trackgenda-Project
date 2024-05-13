@@ -116,6 +116,8 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -126,11 +128,14 @@
             this.settingsTab.SuspendLayout();
             this.calendarWeeklyTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // upperBar
             // 
             this.upperBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.upperBar.Controls.Add(this.pictureBox2);
+            this.upperBar.Controls.Add(this.label3);
             this.upperBar.Controls.Add(this.currentTimeLabel);
             this.upperBar.Controls.Add(this.minimizeButton);
             this.upperBar.Controls.Add(this.maximizeButton);
@@ -487,10 +492,10 @@
             this.monthlyCalendarTab.Controls.Add(this.nextButton);
             this.monthlyCalendarTab.Controls.Add(this.previousButton);
             this.monthlyCalendarTab.Controls.Add(this.monthlyPanel);
-            this.monthlyCalendarTab.Location = new System.Drawing.Point(4, 29);
+            this.monthlyCalendarTab.Location = new System.Drawing.Point(4, 22);
             this.monthlyCalendarTab.Name = "monthlyCalendarTab";
             this.monthlyCalendarTab.Padding = new System.Windows.Forms.Padding(3);
-            this.monthlyCalendarTab.Size = new System.Drawing.Size(1922, 1039);
+            this.monthlyCalendarTab.Size = new System.Drawing.Size(1922, 1046);
             this.monthlyCalendarTab.TabIndex = 0;
             this.monthlyCalendarTab.Text = "tabPage1";
             // 
@@ -538,7 +543,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1533, 73);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 29);
+            this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Friday";
             // 
@@ -549,7 +554,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(1738, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 29);
+            this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 7;
             this.label7.Text = "Saturday";
             // 
@@ -560,7 +565,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1318, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 29);
+            this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 6;
             this.label8.Text = "Thursday";
             // 
@@ -571,7 +576,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(902, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 29);
+            this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Tuesday";
             // 
@@ -582,7 +587,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(1100, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 29);
+            this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Wednesday";
             // 
@@ -593,7 +598,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(697, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 29);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Monday";
             // 
@@ -604,7 +609,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(490, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sunday";
             // 
@@ -665,10 +670,10 @@
             this.settingsTab.Controls.Add(this.label22);
             this.settingsTab.Controls.Add(this.label21);
             this.settingsTab.Controls.Add(this.label9);
-            this.settingsTab.Location = new System.Drawing.Point(4, 29);
+            this.settingsTab.Location = new System.Drawing.Point(4, 22);
             this.settingsTab.Name = "settingsTab";
             this.settingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.settingsTab.Size = new System.Drawing.Size(1922, 1039);
+            this.settingsTab.Size = new System.Drawing.Size(1922, 1046);
             this.settingsTab.TabIndex = 2;
             this.settingsTab.Text = "tabPage1";
             // 
@@ -678,7 +683,7 @@
             this.longTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.longTextBox.Location = new System.Drawing.Point(667, 474);
             this.longTextBox.Name = "longTextBox";
-            this.longTextBox.Size = new System.Drawing.Size(200, 30);
+            this.longTextBox.Size = new System.Drawing.Size(200, 23);
             this.longTextBox.TabIndex = 16;
             this.longTextBox.Text = "Long Break";
             this.longTextBox.Enter += new System.EventHandler(this.longTextBox_Enter);
@@ -700,7 +705,7 @@
             this.shortTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.shortTextBox.Location = new System.Drawing.Point(667, 417);
             this.shortTextBox.Name = "shortTextBox";
-            this.shortTextBox.Size = new System.Drawing.Size(200, 30);
+            this.shortTextBox.Size = new System.Drawing.Size(200, 23);
             this.shortTextBox.TabIndex = 14;
             this.shortTextBox.Text = "Short Break";
             this.shortTextBox.Enter += new System.EventHandler(this.shortTextBox_Enter);
@@ -712,7 +717,7 @@
             this.studyTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.studyTextBox.Location = new System.Drawing.Point(667, 354);
             this.studyTextBox.Name = "studyTextBox";
-            this.studyTextBox.Size = new System.Drawing.Size(200, 30);
+            this.studyTextBox.Size = new System.Drawing.Size(200, 23);
             this.studyTextBox.TabIndex = 13;
             this.studyTextBox.Text = "Study Time";
             this.studyTextBox.Enter += new System.EventHandler(this.studyTextBox_Enter);
@@ -725,7 +730,7 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(662, 298);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(221, 32);
+            this.label23.Size = new System.Drawing.Size(150, 24);
             this.label23.TabIndex = 12;
             this.label23.Text = "Personal Study";
             // 
@@ -744,7 +749,7 @@
             this.darkRadioButton.AutoSize = true;
             this.darkRadioButton.Location = new System.Drawing.Point(692, 174);
             this.darkRadioButton.Name = "darkRadioButton";
-            this.darkRadioButton.Size = new System.Drawing.Size(68, 24);
+            this.darkRadioButton.Size = new System.Drawing.Size(48, 17);
             this.darkRadioButton.TabIndex = 10;
             this.darkRadioButton.TabStop = true;
             this.darkRadioButton.Text = "Dark";
@@ -755,7 +760,7 @@
             this.lightRadioButton.AutoSize = true;
             this.lightRadioButton.Location = new System.Drawing.Point(692, 120);
             this.lightRadioButton.Name = "lightRadioButton";
-            this.lightRadioButton.Size = new System.Drawing.Size(69, 24);
+            this.lightRadioButton.Size = new System.Drawing.Size(48, 17);
             this.lightRadioButton.TabIndex = 9;
             this.lightRadioButton.TabStop = true;
             this.lightRadioButton.Text = "Light";
@@ -787,7 +792,7 @@
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.newPasswordTextBox.Location = new System.Drawing.Point(285, 417);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.newPasswordTextBox.Size = new System.Drawing.Size(200, 23);
             this.newPasswordTextBox.TabIndex = 6;
             this.newPasswordTextBox.Text = "New Password";
             this.newPasswordTextBox.Enter += new System.EventHandler(this.newPasswordTextBox_Enter);
@@ -799,7 +804,7 @@
             this.currentPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.currentPasswordTextBox.Location = new System.Drawing.Point(285, 354);
             this.currentPasswordTextBox.Name = "currentPasswordTextBox";
-            this.currentPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.currentPasswordTextBox.Size = new System.Drawing.Size(200, 23);
             this.currentPasswordTextBox.TabIndex = 5;
             this.currentPasswordTextBox.Text = "Current Password";
             this.currentPasswordTextBox.Enter += new System.EventHandler(this.currentPasswordTextBox_Enter);
@@ -811,7 +816,7 @@
             this.newEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.newEmailTextBox.Location = new System.Drawing.Point(286, 172);
             this.newEmailTextBox.Name = "newEmailTextBox";
-            this.newEmailTextBox.Size = new System.Drawing.Size(200, 30);
+            this.newEmailTextBox.Size = new System.Drawing.Size(200, 23);
             this.newEmailTextBox.TabIndex = 4;
             this.newEmailTextBox.Text = "New Email";
             this.newEmailTextBox.Enter += new System.EventHandler(this.newEmailTextBox_Enter);
@@ -823,7 +828,7 @@
             this.currentEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.currentEmailTextBox.Location = new System.Drawing.Point(286, 109);
             this.currentEmailTextBox.Name = "currentEmailTextBox";
-            this.currentEmailTextBox.Size = new System.Drawing.Size(200, 30);
+            this.currentEmailTextBox.Size = new System.Drawing.Size(200, 23);
             this.currentEmailTextBox.TabIndex = 3;
             this.currentEmailTextBox.Text = "Current Email";
             this.currentEmailTextBox.Enter += new System.EventHandler(this.currentEmailTextBox_Enter);
@@ -836,7 +841,7 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(686, 52);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(107, 32);
+            this.label22.Size = new System.Drawing.Size(76, 24);
             this.label22.TabIndex = 2;
             this.label22.Text = "Theme";
             // 
@@ -847,7 +852,7 @@
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(280, 298);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(260, 32);
+            this.label21.Size = new System.Drawing.Size(179, 24);
             this.label21.TabIndex = 1;
             this.label21.Text = "Change Password";
             // 
@@ -858,7 +863,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(281, 52);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(197, 32);
+            this.label9.Size = new System.Drawing.Size(134, 24);
             this.label9.TabIndex = 0;
             this.label9.Text = "Update Email";
             // 
@@ -896,10 +901,10 @@
             this.calendarWeeklyTab.Controls.Add(this.mondayLabel);
             this.calendarWeeklyTab.Controls.Add(this.sundayLabel);
             this.calendarWeeklyTab.Controls.Add(this.weeklyPanel);
-            this.calendarWeeklyTab.Location = new System.Drawing.Point(4, 29);
+            this.calendarWeeklyTab.Location = new System.Drawing.Point(4, 22);
             this.calendarWeeklyTab.Name = "calendarWeeklyTab";
             this.calendarWeeklyTab.Padding = new System.Windows.Forms.Padding(3);
-            this.calendarWeeklyTab.Size = new System.Drawing.Size(1922, 1039);
+            this.calendarWeeklyTab.Size = new System.Drawing.Size(1922, 1046);
             this.calendarWeeklyTab.TabIndex = 3;
             this.calendarWeeklyTab.Text = "tabPage1";
             // 
@@ -910,7 +915,7 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(408, 860);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 25);
+            this.label20.Size = new System.Drawing.Size(44, 17);
             this.label20.TabIndex = 41;
             this.label20.Text = "19:00";
             // 
@@ -921,7 +926,7 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(408, 795);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 25);
+            this.label18.Size = new System.Drawing.Size(44, 17);
             this.label18.TabIndex = 40;
             this.label18.Text = "18:00";
             // 
@@ -932,7 +937,7 @@
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(408, 724);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 25);
+            this.label19.Size = new System.Drawing.Size(44, 17);
             this.label19.TabIndex = 39;
             this.label19.Text = "17:00";
             // 
@@ -943,7 +948,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(408, 655);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 25);
+            this.label16.Size = new System.Drawing.Size(44, 17);
             this.label16.TabIndex = 38;
             this.label16.Text = "16:00";
             // 
@@ -954,7 +959,7 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(408, 587);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 25);
+            this.label17.Size = new System.Drawing.Size(44, 17);
             this.label17.TabIndex = 37;
             this.label17.Text = "15:00";
             // 
@@ -965,7 +970,7 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(408, 521);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 25);
+            this.label14.Size = new System.Drawing.Size(44, 17);
             this.label14.TabIndex = 36;
             this.label14.Text = "14:00";
             // 
@@ -976,7 +981,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(408, 455);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 25);
+            this.label15.Size = new System.Drawing.Size(44, 17);
             this.label15.TabIndex = 35;
             this.label15.Text = "13:00";
             // 
@@ -987,7 +992,7 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(408, 391);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 25);
+            this.label12.Size = new System.Drawing.Size(44, 17);
             this.label12.TabIndex = 34;
             this.label12.Text = "12:00";
             // 
@@ -998,7 +1003,7 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(408, 322);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 25);
+            this.label13.Size = new System.Drawing.Size(44, 17);
             this.label13.TabIndex = 33;
             this.label13.Text = "11:00";
             // 
@@ -1009,7 +1014,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(408, 257);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 25);
+            this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 32;
             this.label11.Text = "10:00";
             // 
@@ -1020,7 +1025,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(414, 190);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 25);
+            this.label10.Size = new System.Drawing.Size(36, 17);
             this.label10.TabIndex = 31;
             this.label10.Text = "9:00";
             // 
@@ -1030,7 +1035,7 @@
             this.saturdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.saturdayDateLabel.Location = new System.Drawing.Point(1742, 142);
             this.saturdayDateLabel.Name = "saturdayDateLabel";
-            this.saturdayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.saturdayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.saturdayDateLabel.TabIndex = 30;
             this.saturdayDateLabel.Text = "11/11/1111";
             // 
@@ -1040,7 +1045,7 @@
             this.fridayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.fridayDateLabel.Location = new System.Drawing.Point(1542, 142);
             this.fridayDateLabel.Name = "fridayDateLabel";
-            this.fridayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.fridayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.fridayDateLabel.TabIndex = 29;
             this.fridayDateLabel.Text = "11/11/1111";
             // 
@@ -1050,7 +1055,7 @@
             this.thursdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.thursdayDateLabel.Location = new System.Drawing.Point(1337, 142);
             this.thursdayDateLabel.Name = "thursdayDateLabel";
-            this.thursdayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.thursdayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.thursdayDateLabel.TabIndex = 28;
             this.thursdayDateLabel.Text = "11/11/1111";
             // 
@@ -1060,7 +1065,7 @@
             this.wednesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.wednesdayDateLabel.Location = new System.Drawing.Point(1137, 142);
             this.wednesdayDateLabel.Name = "wednesdayDateLabel";
-            this.wednesdayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.wednesdayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.wednesdayDateLabel.TabIndex = 27;
             this.wednesdayDateLabel.Text = "11/11/1111";
             // 
@@ -1070,7 +1075,7 @@
             this.tuesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.tuesdayDateLabel.Location = new System.Drawing.Point(936, 142);
             this.tuesdayDateLabel.Name = "tuesdayDateLabel";
-            this.tuesdayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.tuesdayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.tuesdayDateLabel.TabIndex = 26;
             this.tuesdayDateLabel.Text = "11/11/1111";
             // 
@@ -1080,7 +1085,7 @@
             this.mondayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.mondayDateLabel.Location = new System.Drawing.Point(734, 142);
             this.mondayDateLabel.Name = "mondayDateLabel";
-            this.mondayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.mondayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.mondayDateLabel.TabIndex = 25;
             this.mondayDateLabel.Text = "11/11/1111";
             // 
@@ -1090,7 +1095,7 @@
             this.sundayDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.sundayDateLabel.Location = new System.Drawing.Point(531, 142);
             this.sundayDateLabel.Name = "sundayDateLabel";
-            this.sundayDateLabel.Size = new System.Drawing.Size(89, 20);
+            this.sundayDateLabel.Size = new System.Drawing.Size(65, 13);
             this.sundayDateLabel.TabIndex = 24;
             this.sundayDateLabel.Text = "11/11/1111";
             // 
@@ -1168,7 +1173,7 @@
             this.fridayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayLabel.Location = new System.Drawing.Point(1546, 116);
             this.fridayLabel.Name = "fridayLabel";
-            this.fridayLabel.Size = new System.Drawing.Size(80, 29);
+            this.fridayLabel.Size = new System.Drawing.Size(52, 20);
             this.fridayLabel.TabIndex = 18;
             this.fridayLabel.Text = "Friday";
             // 
@@ -1179,7 +1184,7 @@
             this.saturdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayLabel.Location = new System.Drawing.Point(1736, 116);
             this.saturdayLabel.Name = "saturdayLabel";
-            this.saturdayLabel.Size = new System.Drawing.Size(107, 29);
+            this.saturdayLabel.Size = new System.Drawing.Size(73, 20);
             this.saturdayLabel.TabIndex = 17;
             this.saturdayLabel.Text = "Saturday";
             // 
@@ -1190,7 +1195,7 @@
             this.thursdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayLabel.Location = new System.Drawing.Point(1329, 116);
             this.thursdayLabel.Name = "thursdayLabel";
-            this.thursdayLabel.Size = new System.Drawing.Size(113, 29);
+            this.thursdayLabel.Size = new System.Drawing.Size(74, 20);
             this.thursdayLabel.TabIndex = 16;
             this.thursdayLabel.Text = "Thursday";
             // 
@@ -1201,7 +1206,7 @@
             this.tuesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayLabel.Location = new System.Drawing.Point(931, 116);
             this.tuesdayLabel.Name = "tuesdayLabel";
-            this.tuesdayLabel.Size = new System.Drawing.Size(106, 29);
+            this.tuesdayLabel.Size = new System.Drawing.Size(69, 20);
             this.tuesdayLabel.TabIndex = 15;
             this.tuesdayLabel.Text = "Tuesday";
             // 
@@ -1212,7 +1217,7 @@
             this.wednesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayLabel.Location = new System.Drawing.Point(1119, 116);
             this.wednesdayLabel.Name = "wednesdayLabel";
-            this.wednesdayLabel.Size = new System.Drawing.Size(140, 29);
+            this.wednesdayLabel.Size = new System.Drawing.Size(93, 20);
             this.wednesdayLabel.TabIndex = 14;
             this.wednesdayLabel.Text = "Wednesday";
             // 
@@ -1223,7 +1228,7 @@
             this.mondayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayLabel.Location = new System.Drawing.Point(732, 116);
             this.mondayLabel.Name = "mondayLabel";
-            this.mondayLabel.Size = new System.Drawing.Size(98, 29);
+            this.mondayLabel.Size = new System.Drawing.Size(65, 20);
             this.mondayLabel.TabIndex = 13;
             this.mondayLabel.Text = "Monday";
             // 
@@ -1234,7 +1239,7 @@
             this.sundayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayLabel.Location = new System.Drawing.Point(532, 116);
             this.sundayLabel.Name = "sundayLabel";
-            this.sundayLabel.Size = new System.Drawing.Size(93, 29);
+            this.sundayLabel.Size = new System.Drawing.Size(63, 20);
             this.sundayLabel.TabIndex = 12;
             this.sundayLabel.Text = "Sunday";
             // 
@@ -1244,6 +1249,23 @@
             this.weeklyPanel.Name = "weeklyPanel";
             this.weeklyPanel.Size = new System.Drawing.Size(1465, 878);
             this.weeklyPanel.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(1537, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1489, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 29);
+            this.label3.TabIndex = 7;
             // 
             // CalendarForm
             // 
@@ -1263,6 +1285,7 @@
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
             this.upperBar.ResumeLayout(false);
+            this.upperBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).EndInit();
@@ -1275,6 +1298,7 @@
             this.calendarWeeklyTab.ResumeLayout(false);
             this.calendarWeeklyTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1366,5 +1390,7 @@
         private System.Windows.Forms.TextBox shortTextBox;
         private System.Windows.Forms.TextBox studyTextBox;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -13,6 +13,8 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace Trackgenda
 {
@@ -103,6 +105,7 @@ namespace Trackgenda
             displayDays();
             displayWeekly();
             changeThemeMode();
+            GetWeather();
         }
 
         private void currentTimeTimer_Tick(object sender, EventArgs e)
@@ -1012,5 +1015,44 @@ namespace Trackgenda
                 MessageBox.Show("Please enter all times for personal study!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void GetWeather()
+        {
+            var WeatherApiUrl = "https://api.weatherapi.com/v1/current.json?key=75f22232d91b4dd09f213826242204&q=auto:ip&aqi=no";
+            try
+            {
+
+                using (WebClient client = new WebClient())
+                {
+
+                    string json = client.DownloadString(WeatherApiUrl);
+
+
+                    JObject data = JObject.Parse(json);
+
+
+                    string temperature = data["current"]["temp_c"].ToString();
+                    string iconUrl = "https:" + data["current"]["condition"]["icon"].ToString();
+
+                    using (var iconClient = new WebClient())
+                    {
+                        byte[] imageBytes = iconClient.DownloadData(iconUrl);
+
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            var weatherImage = Image.FromStream(stream);
+                            label3.Text = $"{temperature} °C";
+                            pictureBox2.Image = weatherImage;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors
+                MessageBox.Show($"Error fetching weather data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
     }
 }
