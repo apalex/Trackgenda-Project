@@ -1,6 +1,6 @@
 ﻿namespace Trackgenda
 {
-    partial class MotivionalQuoteForm
+    partial class MotivationalQuoteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MotivionalQuoteForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MotivationalQuoteForm));
             this.displayLabel = new System.Windows.Forms.Label();
             this.quotelabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
@@ -38,11 +38,11 @@
             // 
             this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(62, 47);
+            this.displayLabel.Location = new System.Drawing.Point(41, 43);
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(308, 39);
+            this.displayLabel.Size = new System.Drawing.Size(318, 39);
             this.displayLabel.TabIndex = 0;
-            this.displayLabel.Text = "Random Motivional Quote";
+            this.displayLabel.Text = "Random Motivational Quote";
             // 
             // quotelabel
             // 
@@ -67,7 +67,7 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // MotivionalQuoteForm
+            // MotivationalQuoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -78,7 +78,7 @@
             this.Controls.Add(this.displayLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MotivionalQuoteForm";
+            this.Name = "MotivationalQuoteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MotivionalQuoteForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MotivionalQuoteForm_MouseDown);

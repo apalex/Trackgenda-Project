@@ -199,7 +199,7 @@ namespace Trackgenda
 
         private void motivationalButton_Click(object sender, EventArgs e)
         {
-            MotivionalQuoteForm form = new MotivionalQuoteForm(uid);
+            MotivationalQuoteForm form = new MotivationalQuoteForm(uid);
             form.Show();
         }
 

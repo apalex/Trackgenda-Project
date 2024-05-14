@@ -7,13 +7,13 @@ using Newtonsoft.Json;
 
 namespace Trackgenda
 {
-    public partial class MotivionalQuoteForm : Form
+    public partial class MotivationalQuoteForm : Form
     {
         private int uid;
         private DatabaseConnection dbConn;
         private const string apiUrl = "https://type.fit/api/quotes";
         private HttpClient httpClient;
-        public MotivionalQuoteForm(int uid)
+        public MotivationalQuoteForm(int uid)
         {
             UID = uid;
             dbConn = new DatabaseConnection();
