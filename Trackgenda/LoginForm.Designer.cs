@@ -69,8 +69,8 @@
             // 
             // loginButton
             // 
-            resources.ApplyResources(this.loginButton, "loginButton");
             this.loginButton.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.loginButton, "loginButton");
             this.loginButton.Name = "loginButton";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -101,34 +101,35 @@
             // 
             // comboBox1
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
             resources.GetString("comboBox1.Items1"),
             resources.GetString("comboBox1.Items2")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::Trackgenda.Properties.Resources.TG;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // userPictureBox
             // 
-            resources.ApplyResources(this.userPictureBox, "userPictureBox");
             this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.userPictureBox.Image = global::Trackgenda.Properties.Resources.Sample_User_Icon;
+            resources.ApplyResources(this.userPictureBox, "userPictureBox");
             this.userPictureBox.Name = "userPictureBox";
             this.userPictureBox.TabStop = false;
             // 
             // lockPictureBox
             // 
-            resources.ApplyResources(this.lockPictureBox, "lockPictureBox");
             this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.lockPictureBox.Image = global::Trackgenda.Properties.Resources.Lock_icon;
+            resources.ApplyResources(this.lockPictureBox, "lockPictureBox");
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.TabStop = false;
             // 

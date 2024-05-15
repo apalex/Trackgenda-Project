@@ -1055,6 +1055,25 @@ namespace Trackgenda
             }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var changeLanguage = new ChangeLanguage();
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0: changeLanguage.UpdateConfig("en-CA");
+                    Application.Restart();
+                    break;
 
+                case 1:
+                    changeLanguage.UpdateConfig("fr-CA");
+                    Application.Restart();
+                    break;
+
+                case 2:
+                    changeLanguage.UpdateConfig("ro-MD");
+                    Application.Restart();
+                    break;
+            }
+        }
     }
 }

@@ -133,6 +133,7 @@
     <Compile Include="CellWeekly.Designer.cs">
       <DependentUpon>CellWeekly.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeLanguage.cs" />
     <Compile Include="EmptyCell.cs">
       <SubType>UserControl</SubType>
     </Compile>
