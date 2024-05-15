@@ -140,9 +140,6 @@
   <data name="exitButton.Text" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="&gt;&gt;todoLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 0</value>
   </data>
@@ -177,6 +174,9 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;todoLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -186,20 +186,20 @@
   <data name="&gt;&gt;todoLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="todoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 19</value>
+  <data name="todoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;todoLabel.Name" xml:space="preserve">
     <value>todoLabel</value>
   </data>
   <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3951,17 +3951,17 @@
   <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
     <value>exitButton</value>
   </data>
-  <data name="todoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+  <data name="todoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 19</value>
   </data>
   <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
     <value>textBox1</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;todoLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3977,8 +3977,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ro-MD</value>
   </metadata>
 </root>
