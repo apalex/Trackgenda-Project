@@ -39,15 +39,15 @@
             this.confirmTextBox = new System.Windows.Forms.TextBox();
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
-            this.closeButton1 = new Trackgenda.CloseButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.closeButton1 = new Trackgenda.CloseButton();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.backButton, "backButton");
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Name = "backButton";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -106,31 +106,31 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.confirmButton, "confirmButton");
+            this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // closeButton1
-            // 
-            resources.ApplyResources(this.closeButton1, "closeButton1");
-            this.closeButton1.Name = "closeButton1";
-            // 
             // comboBox1
             // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
             resources.GetString("comboBox1.Items1"),
             resources.GetString("comboBox1.Items2")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // closeButton1
+            // 
+            resources.ApplyResources(this.closeButton1, "closeButton1");
+            this.closeButton1.Name = "closeButton1";
             // 
             // ForgotPasswordForm
             // 

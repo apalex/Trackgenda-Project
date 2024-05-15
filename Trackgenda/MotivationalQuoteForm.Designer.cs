@@ -36,21 +36,21 @@
             // 
             // displayLabel
             // 
-            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.displayLabel, "displayLabel");
+            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Name = "displayLabel";
             // 
             // quotelabel
             // 
-            this.quotelabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.quotelabel, "quotelabel");
+            this.quotelabel.BackColor = System.Drawing.Color.Transparent;
             this.quotelabel.Name = "quotelabel";
             // 
             // closeButton
             // 
+            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.ForeColor = System.Drawing.Color.Black;
             this.closeButton.Name = "closeButton";
             this.closeButton.UseVisualStyleBackColor = false;

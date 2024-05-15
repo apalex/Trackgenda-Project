@@ -49,26 +49,26 @@
             // 
             // resetButton
             // 
+            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.BackColor = System.Drawing.Color.White;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.Name = "resetButton";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // controlButton
             // 
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.BackColor = System.Drawing.Color.White;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.Name = "controlButton";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
             // timeLabel
             // 
-            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.timeLabel, "timeLabel");
+            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
             this.timeLabel.Name = "timeLabel";
             // 
             // exitButton
@@ -82,8 +82,8 @@
             // 
             // displayLabel
             // 
-            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.displayLabel, "displayLabel");
+            this.displayLabel.BackColor = System.Drawing.Color.Transparent;
             this.displayLabel.Name = "displayLabel";
             // 
             // mainTimer

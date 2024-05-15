@@ -55,8 +55,8 @@
             // 
             // dateLabel
             // 
-            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.dateLabel, "dateLabel");
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
             this.dateLabel.Name = "dateLabel";
             // 
@@ -89,6 +89,7 @@
             // 
             // colourComboBox
             // 
+            resources.ApplyResources(this.colourComboBox, "colourComboBox");
             this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colourComboBox.FormattingEnabled = true;
             this.colourComboBox.Items.AddRange(new object[] {
@@ -105,7 +106,6 @@
             resources.GetString("colourComboBox.Items10"),
             resources.GetString("colourComboBox.Items11"),
             resources.GetString("colourComboBox.Items12")});
-            resources.ApplyResources(this.colourComboBox, "colourComboBox");
             this.colourComboBox.Name = "colourComboBox";
             // 
             // EventMonthlyForm

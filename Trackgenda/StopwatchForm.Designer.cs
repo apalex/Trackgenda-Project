@@ -41,8 +41,8 @@
             // 
             // timerLabel
             // 
-            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.timerLabel, "timerLabel");
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Name = "timerLabel";
             // 
             // displayLabel
@@ -53,26 +53,26 @@
             // 
             // controlButton
             // 
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.BackColor = System.Drawing.Color.DarkGray;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.Name = "controlButton";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
             // resetButton
             // 
+            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.BackColor = System.Drawing.Color.DarkGray;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.Name = "resetButton";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.closeButton, "closeButton");
+            this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             this.closeButton.Name = "closeButton";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.minimizeButton_Click);

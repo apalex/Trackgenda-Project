@@ -48,22 +48,22 @@
             // 
             // dateLabel
             // 
-            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.dateLabel, "dateLabel");
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
             this.dateLabel.Name = "dateLabel";
             // 
             // descTextBox
             // 
-            this.descTextBox.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.descTextBox, "descTextBox");
+            this.descTextBox.ForeColor = System.Drawing.Color.Black;
             this.descTextBox.Name = "descTextBox";
             // 
             // controlButton
             // 
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.BackColor = System.Drawing.Color.White;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.ForeColor = System.Drawing.Color.Black;
             this.controlButton.Name = "controlButton";
             this.controlButton.UseVisualStyleBackColor = false;
@@ -71,8 +71,8 @@
             // 
             // colourComboBox
             // 
-            this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.colourComboBox, "colourComboBox");
+            this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colourComboBox.ForeColor = System.Drawing.Color.Black;
             this.colourComboBox.FormattingEnabled = true;
             this.colourComboBox.Items.AddRange(new object[] {

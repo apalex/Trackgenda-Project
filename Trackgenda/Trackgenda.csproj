@@ -233,12 +233,33 @@
     <Compile Include="TODOForm.Designer.cs">
       <DependentUpon>TODOForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BackgroundForm.en-CA.resx">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackgroundForm.fr-CA.resx">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackgroundForm.ro-MD.resx">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackgroundForm.ro-RO.resx">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.en-CA.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.fr-CA.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.ro-MD.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CellWeekly.resx">
       <DependentUpon>CellWeekly.cs</DependentUpon>
@@ -249,31 +270,103 @@
     <EmbeddedResource Include="CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventMonthlyForm.en-CA.resx">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventMonthlyForm.fr-CA.resx">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventMonthlyForm.resx">
       <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventMonthlyForm.ro-MD.resx">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventWeeklyForm.en-CA.resx">
+      <DependentUpon>EventWeeklyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventWeeklyForm.fr-CA.resx">
+      <DependentUpon>EventWeeklyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventWeeklyForm.resx">
       <DependentUpon>EventWeeklyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventWeeklyForm.ro-MD.resx">
+      <DependentUpon>EventWeeklyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactForm.en-CA.resx">
+      <DependentUpon>FactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactForm.fr-CA.resx">
+      <DependentUpon>FactForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FactForm.resx">
       <DependentUpon>FactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactForm.ro-MD.resx">
+      <DependentUpon>FactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordForm.en-CA.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordForm.fr-CA.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordForm.ro-MD.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en-CA.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.fr-CA.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.ro-MD.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotivationalQuoteForm.en-CA.resx">
+      <DependentUpon>MotivationalQuoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotivationalQuoteForm.fr-CA.resx">
+      <DependentUpon>MotivationalQuoteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MotivationalQuoteForm.resx">
       <DependentUpon>MotivationalQuoteForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MotivationalQuoteForm.ro-MD.resx">
+      <DependentUpon>MotivationalQuoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotesForm.en-CA.resx">
+      <DependentUpon>NotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotesForm.fr-CA.resx">
+      <DependentUpon>NotesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotesForm.resx">
+      <DependentUpon>NotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotesForm.ro-MD.resx">
       <DependentUpon>NotesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressBarForm.bin.resx">
       <DependentUpon>ProgressBarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.en-CA.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.fr-CA.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgressBarForm.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.ro-MD.resx">
       <DependentUpon>ProgressBarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -286,14 +379,47 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisterForm.en-CA.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.fr-CA.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.ro-MD.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopwatchForm.en-CA.resx">
+      <DependentUpon>StopwatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopwatchForm.fr-CA.resx">
+      <DependentUpon>StopwatchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StopwatchForm.resx">
       <DependentUpon>StopwatchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StopwatchForm.ro-MD.resx">
+      <DependentUpon>StopwatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyDashboard.en-CA.resx">
+      <DependentUpon>StudyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyDashboard.fr-CA.resx">
+      <DependentUpon>StudyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudyDashboard.resx">
       <DependentUpon>StudyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyDashboard.ro-MD.resx">
+      <DependentUpon>StudyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyTechnique.en-CA.resx">
+      <DependentUpon>StudyTechnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyTechnique.fr-CA.resx">
+      <DependentUpon>StudyTechnique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudyTechnique.resx">
       <DependentUpon>StudyTechnique.cs</DependentUpon>
@@ -301,7 +427,19 @@
     <EmbeddedResource Include="CellDay.resx">
       <DependentUpon>CellDay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudyTechnique.ro-MD.resx">
+      <DependentUpon>StudyTechnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TODOForm.en-CA.resx">
+      <DependentUpon>TODOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TODOForm.fr-CA.resx">
+      <DependentUpon>TODOForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TODOForm.resx">
+      <DependentUpon>TODOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TODOForm.ro-MD.resx">
       <DependentUpon>TODOForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

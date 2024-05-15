@@ -41,9 +41,9 @@
             // 
             // noteTextBox
             // 
+            resources.ApplyResources(this.noteTextBox, "noteTextBox");
             this.noteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.noteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.noteTextBox, "noteTextBox");
             this.noteTextBox.Name = "noteTextBox";
             // 
             // label1
@@ -54,9 +54,9 @@
             // 
             // previousButton
             // 
+            resources.ApplyResources(this.previousButton, "previousButton");
             this.previousButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.previousButton, "previousButton");
             this.previousButton.Name = "previousButton";
             this.previousButton.UseVisualStyleBackColor = false;
             this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
@@ -73,36 +73,36 @@
             // 
             // nextButton
             // 
+            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.Name = "nextButton";
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // clearButton
             // 
+            resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.Name = "clearButton";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // addRemoveButton
             // 
+            resources.ApplyResources(this.addRemoveButton, "addRemoveButton");
             this.addRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addRemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addRemoveButton, "addRemoveButton");
             this.addRemoveButton.Name = "addRemoveButton";
             this.addRemoveButton.UseVisualStyleBackColor = false;
             this.addRemoveButton.Click += new System.EventHandler(this.addRemoveButton_Click);
             // 
             // updateButton
             // 
+            resources.ApplyResources(this.updateButton, "updateButton");
             this.updateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.updateButton, "updateButton");
             this.updateButton.Name = "updateButton";
             this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);

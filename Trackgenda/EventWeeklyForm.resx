@@ -117,212 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="exitButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="exitButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 0</value>
-  </data>
-  <data name="exitButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 27</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="exitButton.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
-    <value>exitButton</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="dateLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="dateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 28</value>
-  </data>
-  <data name="dateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="dateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 33</value>
-  </data>
-  <data name="dateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="dateLabel.Text" xml:space="preserve">
-    <value>DATE</value>
-  </data>
-  <data name="dateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;dateLabel.Name" xml:space="preserve">
-    <value>dateLabel</value>
-  </data>
-  <data name="&gt;&gt;dateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;dateLabel.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 73</value>
-  </data>
-  <data name="descTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="descTextBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="descTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 63</value>
-  </data>
-  <data name="descTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;descTextBox.Name" xml:space="preserve">
-    <value>descTextBox</value>
-  </data>
-  <data name="&gt;&gt;descTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;descTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="controlButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="controlButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="controlButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 189</value>
-  </data>
-  <data name="controlButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="controlButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 27</value>
-  </data>
-  <data name="controlButton.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
   </data>
   <data name="controlButton.Text" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="&gt;&gt;controlButton.Name" xml:space="preserve">
-    <value>controlButton</value>
+  <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;controlButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;controlButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="controlButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 189</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;controlButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="colourComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="&gt;&gt;dateLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="exitButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="colourComboBox.Items" xml:space="preserve">
-    <value>Theme</value>
-  </data>
-  <data name="colourComboBox.Items1" xml:space="preserve">
-    <value>White</value>
-  </data>
-  <data name="colourComboBox.Items2" xml:space="preserve">
-    <value>Silver</value>
-  </data>
-  <data name="colourComboBox.Items3" xml:space="preserve">
-    <value>Gray</value>
-  </data>
-  <data name="colourComboBox.Items4" xml:space="preserve">
-    <value>LightCoral</value>
-  </data>
-  <data name="colourComboBox.Items5" xml:space="preserve">
-    <value>WhiteSmoke</value>
-  </data>
-  <data name="colourComboBox.Items6" xml:space="preserve">
-    <value>Salmon</value>
-  </data>
-  <data name="colourComboBox.Items7" xml:space="preserve">
-    <value>Gold</value>
-  </data>
-  <data name="colourComboBox.Items8" xml:space="preserve">
-    <value>OliveDrab</value>
+  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 27</value>
   </data>
   <data name="colourComboBox.Items9" xml:space="preserve">
     <value>YellowGreen</value>
   </data>
-  <data name="colourComboBox.Items10" xml:space="preserve">
-    <value>SkyBlue</value>
+  <data name="colourComboBox.Items8" xml:space="preserve">
+    <value>OliveDrab</value>
   </data>
-  <data name="colourComboBox.Items11" xml:space="preserve">
-    <value>Pink</value>
+  <data name="descTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 63</value>
   </data>
-  <data name="colourComboBox.Items12" xml:space="preserve">
-    <value>MediumOrchid</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="colourComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 151</value>
+  <data name="colourComboBox.Items1" xml:space="preserve">
+    <value>White</value>
   </data>
-  <data name="colourComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="dateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
-  <data name="colourComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 21</value>
-  </data>
-  <data name="colourComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;colourComboBox.Name" xml:space="preserve">
-    <value>colourComboBox</value>
-  </data>
-  <data name="&gt;&gt;colourComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colourComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colourComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en-CA</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 250</value>
+  <data name="colourComboBox.Items3" xml:space="preserve">
+    <value>Gray</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4065,19 +3911,173 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="colourComboBox.Items5" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="colourComboBox.Items4" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="colourComboBox.Items7" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="colourComboBox.Items6" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="dateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 28</value>
+  </data>
+  <data name="&gt;&gt;controlButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateLabel.Name" xml:space="preserve">
+    <value>dateLabel</value>
+  </data>
+  <data name="colourComboBox.Items10" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="&gt;&gt;descTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 0</value>
+  </data>
+  <data name="dateLabel.Text" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="&gt;&gt;descTextBox.Name" xml:space="preserve">
+    <value>descTextBox</value>
+  </data>
+  <data name="controlButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colourComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="colourComboBox.Items12" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="controlButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
+    <value>exitButton</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>EventWeeklyForm</value>
   </data>
+  <data name="descTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;colourComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;descTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="exitButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="colourComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="controlButton.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;colourComboBox.Name" xml:space="preserve">
+    <value>colourComboBox</value>
+  </data>
+  <data name="descTextBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dateLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;controlButton.Name" xml:space="preserve">
+    <value>controlButton</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 250</value>
+  </data>
+  <data name="exitButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="&gt;&gt;dateLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colourComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 21</value>
+  </data>
+  <data name="&gt;&gt;controlButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="descTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="colourComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EventWeeklyForm</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="exitButton.Text" xml:space="preserve">
+    <value>X</value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;colourComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colourComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 151</value>
+  </data>
+  <data name="dateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 33</value>
+  </data>
+  <data name="controlButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;colourComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="controlButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 27</value>
+  </data>
+  <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="colourComboBox.Items" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="colourComboBox.Items2" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="colourComboBox.Items11" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 73</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ro-MD</value>
+  </metadata>
 </root>

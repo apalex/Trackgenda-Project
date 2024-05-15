@@ -37,36 +37,36 @@
             // 
             // personalButton
             // 
+            resources.ApplyResources(this.personalButton, "personalButton");
             this.personalButton.BackColor = System.Drawing.Color.White;
             this.personalButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.personalButton, "personalButton");
             this.personalButton.Name = "personalButton";
             this.personalButton.UseVisualStyleBackColor = false;
             this.personalButton.Click += new System.EventHandler(this.personalButton_Click);
             // 
             // pomodoroButton
             // 
+            resources.ApplyResources(this.pomodoroButton, "pomodoroButton");
             this.pomodoroButton.BackColor = System.Drawing.Color.White;
             this.pomodoroButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pomodoroButton, "pomodoroButton");
             this.pomodoroButton.Name = "pomodoroButton";
             this.pomodoroButton.UseVisualStyleBackColor = false;
             this.pomodoroButton.Click += new System.EventHandler(this.pomodoroButton_Click);
             // 
             // fiftyTwoSeventeenRuleButton
             // 
+            resources.ApplyResources(this.fiftyTwoSeventeenRuleButton, "fiftyTwoSeventeenRuleButton");
             this.fiftyTwoSeventeenRuleButton.BackColor = System.Drawing.Color.White;
             this.fiftyTwoSeventeenRuleButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.fiftyTwoSeventeenRuleButton, "fiftyTwoSeventeenRuleButton");
             this.fiftyTwoSeventeenRuleButton.Name = "fiftyTwoSeventeenRuleButton";
             this.fiftyTwoSeventeenRuleButton.UseVisualStyleBackColor = false;
             this.fiftyTwoSeventeenRuleButton.Click += new System.EventHandler(this.fiftyTwoSeventeenRuleButton_Click);
             // 
             // exitButton
             // 
+            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.BackColor = System.Drawing.Color.White;
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.Name = "exitButton";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);

@@ -50,8 +50,8 @@
             // 
             // backButton
             // 
-            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.backButton, "backButton");
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Name = "backButton";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -123,8 +123,8 @@
             // 
             // registerButton
             // 
-            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.registerButton, "registerButton");
+            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerButton.Name = "registerButton";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
@@ -149,12 +149,12 @@
             // 
             // comboBox1
             // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
             resources.GetString("comboBox1.Items1"),
             resources.GetString("comboBox1.Items2")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
             // 
             // label1
