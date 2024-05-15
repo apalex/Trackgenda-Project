@@ -40,136 +40,105 @@
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
             this.closeButton1 = new Trackgenda.CloseButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // backButton
             // 
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(68, 40);
-            this.backButton.TabIndex = 3;
-            this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // usernameLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(49, 73);
+            resources.ApplyResources(this.usernameLabel, "usernameLabel");
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(144, 32);
-            this.usernameLabel.TabIndex = 4;
-            this.usernameLabel.Text = "Username";
             // 
             // newPasswordLabel
             // 
-            this.newPasswordLabel.AutoSize = true;
-            this.newPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPasswordLabel.Location = new System.Drawing.Point(49, 233);
+            resources.ApplyResources(this.newPasswordLabel, "newPasswordLabel");
             this.newPasswordLabel.Name = "newPasswordLabel";
-            this.newPasswordLabel.Size = new System.Drawing.Size(201, 32);
-            this.newPasswordLabel.TabIndex = 5;
-            this.newPasswordLabel.Text = "New Password";
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(49, 153);
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(86, 32);
-            this.emailLabel.TabIndex = 6;
-            this.emailLabel.Text = "Email";
             // 
             // confirmLabel
             // 
-            this.confirmLabel.AutoSize = true;
-            this.confirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmLabel.Location = new System.Drawing.Point(49, 313);
+            resources.ApplyResources(this.confirmLabel, "confirmLabel");
             this.confirmLabel.Name = "confirmLabel";
-            this.confirmLabel.Size = new System.Drawing.Size(244, 32);
-            this.confirmLabel.TabIndex = 7;
-            this.confirmLabel.Text = "Confirm Password";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.usernameTextBox, "usernameTextBox");
             this.usernameTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.usernameTextBox.Location = new System.Drawing.Point(59, 113);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(334, 30);
-            this.usernameTextBox.TabIndex = 8;
-            this.usernameTextBox.Text = "Username";
             this.usernameTextBox.Enter += new System.EventHandler(this.usernameTextBox_Enter);
             this.usernameTextBox.Leave += new System.EventHandler(this.usernameTextBox_Leave);
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.emailTextBox, "emailTextBox");
             this.emailTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.emailTextBox.Location = new System.Drawing.Point(59, 193);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(334, 30);
-            this.emailTextBox.TabIndex = 9;
-            this.emailTextBox.Text = "email@gmail.com";
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // confirmTextBox
             // 
-            this.confirmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.confirmTextBox, "confirmTextBox");
             this.confirmTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.confirmTextBox.Location = new System.Drawing.Point(59, 353);
             this.confirmTextBox.Name = "confirmTextBox";
-            this.confirmTextBox.PasswordChar = '*';
-            this.confirmTextBox.Size = new System.Drawing.Size(330, 30);
-            this.confirmTextBox.TabIndex = 10;
-            this.confirmTextBox.Text = "New Password";
             this.confirmTextBox.Enter += new System.EventHandler(this.confirmTextBox_Enter);
             this.confirmTextBox.Leave += new System.EventHandler(this.confirmTextBox_Leave);
             // 
             // newPasswordTextBox
             // 
-            this.newPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.newPasswordTextBox, "newPasswordTextBox");
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(59, 273);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.PasswordChar = '*';
-            this.newPasswordTextBox.Size = new System.Drawing.Size(332, 30);
-            this.newPasswordTextBox.TabIndex = 11;
-            this.newPasswordTextBox.Text = "New Password";
             this.newPasswordTextBox.Enter += new System.EventHandler(this.newPasswordTextBox_Enter);
             this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
             // 
             // confirmButton
             // 
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.Location = new System.Drawing.Point(59, 421);
+            resources.ApplyResources(this.confirmButton, "confirmButton");
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(334, 43);
-            this.confirmButton.TabIndex = 12;
-            this.confirmButton.Text = "Confirm";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // closeButton1
             // 
-            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            resources.ApplyResources(this.closeButton1, "closeButton1");
             this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(68, 40);
-            this.closeButton1.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // ForgotPasswordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 542);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.newPasswordTextBox);
@@ -182,10 +151,7 @@
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ForgotPasswordForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ForgotPasswordForm";
             this.Load += new System.EventHandler(this.ForgotPasswordForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);
@@ -205,5 +171,7 @@
         private System.Windows.Forms.TextBox newPasswordTextBox;
         private System.Windows.Forms.Button confirmButton;
         private CloseButton closeButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -37,49 +37,35 @@
             // displayLabel
             // 
             this.displayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(41, 43);
+            resources.ApplyResources(this.displayLabel, "displayLabel");
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(318, 39);
-            this.displayLabel.TabIndex = 0;
-            this.displayLabel.Text = "Random Motivational Quote";
             // 
             // quotelabel
             // 
             this.quotelabel.BackColor = System.Drawing.Color.Transparent;
-            this.quotelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quotelabel.Location = new System.Drawing.Point(30, 98);
+            resources.ApplyResources(this.quotelabel, "quotelabel");
             this.quotelabel.Name = "quotelabel";
-            this.quotelabel.Size = new System.Drawing.Size(340, 125);
-            this.quotelabel.TabIndex = 1;
             // 
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.DarkGray;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(335, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(68, 40);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.Text = "X";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // MotivationalQuoteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(400, 250);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.quotelabel);
             this.Controls.Add(this.displayLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MotivationalQuoteForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MotivionalQuoteForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MotivionalQuoteForm_MouseDown);
             this.ResumeLayout(false);

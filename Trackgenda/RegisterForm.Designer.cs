@@ -44,180 +44,131 @@
             this.confirmLabel = new System.Windows.Forms.Label();
             this.confirmTextBox = new System.Windows.Forms.TextBox();
             this.closeButton1 = new Trackgenda.CloseButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // backButton
             // 
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(68, 40);
-            this.backButton.TabIndex = 1;
-            this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // passwordLabel
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(60, 377);
+            resources.ApplyResources(this.passwordLabel, "passwordLabel");
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(138, 32);
-            this.passwordLabel.TabIndex = 2;
-            this.passwordLabel.Text = "Password";
             // 
             // firstNameLabel
             // 
-            this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(59, 66);
+            resources.ApplyResources(this.firstNameLabel, "firstNameLabel");
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(151, 32);
-            this.firstNameLabel.TabIndex = 3;
-            this.firstNameLabel.Text = "First Name";
             // 
             // usernameLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(60, 298);
+            resources.ApplyResources(this.usernameLabel, "usernameLabel");
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(144, 32);
-            this.usernameLabel.TabIndex = 4;
-            this.usernameLabel.Text = "Username";
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(60, 220);
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(86, 32);
-            this.emailLabel.TabIndex = 5;
-            this.emailLabel.Text = "Email";
             // 
             // lastNameLabel
             // 
-            this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(60, 141);
+            resources.ApplyResources(this.lastNameLabel, "lastNameLabel");
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(150, 32);
-            this.lastNameLabel.TabIndex = 6;
-            this.lastNameLabel.Text = "Last Name";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.emailTextBox, "emailTextBox");
             this.emailTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.emailTextBox.Location = new System.Drawing.Point(63, 255);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(334, 30);
-            this.emailTextBox.TabIndex = 7;
-            this.emailTextBox.Text = "email@gmail.com";
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.firstNameTextBox, "firstNameTextBox");
             this.firstNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.firstNameTextBox.Location = new System.Drawing.Point(63, 101);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(334, 30);
-            this.firstNameTextBox.TabIndex = 0;
-            this.firstNameTextBox.Text = "John";
             this.firstNameTextBox.Enter += new System.EventHandler(this.firstNameTextBox_Enter);
             this.firstNameTextBox.Leave += new System.EventHandler(this.firstNameTextBox_Leave);
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lastNameTextBox, "lastNameTextBox");
             this.lastNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.lastNameTextBox.Location = new System.Drawing.Point(63, 176);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(334, 30);
-            this.lastNameTextBox.TabIndex = 1;
-            this.lastNameTextBox.Text = "Doe";
             this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
             this.lastNameTextBox.Leave += new System.EventHandler(this.lastNameTextBox_Leave);
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
             this.passwordTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.passwordTextBox.Location = new System.Drawing.Point(63, 412);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(334, 30);
-            this.passwordTextBox.TabIndex = 10;
-            this.passwordTextBox.Text = "Password";
             this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
             this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.usernameTextBox, "usernameTextBox");
             this.usernameTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.usernameTextBox.Location = new System.Drawing.Point(63, 333);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(334, 30);
-            this.usernameTextBox.TabIndex = 11;
-            this.usernameTextBox.Text = "Username";
             this.usernameTextBox.Enter += new System.EventHandler(this.usernameTextBox_Enter);
             this.usernameTextBox.Leave += new System.EventHandler(this.usernameTextBox_Leave);
             // 
             // registerButton
             // 
             this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(63, 547);
+            resources.ApplyResources(this.registerButton, "registerButton");
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(334, 43);
-            this.registerButton.TabIndex = 12;
-            this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // confirmLabel
             // 
-            this.confirmLabel.AutoSize = true;
-            this.confirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmLabel.Location = new System.Drawing.Point(57, 460);
+            resources.ApplyResources(this.confirmLabel, "confirmLabel");
             this.confirmLabel.Name = "confirmLabel";
-            this.confirmLabel.Size = new System.Drawing.Size(244, 32);
-            this.confirmLabel.TabIndex = 13;
-            this.confirmLabel.Text = "Confirm Password";
             // 
             // confirmTextBox
             // 
-            this.confirmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.confirmTextBox, "confirmTextBox");
             this.confirmTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.confirmTextBox.Location = new System.Drawing.Point(63, 495);
             this.confirmTextBox.Name = "confirmTextBox";
-            this.confirmTextBox.PasswordChar = '*';
-            this.confirmTextBox.Size = new System.Drawing.Size(334, 30);
-            this.confirmTextBox.TabIndex = 14;
-            this.confirmTextBox.Text = "Password";
             this.confirmTextBox.Enter += new System.EventHandler(this.confirmTextBox_Enter);
             this.confirmTextBox.Leave += new System.EventHandler(this.confirmTextBox_Leave);
             // 
             // closeButton1
             // 
-            this.closeButton1.Location = new System.Drawing.Point(382, 0);
+            resources.ApplyResources(this.closeButton1, "closeButton1");
             this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(68, 40);
-            this.closeButton1.TabIndex = 15;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 615);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmTextBox);
             this.Controls.Add(this.confirmLabel);
@@ -234,9 +185,7 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
             this.ResumeLayout(false);
@@ -260,5 +209,7 @@
         private System.Windows.Forms.Label confirmLabel;
         private System.Windows.Forms.TextBox confirmTextBox;
         private CloseButton closeButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

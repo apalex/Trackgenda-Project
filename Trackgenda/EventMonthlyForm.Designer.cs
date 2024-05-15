@@ -40,82 +40,51 @@
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.BackColor = System.Drawing.Color.White;
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.Black;
-            this.exitButton.Location = new System.Drawing.Point(390, 0);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(60, 40);
-            this.exitButton.TabIndex = 27;
-            this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // descTextBox
             // 
-            this.descTextBox.Location = new System.Drawing.Point(42, 106);
+            resources.ApplyResources(this.descTextBox, "descTextBox");
             this.descTextBox.Name = "descTextBox";
-            this.descTextBox.Size = new System.Drawing.Size(373, 26);
-            this.descTextBox.TabIndex = 28;
             // 
             // dateLabel
             // 
             this.dateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.dateLabel, "dateLabel");
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
-            this.dateLabel.Location = new System.Drawing.Point(147, 28);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(158, 50);
-            this.dateLabel.TabIndex = 29;
-            this.dateLabel.Text = "DATE";
-            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // addButton
             // 
-            this.addButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            resources.ApplyResources(this.addButton, "addButton");
             this.addButton.BackColor = System.Drawing.Color.White;
             this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(181, 194);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(90, 39);
-            this.addButton.TabIndex = 30;
-            this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // maximumLabel
             // 
-            this.maximumLabel.AutoSize = true;
+            resources.ApplyResources(this.maximumLabel, "maximumLabel");
             this.maximumLabel.BackColor = System.Drawing.Color.Transparent;
-            this.maximumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maximumLabel.ForeColor = System.Drawing.Color.Red;
-            this.maximumLabel.Location = new System.Drawing.Point(66, 78);
             this.maximumLabel.Name = "maximumLabel";
-            this.maximumLabel.Size = new System.Drawing.Size(349, 25);
-            this.maximumLabel.TabIndex = 31;
-            this.maximumLabel.Text = "Maximum amount of 3 events reached!";
-            this.maximumLabel.Visible = false;
             // 
             // editButton
             // 
-            this.editButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.BackColor = System.Drawing.Color.White;
             this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(165, 194);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(133, 39);
-            this.editButton.TabIndex = 32;
-            this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = false;
-            this.editButton.Visible = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // colourComboBox
@@ -123,30 +92,27 @@
             this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colourComboBox.FormattingEnabled = true;
             this.colourComboBox.Items.AddRange(new object[] {
-            "Theme",
-            "White",
-            "Silver",
-            "Gray",
-            "LightCoral",
-            "WhiteSmoke",
-            "Salmon",
-            "Gold",
-            "OliveDrab",
-            "YellowGreen",
-            "SkyBlue",
-            "Pink",
-            "MediumOrchid"});
-            this.colourComboBox.Location = new System.Drawing.Point(42, 148);
+            resources.GetString("colourComboBox.Items"),
+            resources.GetString("colourComboBox.Items1"),
+            resources.GetString("colourComboBox.Items2"),
+            resources.GetString("colourComboBox.Items3"),
+            resources.GetString("colourComboBox.Items4"),
+            resources.GetString("colourComboBox.Items5"),
+            resources.GetString("colourComboBox.Items6"),
+            resources.GetString("colourComboBox.Items7"),
+            resources.GetString("colourComboBox.Items8"),
+            resources.GetString("colourComboBox.Items9"),
+            resources.GetString("colourComboBox.Items10"),
+            resources.GetString("colourComboBox.Items11"),
+            resources.GetString("colourComboBox.Items12")});
+            resources.ApplyResources(this.colourComboBox, "colourComboBox");
             this.colourComboBox.Name = "colourComboBox";
-            this.colourComboBox.Size = new System.Drawing.Size(373, 28);
-            this.colourComboBox.TabIndex = 33;
             // 
             // EventMonthlyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(450, 245);
             this.Controls.Add(this.colourComboBox);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.maximumLabel);
@@ -156,9 +122,7 @@
             this.Controls.Add(this.exitButton);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EventMonthlyForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.EventMonthlyForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EventMonthlyForm_MouseDown);
             this.ResumeLayout(false);

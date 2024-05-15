@@ -38,97 +38,72 @@
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.BackColor = System.Drawing.Color.White;
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.Black;
-            this.exitButton.Location = new System.Drawing.Point(390, 0);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(60, 40);
-            this.exitButton.TabIndex = 28;
-            this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // dateLabel
             // 
             this.dateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.dateLabel, "dateLabel");
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
-            this.dateLabel.Location = new System.Drawing.Point(114, 42);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(251, 50);
-            this.dateLabel.TabIndex = 30;
-            this.dateLabel.Text = "DATE";
-            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // descTextBox
             // 
             this.descTextBox.ForeColor = System.Drawing.Color.Black;
-            this.descTextBox.Location = new System.Drawing.Point(50, 109);
-            this.descTextBox.Multiline = true;
+            resources.ApplyResources(this.descTextBox, "descTextBox");
             this.descTextBox.Name = "descTextBox";
-            this.descTextBox.Size = new System.Drawing.Size(352, 92);
-            this.descTextBox.TabIndex = 31;
             // 
             // controlButton
             // 
             this.controlButton.BackColor = System.Drawing.Color.White;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.controlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.ForeColor = System.Drawing.Color.Black;
-            this.controlButton.Location = new System.Drawing.Point(157, 284);
             this.controlButton.Name = "controlButton";
-            this.controlButton.Size = new System.Drawing.Size(115, 40);
-            this.controlButton.TabIndex = 32;
-            this.controlButton.Text = "Add";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
             // colourComboBox
             // 
             this.colourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colourComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.colourComboBox, "colourComboBox");
             this.colourComboBox.ForeColor = System.Drawing.Color.Black;
             this.colourComboBox.FormattingEnabled = true;
             this.colourComboBox.Items.AddRange(new object[] {
-            "Theme",
-            "White",
-            "Silver",
-            "Gray",
-            "LightCoral",
-            "WhiteSmoke",
-            "Salmon",
-            "Gold",
-            "OliveDrab",
-            "YellowGreen",
-            "SkyBlue",
-            "Pink",
-            "MediumOrchid"});
-            this.colourComboBox.Location = new System.Drawing.Point(50, 227);
+            resources.GetString("colourComboBox.Items"),
+            resources.GetString("colourComboBox.Items1"),
+            resources.GetString("colourComboBox.Items2"),
+            resources.GetString("colourComboBox.Items3"),
+            resources.GetString("colourComboBox.Items4"),
+            resources.GetString("colourComboBox.Items5"),
+            resources.GetString("colourComboBox.Items6"),
+            resources.GetString("colourComboBox.Items7"),
+            resources.GetString("colourComboBox.Items8"),
+            resources.GetString("colourComboBox.Items9"),
+            resources.GetString("colourComboBox.Items10"),
+            resources.GetString("colourComboBox.Items11"),
+            resources.GetString("colourComboBox.Items12")});
             this.colourComboBox.Name = "colourComboBox";
-            this.colourComboBox.Size = new System.Drawing.Size(352, 28);
-            this.colourComboBox.TabIndex = 33;
             // 
             // EventWeeklyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 375);
             this.Controls.Add(this.colourComboBox);
             this.Controls.Add(this.controlButton);
             this.Controls.Add(this.descTextBox);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EventWeeklyForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EventWeeklyForm";
             this.Load += new System.EventHandler(this.EventWeeklyForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EventWeeklyForm_MouseDown);
             this.ResumeLayout(false);

@@ -42,27 +42,17 @@
             // 
             // seperatorLabel
             // 
-            this.seperatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.seperatorLabel, "seperatorLabel");
             this.seperatorLabel.BackColor = System.Drawing.Color.Transparent;
             this.seperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.seperatorLabel.Location = new System.Drawing.Point(0, 41);
             this.seperatorLabel.Name = "seperatorLabel";
-            this.seperatorLabel.Size = new System.Drawing.Size(480, 1);
-            this.seperatorLabel.TabIndex = 30;
             // 
             // resetButton
             // 
             this.resetButton.BackColor = System.Drawing.Color.White;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.resetButton.Enabled = false;
-            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(338, 134);
+            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(130, 45);
-            this.resetButton.TabIndex = 29;
-            this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
@@ -70,50 +60,31 @@
             // 
             this.controlButton.BackColor = System.Drawing.Color.White;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.controlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlButton.Location = new System.Drawing.Point(338, 70);
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.Name = "controlButton";
-            this.controlButton.Size = new System.Drawing.Size(130, 45);
-            this.controlButton.TabIndex = 28;
-            this.controlButton.Text = "Start";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
             // timeLabel
             // 
             this.timeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(5, 90);
+            resources.ApplyResources(this.timeLabel, "timeLabel");
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(325, 70);
-            this.timeLabel.TabIndex = 27;
-            this.timeLabel.Text = "00:00";
-            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.BackColor = System.Drawing.Color.White;
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(420, 0);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(60, 40);
-            this.exitButton.TabIndex = 26;
-            this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // displayLabel
             // 
             this.displayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(8, 6);
+            resources.ApplyResources(this.displayLabel, "displayLabel");
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(184, 40);
-            this.displayLabel.TabIndex = 25;
-            this.displayLabel.Text = "TEXT HERE";
             // 
             // mainTimer
             // 
@@ -123,20 +94,15 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(8, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 29);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Study";
             // 
             // StudyTechnique
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(480, 204);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.seperatorLabel);
             this.Controls.Add(this.resetButton);
@@ -144,12 +110,8 @@
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.displayLabel);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudyTechnique";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StudyTechnique";
             this.Load += new System.EventHandler(this.StudyTechnique_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StudyTechnique_MouseDown);
             this.ResumeLayout(false);

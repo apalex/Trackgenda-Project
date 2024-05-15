@@ -42,34 +42,21 @@
             // timerLabel
             // 
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerLabel.Location = new System.Drawing.Point(6, 61);
+            resources.ApplyResources(this.timerLabel, "timerLabel");
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(302, 77);
-            this.timerLabel.TabIndex = 0;
-            this.timerLabel.Text = "00:00:00";
             // 
             // displayLabel
             // 
-            this.displayLabel.AutoSize = true;
+            resources.ApplyResources(this.displayLabel, "displayLabel");
             this.displayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(12, 6);
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(77, 29);
-            this.displayLabel.TabIndex = 2;
-            this.displayLabel.Text = "Timer";
             // 
             // controlButton
             // 
             this.controlButton.BackColor = System.Drawing.Color.DarkGray;
             this.controlButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.controlButton.Location = new System.Drawing.Point(320, 50);
+            resources.ApplyResources(this.controlButton, "controlButton");
             this.controlButton.Name = "controlButton";
-            this.controlButton.Size = new System.Drawing.Size(88, 46);
-            this.controlButton.TabIndex = 4;
-            this.controlButton.Text = "Start";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 
@@ -77,37 +64,25 @@
             // 
             this.resetButton.BackColor = System.Drawing.Color.DarkGray;
             this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetButton.Location = new System.Drawing.Point(320, 102);
+            resources.ApplyResources(this.resetButton, "resetButton");
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(88, 46);
-            this.resetButton.TabIndex = 5;
-            this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.DarkGray;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(367, 0);
+            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(53, 34);
-            this.closeButton.TabIndex = 6;
-            this.closeButton.Text = "X";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // seperatorLabel
             // 
-            this.seperatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.seperatorLabel, "seperatorLabel");
             this.seperatorLabel.BackColor = System.Drawing.Color.Transparent;
             this.seperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.seperatorLabel.Location = new System.Drawing.Point(0, 37);
             this.seperatorLabel.Name = "seperatorLabel";
-            this.seperatorLabel.Size = new System.Drawing.Size(420, 1);
-            this.seperatorLabel.TabIndex = 18;
             // 
             // timerStopwatch
             // 
@@ -116,10 +91,9 @@
             // 
             // StopwatchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(420, 160);
             this.Controls.Add(this.seperatorLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.resetButton);
@@ -127,7 +101,6 @@
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.timerLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StopwatchForm";
             this.Load += new System.EventHandler(this.StopwatchForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StopwatchForm_MouseDown);

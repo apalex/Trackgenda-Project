@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.upperBar = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.currentTimeLabel = new System.Windows.Forms.Label();
@@ -118,8 +120,6 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.upperBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
@@ -146,57 +146,54 @@
             this.upperBar.Controls.Add(this.XButton);
             this.upperBar.Controls.Add(this.hamburgerPictureBox);
             this.upperBar.Controls.Add(this.logoLabel);
-            this.upperBar.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.upperBar, "upperBar");
             this.upperBar.ForeColor = System.Drawing.Color.Black;
-            this.upperBar.Location = new System.Drawing.Point(0, 0);
             this.upperBar.Name = "upperBar";
-            this.upperBar.Size = new System.Drawing.Size(1920, 51);
-            this.upperBar.TabIndex = 2;
             this.upperBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.ForeColor = System.Drawing.Color.Transparent;
+            this.label24.Name = "label24";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(1537, 3);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1489, 15);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 29);
-            this.label3.TabIndex = 7;
             // 
             // currentTimeLabel
             // 
-            this.currentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.currentTimeLabel, "currentTimeLabel");
             this.currentTimeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.currentTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentTimeLabel.ForeColor = System.Drawing.Color.White;
-            this.currentTimeLabel.Location = new System.Drawing.Point(1637, 15);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(86, 30);
-            this.currentTimeLabel.TabIndex = 4;
-            this.currentTimeLabel.Text = "Timer";
-            this.currentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // minimizeButton
             // 
-            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.minimizeButton, "minimizeButton");
             this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.White;
-            this.minimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeButton.Image")));
-            this.minimizeButton.Location = new System.Drawing.Point(1740, 0);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(60, 50);
-            this.minimizeButton.TabIndex = 3;
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             this.minimizeButton.MouseLeave += new System.EventHandler(this.minimizeButton_MouseLeave);
@@ -204,16 +201,11 @@
             // 
             // maximizeButton
             // 
-            this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.maximizeButton, "maximizeButton");
             this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.White;
-            this.maximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("maximizeButton.Image")));
-            this.maximizeButton.Location = new System.Drawing.Point(1800, 0);
             this.maximizeButton.Name = "maximizeButton";
-            this.maximizeButton.Size = new System.Drawing.Size(60, 50);
-            this.maximizeButton.TabIndex = 3;
             this.maximizeButton.UseVisualStyleBackColor = false;
             this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
             this.maximizeButton.MouseLeave += new System.EventHandler(this.maximizeButton_MouseLeave);
@@ -221,16 +213,11 @@
             // 
             // XButton
             // 
-            this.XButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.XButton, "XButton");
             this.XButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.XButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.XButton.ForeColor = System.Drawing.Color.White;
-            this.XButton.Location = new System.Drawing.Point(1860, 0);
             this.XButton.Name = "XButton";
-            this.XButton.Size = new System.Drawing.Size(60, 50);
-            this.XButton.TabIndex = 3;
-            this.XButton.Text = "X";
             this.XButton.UseVisualStyleBackColor = false;
             this.XButton.Click += new System.EventHandler(this.XButton_Click);
             this.XButton.MouseLeave += new System.EventHandler(this.XButton_MouseLeave);
@@ -238,25 +225,17 @@
             // 
             // hamburgerPictureBox
             // 
-            this.hamburgerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("hamburgerPictureBox.Image")));
-            this.hamburgerPictureBox.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.hamburgerPictureBox, "hamburgerPictureBox");
             this.hamburgerPictureBox.Name = "hamburgerPictureBox";
-            this.hamburgerPictureBox.Size = new System.Drawing.Size(37, 30);
-            this.hamburgerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hamburgerPictureBox.TabIndex = 3;
             this.hamburgerPictureBox.TabStop = false;
             this.hamburgerPictureBox.Click += new System.EventHandler(this.hamburgerPictureBox_Click);
             // 
             // logoLabel
             // 
             this.logoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.logoLabel, "logoLabel");
             this.logoLabel.ForeColor = System.Drawing.Color.White;
-            this.logoLabel.Location = new System.Drawing.Point(55, 15);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(128, 26);
-            this.logoLabel.TabIndex = 3;
-            this.logoLabel.Text = "Trackgenda";
             // 
             // sidePanel
             // 
@@ -274,208 +253,103 @@
             this.sidePanel.Controls.Add(this.settingsButton);
             this.sidePanel.Controls.Add(this.logoutButton);
             this.sidePanel.Controls.Add(this.exitButton);
-            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            resources.ApplyResources(this.sidePanel, "sidePanel");
             this.sidePanel.ForeColor = System.Drawing.Color.Black;
-            this.sidePanel.Location = new System.Drawing.Point(0, 51);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(220, 1029);
-            this.sidePanel.TabIndex = 4;
             // 
             // sideLogoPicture
             // 
             this.sideLogoPicture.Image = global::Trackgenda.Properties.Resources.TG;
-            this.sideLogoPicture.Location = new System.Drawing.Point(0, 30);
-            this.sideLogoPicture.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            resources.ApplyResources(this.sideLogoPicture, "sideLogoPicture");
             this.sideLogoPicture.Name = "sideLogoPicture";
-            this.sideLogoPicture.Size = new System.Drawing.Size(219, 81);
-            this.sideLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.sideLogoPicture.TabIndex = 15;
             this.sideLogoPicture.TabStop = false;
             // 
             // dashboardButton
             // 
-            this.dashboardButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.dashboardButton, "dashboardButton");
             this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.ForeColor = System.Drawing.Color.White;
-            this.dashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Image")));
-            this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardButton.Location = new System.Drawing.Point(10, 151);
-            this.dashboardButton.Margin = new System.Windows.Forms.Padding(10, 40, 10, 10);
             this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Size = new System.Drawing.Size(200, 60);
-            this.dashboardButton.TabIndex = 5;
-            this.dashboardButton.Text = "Calendar";
             this.dashboardButton.UseVisualStyleBackColor = false;
             this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // todoButton
             // 
-            this.todoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.todoButton, "todoButton");
             this.todoButton.BackColor = System.Drawing.Color.Gray;
-            this.todoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.todoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todoButton.Image = ((System.Drawing.Image)(resources.GetObject("todoButton.Image")));
-            this.todoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.todoButton.Location = new System.Drawing.Point(10, 231);
-            this.todoButton.Margin = new System.Windows.Forms.Padding(10);
             this.todoButton.Name = "todoButton";
-            this.todoButton.Size = new System.Drawing.Size(200, 60);
-            this.todoButton.TabIndex = 14;
-            this.todoButton.Text = "TODO";
             this.todoButton.UseVisualStyleBackColor = false;
             this.todoButton.Click += new System.EventHandler(this.todoButton_Click);
             // 
             // studyButton
             // 
-            this.studyButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.studyButton, "studyButton");
             this.studyButton.BackColor = System.Drawing.Color.Gray;
-            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studyButton.Image = ((System.Drawing.Image)(resources.GetObject("studyButton.Image")));
-            this.studyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.studyButton.Location = new System.Drawing.Point(10, 311);
-            this.studyButton.Margin = new System.Windows.Forms.Padding(10);
             this.studyButton.Name = "studyButton";
-            this.studyButton.Size = new System.Drawing.Size(200, 60);
-            this.studyButton.TabIndex = 22;
-            this.studyButton.Text = "Study";
             this.studyButton.UseVisualStyleBackColor = false;
             this.studyButton.Click += new System.EventHandler(this.studyButton_Click);
             // 
             // stopwatchButton
             // 
-            this.stopwatchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.stopwatchButton, "stopwatchButton");
             this.stopwatchButton.BackColor = System.Drawing.Color.Gray;
-            this.stopwatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stopwatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopwatchButton.Image = ((System.Drawing.Image)(resources.GetObject("stopwatchButton.Image")));
-            this.stopwatchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stopwatchButton.Location = new System.Drawing.Point(10, 391);
-            this.stopwatchButton.Margin = new System.Windows.Forms.Padding(10);
             this.stopwatchButton.Name = "stopwatchButton";
-            this.stopwatchButton.Size = new System.Drawing.Size(200, 60);
-            this.stopwatchButton.TabIndex = 21;
-            this.stopwatchButton.Text = "Stopwatch";
             this.stopwatchButton.UseVisualStyleBackColor = false;
             this.stopwatchButton.Click += new System.EventHandler(this.stopwatchButton_Click);
             // 
             // notesButton
             // 
-            this.notesButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.notesButton, "notesButton");
             this.notesButton.BackColor = System.Drawing.Color.Gray;
-            this.notesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.notesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notesButton.Image = ((System.Drawing.Image)(resources.GetObject("notesButton.Image")));
-            this.notesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.notesButton.Location = new System.Drawing.Point(10, 471);
-            this.notesButton.Margin = new System.Windows.Forms.Padding(10);
             this.notesButton.Name = "notesButton";
-            this.notesButton.Size = new System.Drawing.Size(200, 60);
-            this.notesButton.TabIndex = 20;
-            this.notesButton.Text = "Notebook";
             this.notesButton.UseVisualStyleBackColor = false;
             this.notesButton.Click += new System.EventHandler(this.notesButton_Click);
             // 
             // motivationalButton
             // 
-            this.motivationalButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.motivationalButton, "motivationalButton");
             this.motivationalButton.BackColor = System.Drawing.Color.Gray;
-            this.motivationalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.motivationalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.motivationalButton.Image = ((System.Drawing.Image)(resources.GetObject("motivationalButton.Image")));
-            this.motivationalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.motivationalButton.Location = new System.Drawing.Point(10, 551);
-            this.motivationalButton.Margin = new System.Windows.Forms.Padding(10);
             this.motivationalButton.Name = "motivationalButton";
-            this.motivationalButton.Size = new System.Drawing.Size(200, 60);
-            this.motivationalButton.TabIndex = 20;
-            this.motivationalButton.Text = "Motivional Quote";
             this.motivationalButton.UseVisualStyleBackColor = false;
             this.motivationalButton.Click += new System.EventHandler(this.motivationalButton_Click);
             // 
             // factButton
             // 
-            this.factButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.factButton, "factButton");
             this.factButton.BackColor = System.Drawing.Color.Gray;
-            this.factButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.factButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.factButton.Image = ((System.Drawing.Image)(resources.GetObject("factButton.Image")));
-            this.factButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.factButton.Location = new System.Drawing.Point(10, 631);
-            this.factButton.Margin = new System.Windows.Forms.Padding(10);
             this.factButton.Name = "factButton";
-            this.factButton.Size = new System.Drawing.Size(200, 60);
-            this.factButton.TabIndex = 19;
-            this.factButton.Text = "Fun Fact";
             this.factButton.UseVisualStyleBackColor = false;
             this.factButton.Click += new System.EventHandler(this.factButton_Click);
             // 
             // backgroundButton
             // 
-            this.backgroundButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.backgroundButton, "backgroundButton");
             this.backgroundButton.BackColor = System.Drawing.Color.Gray;
-            this.backgroundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backgroundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backgroundButton.Image = ((System.Drawing.Image)(resources.GetObject("backgroundButton.Image")));
-            this.backgroundButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.backgroundButton.Location = new System.Drawing.Point(10, 711);
-            this.backgroundButton.Margin = new System.Windows.Forms.Padding(10);
             this.backgroundButton.Name = "backgroundButton";
-            this.backgroundButton.Size = new System.Drawing.Size(200, 60);
-            this.backgroundButton.TabIndex = 18;
-            this.backgroundButton.Text = "Background";
             this.backgroundButton.UseVisualStyleBackColor = false;
             this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
             // 
             // settingsButton
             // 
-            this.settingsButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.BackColor = System.Drawing.Color.Gray;
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
-            this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(10, 791);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(10);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(200, 60);
-            this.settingsButton.TabIndex = 17;
-            this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // logoutButton
             // 
-            this.logoutButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.logoutButton, "logoutButton");
             this.logoutButton.BackColor = System.Drawing.Color.Gray;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
-            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(10, 871);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(10);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(200, 60);
-            this.logoutButton.TabIndex = 16;
-            this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            resources.ApplyResources(this.exitButton, "exitButton");
             this.exitButton.BackColor = System.Drawing.Color.Gray;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitButton.Location = new System.Drawing.Point(10, 951);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(200, 60);
-            this.exitButton.TabIndex = 15;
-            this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
@@ -486,17 +360,12 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.monthlyCalendarTab);
             this.tabControl1.Controls.Add(this.settingsTab);
             this.tabControl1.Controls.Add(this.calendarWeeklyTab);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1930, 1072);
-            this.tabControl1.TabIndex = 23;
             // 
             // monthlyCalendarTab
             // 
@@ -514,139 +383,81 @@
             this.monthlyCalendarTab.Controls.Add(this.nextButton);
             this.monthlyCalendarTab.Controls.Add(this.previousButton);
             this.monthlyCalendarTab.Controls.Add(this.monthlyPanel);
-            this.monthlyCalendarTab.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.monthlyCalendarTab, "monthlyCalendarTab");
             this.monthlyCalendarTab.Name = "monthlyCalendarTab";
-            this.monthlyCalendarTab.Padding = new System.Windows.Forms.Padding(3);
-            this.monthlyCalendarTab.Size = new System.Drawing.Size(1922, 1046);
-            this.monthlyCalendarTab.TabIndex = 0;
-            this.monthlyCalendarTab.Text = "tabPage1";
             // 
             // weeklyButton
             // 
             this.weeklyButton.BackColor = System.Drawing.Color.White;
             this.weeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.weeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weeklyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.weeklyButton, "weeklyButton");
             this.weeklyButton.ForeColor = System.Drawing.Color.Black;
-            this.weeklyButton.Location = new System.Drawing.Point(276, 324);
             this.weeklyButton.Name = "weeklyButton";
-            this.weeklyButton.Size = new System.Drawing.Size(120, 50);
-            this.weeklyButton.TabIndex = 11;
-            this.weeklyButton.Text = "Weekly";
             this.weeklyButton.UseVisualStyleBackColor = false;
             this.weeklyButton.Click += new System.EventHandler(this.weeklyButton_Click);
             // 
             // monthPictureBox
             // 
             this.monthPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.monthPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("monthPictureBox.Image")));
-            this.monthPictureBox.Location = new System.Drawing.Point(1023, 24);
+            resources.ApplyResources(this.monthPictureBox, "monthPictureBox");
             this.monthPictureBox.Name = "monthPictureBox";
-            this.monthPictureBox.Size = new System.Drawing.Size(41, 43);
-            this.monthPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.monthPictureBox.TabIndex = 10;
             this.monthPictureBox.TabStop = false;
             // 
             // dateLabel
             // 
             this.dateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(1051, 24);
+            resources.ApplyResources(this.dateLabel, "dateLabel");
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(173, 47);
-            this.dateLabel.TabIndex = 9;
-            this.dateLabel.Text = "date";
-            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1533, 73);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Friday";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1738, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Saturday";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
+            resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1318, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 20);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Thursday";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(902, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Tuesday";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1100, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Wednesday";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(697, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Monday";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(490, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sunday";
             // 
             // nextButton
             // 
             this.nextButton.BackColor = System.Drawing.Color.White;
             this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.ForeColor = System.Drawing.Color.Black;
-            this.nextButton.Location = new System.Drawing.Point(276, 128);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(120, 50);
-            this.nextButton.TabIndex = 1;
-            this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
@@ -654,23 +465,16 @@
             // 
             this.previousButton.BackColor = System.Drawing.Color.White;
             this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.previousButton, "previousButton");
             this.previousButton.ForeColor = System.Drawing.Color.Black;
-            this.previousButton.Location = new System.Drawing.Point(276, 222);
             this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(120, 50);
-            this.previousButton.TabIndex = 0;
-            this.previousButton.Text = "Previous";
             this.previousButton.UseVisualStyleBackColor = false;
             this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
             // 
             // monthlyPanel
             // 
-            this.monthlyPanel.Location = new System.Drawing.Point(421, 124);
+            resources.ApplyResources(this.monthlyPanel, "monthlyPanel");
             this.monthlyPanel.Name = "monthlyPanel";
-            this.monthlyPanel.Size = new System.Drawing.Size(1465, 878);
-            this.monthlyPanel.TabIndex = 0;
             // 
             // settingsTab
             // 
@@ -692,202 +496,130 @@
             this.settingsTab.Controls.Add(this.label22);
             this.settingsTab.Controls.Add(this.label21);
             this.settingsTab.Controls.Add(this.label9);
-            this.settingsTab.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.settingsTab, "settingsTab");
             this.settingsTab.Name = "settingsTab";
-            this.settingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.settingsTab.Size = new System.Drawing.Size(1922, 1046);
-            this.settingsTab.TabIndex = 2;
-            this.settingsTab.Text = "tabPage1";
             // 
             // longTextBox
             // 
-            this.longTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.longTextBox, "longTextBox");
             this.longTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.longTextBox.Location = new System.Drawing.Point(667, 474);
             this.longTextBox.Name = "longTextBox";
-            this.longTextBox.Size = new System.Drawing.Size(200, 23);
-            this.longTextBox.TabIndex = 16;
-            this.longTextBox.Text = "Long Break";
             this.longTextBox.Enter += new System.EventHandler(this.longTextBox_Enter);
             this.longTextBox.Leave += new System.EventHandler(this.longTextBox_Leave);
             // 
             // confirmStudyButton
             // 
-            this.confirmStudyButton.Location = new System.Drawing.Point(668, 538);
+            resources.ApplyResources(this.confirmStudyButton, "confirmStudyButton");
             this.confirmStudyButton.Name = "confirmStudyButton";
-            this.confirmStudyButton.Size = new System.Drawing.Size(199, 30);
-            this.confirmStudyButton.TabIndex = 15;
-            this.confirmStudyButton.Text = "Set";
             this.confirmStudyButton.UseVisualStyleBackColor = true;
             this.confirmStudyButton.Click += new System.EventHandler(this.confirmStudyButton_Click);
             // 
             // shortTextBox
             // 
-            this.shortTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.shortTextBox, "shortTextBox");
             this.shortTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.shortTextBox.Location = new System.Drawing.Point(667, 417);
             this.shortTextBox.Name = "shortTextBox";
-            this.shortTextBox.Size = new System.Drawing.Size(200, 23);
-            this.shortTextBox.TabIndex = 14;
-            this.shortTextBox.Text = "Short Break";
             this.shortTextBox.Enter += new System.EventHandler(this.shortTextBox_Enter);
             this.shortTextBox.Leave += new System.EventHandler(this.shortTextBox_Leave);
             // 
             // studyTextBox
             // 
-            this.studyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.studyTextBox, "studyTextBox");
             this.studyTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.studyTextBox.Location = new System.Drawing.Point(667, 354);
             this.studyTextBox.Name = "studyTextBox";
-            this.studyTextBox.Size = new System.Drawing.Size(200, 23);
-            this.studyTextBox.TabIndex = 13;
-            this.studyTextBox.Text = "Study Time";
             this.studyTextBox.Enter += new System.EventHandler(this.studyTextBox_Enter);
             this.studyTextBox.Leave += new System.EventHandler(this.studyTextBox_Leave);
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
+            resources.ApplyResources(this.label23, "label23");
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(662, 298);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(150, 24);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "Personal Study";
             // 
             // changeThemeButton
             // 
-            this.changeThemeButton.Location = new System.Drawing.Point(668, 229);
+            resources.ApplyResources(this.changeThemeButton, "changeThemeButton");
             this.changeThemeButton.Name = "changeThemeButton";
-            this.changeThemeButton.Size = new System.Drawing.Size(174, 30);
-            this.changeThemeButton.TabIndex = 11;
-            this.changeThemeButton.Text = "Change Theme";
             this.changeThemeButton.UseVisualStyleBackColor = true;
             this.changeThemeButton.Click += new System.EventHandler(this.changeThemeButton_Click);
             // 
             // darkRadioButton
             // 
-            this.darkRadioButton.AutoSize = true;
-            this.darkRadioButton.Location = new System.Drawing.Point(692, 174);
+            resources.ApplyResources(this.darkRadioButton, "darkRadioButton");
             this.darkRadioButton.Name = "darkRadioButton";
-            this.darkRadioButton.Size = new System.Drawing.Size(48, 17);
-            this.darkRadioButton.TabIndex = 10;
             this.darkRadioButton.TabStop = true;
-            this.darkRadioButton.Text = "Dark";
             this.darkRadioButton.UseVisualStyleBackColor = true;
             // 
             // lightRadioButton
             // 
-            this.lightRadioButton.AutoSize = true;
-            this.lightRadioButton.Location = new System.Drawing.Point(692, 120);
+            resources.ApplyResources(this.lightRadioButton, "lightRadioButton");
             this.lightRadioButton.Name = "lightRadioButton";
-            this.lightRadioButton.Size = new System.Drawing.Size(48, 17);
-            this.lightRadioButton.TabIndex = 9;
             this.lightRadioButton.TabStop = true;
-            this.lightRadioButton.Text = "Light";
             this.lightRadioButton.UseVisualStyleBackColor = true;
             // 
             // confirmPasswordTextBox
             // 
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(287, 474);
+            resources.ApplyResources(this.confirmPasswordTextBox, "confirmPasswordTextBox");
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(199, 30);
-            this.confirmPasswordTextBox.TabIndex = 8;
-            this.confirmPasswordTextBox.Text = "Confirm";
             this.confirmPasswordTextBox.UseVisualStyleBackColor = true;
             this.confirmPasswordTextBox.Click += new System.EventHandler(this.confirmPasswordTextBox_Click);
             // 
             // updateEmailButton
             // 
-            this.updateEmailButton.Location = new System.Drawing.Point(287, 229);
+            resources.ApplyResources(this.updateEmailButton, "updateEmailButton");
             this.updateEmailButton.Name = "updateEmailButton";
-            this.updateEmailButton.Size = new System.Drawing.Size(199, 30);
-            this.updateEmailButton.TabIndex = 7;
-            this.updateEmailButton.Text = "Update";
             this.updateEmailButton.UseVisualStyleBackColor = true;
             this.updateEmailButton.Click += new System.EventHandler(this.updateEmailButton_Click);
             // 
             // newPasswordTextBox
             // 
-            this.newPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.newPasswordTextBox, "newPasswordTextBox");
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(285, 417);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.Size = new System.Drawing.Size(200, 23);
-            this.newPasswordTextBox.TabIndex = 6;
-            this.newPasswordTextBox.Text = "New Password";
             this.newPasswordTextBox.Enter += new System.EventHandler(this.newPasswordTextBox_Enter);
             this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
             // 
             // currentPasswordTextBox
             // 
-            this.currentPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.currentPasswordTextBox, "currentPasswordTextBox");
             this.currentPasswordTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.currentPasswordTextBox.Location = new System.Drawing.Point(285, 354);
             this.currentPasswordTextBox.Name = "currentPasswordTextBox";
-            this.currentPasswordTextBox.Size = new System.Drawing.Size(200, 23);
-            this.currentPasswordTextBox.TabIndex = 5;
-            this.currentPasswordTextBox.Text = "Current Password";
             this.currentPasswordTextBox.Enter += new System.EventHandler(this.currentPasswordTextBox_Enter);
             this.currentPasswordTextBox.Leave += new System.EventHandler(this.currentPasswordTextBox_Leave);
             // 
             // newEmailTextBox
             // 
-            this.newEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.newEmailTextBox, "newEmailTextBox");
             this.newEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.newEmailTextBox.Location = new System.Drawing.Point(286, 172);
             this.newEmailTextBox.Name = "newEmailTextBox";
-            this.newEmailTextBox.Size = new System.Drawing.Size(200, 23);
-            this.newEmailTextBox.TabIndex = 4;
-            this.newEmailTextBox.Text = "New Email";
             this.newEmailTextBox.Enter += new System.EventHandler(this.newEmailTextBox_Enter);
             this.newEmailTextBox.Leave += new System.EventHandler(this.newEmailTextBox_Leave);
             // 
             // currentEmailTextBox
             // 
-            this.currentEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.currentEmailTextBox, "currentEmailTextBox");
             this.currentEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.currentEmailTextBox.Location = new System.Drawing.Point(286, 109);
             this.currentEmailTextBox.Name = "currentEmailTextBox";
-            this.currentEmailTextBox.Size = new System.Drawing.Size(200, 23);
-            this.currentEmailTextBox.TabIndex = 3;
-            this.currentEmailTextBox.Text = "Current Email";
             this.currentEmailTextBox.Enter += new System.EventHandler(this.currentEmailTextBox_Enter);
             this.currentEmailTextBox.Leave += new System.EventHandler(this.currentEmailTextBox_Leave);
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
+            resources.ApplyResources(this.label22, "label22");
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(686, 52);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 24);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Theme";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
+            resources.ApplyResources(this.label21, "label21");
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(280, 298);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(179, 24);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Change Password";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
+            resources.ApplyResources(this.label9, "label9");
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(281, 52);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Update Email";
             // 
             // calendarWeeklyTab
             // 
@@ -923,216 +655,124 @@
             this.calendarWeeklyTab.Controls.Add(this.mondayLabel);
             this.calendarWeeklyTab.Controls.Add(this.sundayLabel);
             this.calendarWeeklyTab.Controls.Add(this.weeklyPanel);
-            this.calendarWeeklyTab.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.calendarWeeklyTab, "calendarWeeklyTab");
             this.calendarWeeklyTab.Name = "calendarWeeklyTab";
-            this.calendarWeeklyTab.Padding = new System.Windows.Forms.Padding(3);
-            this.calendarWeeklyTab.Size = new System.Drawing.Size(1922, 1046);
-            this.calendarWeeklyTab.TabIndex = 3;
-            this.calendarWeeklyTab.Text = "tabPage1";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
+            resources.ApplyResources(this.label20, "label20");
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(408, 860);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 17);
-            this.label20.TabIndex = 41;
-            this.label20.Text = "19:00";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
+            resources.ApplyResources(this.label18, "label18");
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(408, 795);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 17);
-            this.label18.TabIndex = 40;
-            this.label18.Text = "18:00";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
+            resources.ApplyResources(this.label19, "label19");
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(408, 724);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(44, 17);
-            this.label19.TabIndex = 39;
-            this.label19.Text = "17:00";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
+            resources.ApplyResources(this.label16, "label16");
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(408, 655);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 17);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "16:00";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
+            resources.ApplyResources(this.label17, "label17");
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(408, 587);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 17);
-            this.label17.TabIndex = 37;
-            this.label17.Text = "15:00";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
+            resources.ApplyResources(this.label14, "label14");
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(408, 521);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 17);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "14:00";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
+            resources.ApplyResources(this.label15, "label15");
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(408, 455);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 17);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "13:00";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
+            resources.ApplyResources(this.label12, "label12");
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(408, 391);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 17);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "12:00";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
+            resources.ApplyResources(this.label13, "label13");
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(408, 322);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "11:00";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
+            resources.ApplyResources(this.label11, "label11");
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(408, 257);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 17);
-            this.label11.TabIndex = 32;
-            this.label11.Text = "10:00";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
+            resources.ApplyResources(this.label10, "label10");
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(414, 190);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 17);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "9:00";
             // 
             // saturdayDateLabel
             // 
-            this.saturdayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.saturdayDateLabel, "saturdayDateLabel");
             this.saturdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.saturdayDateLabel.Location = new System.Drawing.Point(1742, 142);
             this.saturdayDateLabel.Name = "saturdayDateLabel";
-            this.saturdayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.saturdayDateLabel.TabIndex = 30;
-            this.saturdayDateLabel.Text = "11/11/1111";
             // 
             // fridayDateLabel
             // 
-            this.fridayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.fridayDateLabel, "fridayDateLabel");
             this.fridayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fridayDateLabel.Location = new System.Drawing.Point(1542, 142);
             this.fridayDateLabel.Name = "fridayDateLabel";
-            this.fridayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.fridayDateLabel.TabIndex = 29;
-            this.fridayDateLabel.Text = "11/11/1111";
             // 
             // thursdayDateLabel
             // 
-            this.thursdayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.thursdayDateLabel, "thursdayDateLabel");
             this.thursdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.thursdayDateLabel.Location = new System.Drawing.Point(1337, 142);
             this.thursdayDateLabel.Name = "thursdayDateLabel";
-            this.thursdayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.thursdayDateLabel.TabIndex = 28;
-            this.thursdayDateLabel.Text = "11/11/1111";
             // 
             // wednesdayDateLabel
             // 
-            this.wednesdayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.wednesdayDateLabel, "wednesdayDateLabel");
             this.wednesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.wednesdayDateLabel.Location = new System.Drawing.Point(1137, 142);
             this.wednesdayDateLabel.Name = "wednesdayDateLabel";
-            this.wednesdayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.wednesdayDateLabel.TabIndex = 27;
-            this.wednesdayDateLabel.Text = "11/11/1111";
             // 
             // tuesdayDateLabel
             // 
-            this.tuesdayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.tuesdayDateLabel, "tuesdayDateLabel");
             this.tuesdayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tuesdayDateLabel.Location = new System.Drawing.Point(936, 142);
             this.tuesdayDateLabel.Name = "tuesdayDateLabel";
-            this.tuesdayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.tuesdayDateLabel.TabIndex = 26;
-            this.tuesdayDateLabel.Text = "11/11/1111";
             // 
             // mondayDateLabel
             // 
-            this.mondayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.mondayDateLabel, "mondayDateLabel");
             this.mondayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mondayDateLabel.Location = new System.Drawing.Point(734, 142);
             this.mondayDateLabel.Name = "mondayDateLabel";
-            this.mondayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.mondayDateLabel.TabIndex = 25;
-            this.mondayDateLabel.Text = "11/11/1111";
             // 
             // sundayDateLabel
             // 
-            this.sundayDateLabel.AutoSize = true;
+            resources.ApplyResources(this.sundayDateLabel, "sundayDateLabel");
             this.sundayDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.sundayDateLabel.Location = new System.Drawing.Point(531, 142);
             this.sundayDateLabel.Name = "sundayDateLabel";
-            this.sundayDateLabel.Size = new System.Drawing.Size(65, 13);
-            this.sundayDateLabel.TabIndex = 24;
-            this.sundayDateLabel.Text = "11/11/1111";
             // 
             // monthlyButton
             // 
             this.monthlyButton.BackColor = System.Drawing.Color.White;
             this.monthlyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.monthlyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.monthlyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.monthlyButton, "monthlyButton");
             this.monthlyButton.ForeColor = System.Drawing.Color.Black;
-            this.monthlyButton.Location = new System.Drawing.Point(252, 367);
             this.monthlyButton.Name = "monthlyButton";
-            this.monthlyButton.Size = new System.Drawing.Size(120, 50);
-            this.monthlyButton.TabIndex = 23;
-            this.monthlyButton.Text = "Monthly";
             this.monthlyButton.UseVisualStyleBackColor = false;
             this.monthlyButton.Click += new System.EventHandler(this.monthlyButton_Click);
             // 
@@ -1140,14 +780,9 @@
             // 
             this.nextWeeklyButton.BackColor = System.Drawing.Color.White;
             this.nextWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextWeeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextWeeklyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.nextWeeklyButton, "nextWeeklyButton");
             this.nextWeeklyButton.ForeColor = System.Drawing.Color.Black;
-            this.nextWeeklyButton.Location = new System.Drawing.Point(252, 171);
             this.nextWeeklyButton.Name = "nextWeeklyButton";
-            this.nextWeeklyButton.Size = new System.Drawing.Size(120, 50);
-            this.nextWeeklyButton.TabIndex = 22;
-            this.nextWeeklyButton.Text = "Next";
             this.nextWeeklyButton.UseVisualStyleBackColor = false;
             this.nextWeeklyButton.Click += new System.EventHandler(this.nextWeeklyButton_Click);
             // 
@@ -1155,162 +790,84 @@
             // 
             this.previousWeeklyButton.BackColor = System.Drawing.Color.White;
             this.previousWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previousWeeklyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previousWeeklyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.previousWeeklyButton, "previousWeeklyButton");
             this.previousWeeklyButton.ForeColor = System.Drawing.Color.Black;
-            this.previousWeeklyButton.Location = new System.Drawing.Point(252, 265);
             this.previousWeeklyButton.Name = "previousWeeklyButton";
-            this.previousWeeklyButton.Size = new System.Drawing.Size(120, 50);
-            this.previousWeeklyButton.TabIndex = 21;
-            this.previousWeeklyButton.Text = "Previous";
             this.previousWeeklyButton.UseVisualStyleBackColor = false;
             this.previousWeeklyButton.Click += new System.EventHandler(this.previousWeeklyButton_Click);
             // 
             // weekPictureBox
             // 
             this.weekPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.weekPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("weekPictureBox.Image")));
-            this.weekPictureBox.Location = new System.Drawing.Point(1025, 67);
+            resources.ApplyResources(this.weekPictureBox, "weekPictureBox");
             this.weekPictureBox.Name = "weekPictureBox";
-            this.weekPictureBox.Size = new System.Drawing.Size(41, 43);
-            this.weekPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weekPictureBox.TabIndex = 20;
             this.weekPictureBox.TabStop = false;
             // 
             // weeklyDisplayLabel
             // 
             this.weeklyDisplayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.weeklyDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyDisplayLabel.Location = new System.Drawing.Point(1053, 67);
+            resources.ApplyResources(this.weeklyDisplayLabel, "weeklyDisplayLabel");
             this.weeklyDisplayLabel.Name = "weeklyDisplayLabel";
-            this.weeklyDisplayLabel.Size = new System.Drawing.Size(173, 47);
-            this.weeklyDisplayLabel.TabIndex = 19;
-            this.weeklyDisplayLabel.Text = "date";
-            this.weeklyDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fridayLabel
             // 
-            this.fridayLabel.AutoSize = true;
+            resources.ApplyResources(this.fridayLabel, "fridayLabel");
             this.fridayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fridayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fridayLabel.Location = new System.Drawing.Point(1546, 116);
             this.fridayLabel.Name = "fridayLabel";
-            this.fridayLabel.Size = new System.Drawing.Size(52, 20);
-            this.fridayLabel.TabIndex = 18;
-            this.fridayLabel.Text = "Friday";
             // 
             // saturdayLabel
             // 
-            this.saturdayLabel.AutoSize = true;
+            resources.ApplyResources(this.saturdayLabel, "saturdayLabel");
             this.saturdayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.saturdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturdayLabel.Location = new System.Drawing.Point(1736, 116);
             this.saturdayLabel.Name = "saturdayLabel";
-            this.saturdayLabel.Size = new System.Drawing.Size(73, 20);
-            this.saturdayLabel.TabIndex = 17;
-            this.saturdayLabel.Text = "Saturday";
             // 
             // thursdayLabel
             // 
-            this.thursdayLabel.AutoSize = true;
+            resources.ApplyResources(this.thursdayLabel, "thursdayLabel");
             this.thursdayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.thursdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursdayLabel.Location = new System.Drawing.Point(1329, 116);
             this.thursdayLabel.Name = "thursdayLabel";
-            this.thursdayLabel.Size = new System.Drawing.Size(74, 20);
-            this.thursdayLabel.TabIndex = 16;
-            this.thursdayLabel.Text = "Thursday";
             // 
             // tuesdayLabel
             // 
-            this.tuesdayLabel.AutoSize = true;
+            resources.ApplyResources(this.tuesdayLabel, "tuesdayLabel");
             this.tuesdayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tuesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tuesdayLabel.Location = new System.Drawing.Point(931, 116);
             this.tuesdayLabel.Name = "tuesdayLabel";
-            this.tuesdayLabel.Size = new System.Drawing.Size(69, 20);
-            this.tuesdayLabel.TabIndex = 15;
-            this.tuesdayLabel.Text = "Tuesday";
             // 
             // wednesdayLabel
             // 
-            this.wednesdayLabel.AutoSize = true;
+            resources.ApplyResources(this.wednesdayLabel, "wednesdayLabel");
             this.wednesdayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.wednesdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesdayLabel.Location = new System.Drawing.Point(1119, 116);
             this.wednesdayLabel.Name = "wednesdayLabel";
-            this.wednesdayLabel.Size = new System.Drawing.Size(93, 20);
-            this.wednesdayLabel.TabIndex = 14;
-            this.wednesdayLabel.Text = "Wednesday";
             // 
             // mondayLabel
             // 
-            this.mondayLabel.AutoSize = true;
+            resources.ApplyResources(this.mondayLabel, "mondayLabel");
             this.mondayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mondayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mondayLabel.Location = new System.Drawing.Point(732, 116);
             this.mondayLabel.Name = "mondayLabel";
-            this.mondayLabel.Size = new System.Drawing.Size(65, 20);
-            this.mondayLabel.TabIndex = 13;
-            this.mondayLabel.Text = "Monday";
             // 
             // sundayLabel
             // 
-            this.sundayLabel.AutoSize = true;
+            resources.ApplyResources(this.sundayLabel, "sundayLabel");
             this.sundayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.sundayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sundayLabel.Location = new System.Drawing.Point(532, 116);
             this.sundayLabel.Name = "sundayLabel";
-            this.sundayLabel.Size = new System.Drawing.Size(63, 20);
-            this.sundayLabel.TabIndex = 12;
-            this.sundayLabel.Text = "Sunday";
             // 
             // weeklyPanel
             // 
-            this.weeklyPanel.Location = new System.Drawing.Point(462, 167);
+            resources.ApplyResources(this.weeklyPanel, "weeklyPanel");
             this.weeklyPanel.Name = "weeklyPanel";
-            this.weeklyPanel.Size = new System.Drawing.Size(1465, 878);
-            this.weeklyPanel.TabIndex = 11;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Transparent;
-            this.label24.Location = new System.Drawing.Point(225, 15);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 18);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "Language";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "English",
-            "French",
-            "Romanian"});
-            this.comboBox1.Location = new System.Drawing.Point(303, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
             // 
             // CalendarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
+            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.upperBar);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "CalendarForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
             this.upperBar.ResumeLayout(false);

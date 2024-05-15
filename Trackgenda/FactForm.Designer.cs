@@ -38,48 +38,34 @@
             // 
             this.closeButton.BackColor = System.Drawing.Color.LightCoral;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(335, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(68, 40);
-            this.closeButton.TabIndex = 4;
-            this.closeButton.Text = "X";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // factLabel
             // 
             this.factLabel.BackColor = System.Drawing.Color.Transparent;
-            this.factLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.factLabel.Location = new System.Drawing.Point(30, 98);
+            resources.ApplyResources(this.factLabel, "factLabel");
             this.factLabel.Name = "factLabel";
-            this.factLabel.Size = new System.Drawing.Size(340, 125);
-            this.factLabel.TabIndex = 5;
             // 
             // displayLabel
             // 
             this.displayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.Location = new System.Drawing.Point(98, 31);
+            resources.ApplyResources(this.displayLabel, "displayLabel");
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(210, 39);
-            this.displayLabel.TabIndex = 6;
-            this.displayLabel.Text = "Random Fun Fact";
             // 
             // FactForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(400, 250);
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.factLabel);
             this.Controls.Add(this.closeButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FactForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FactForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FactForm_MouseDown);
             this.ResumeLayout(false);
