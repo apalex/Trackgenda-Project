@@ -31,18 +31,34 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.upperBar = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.currentTimeLabel = new System.Windows.Forms.Label();
+            this.minimizeButton = new System.Windows.Forms.Button();
+            this.maximizeButton = new System.Windows.Forms.Button();
             this.XButton = new System.Windows.Forms.Button();
+            this.hamburgerPictureBox = new System.Windows.Forms.PictureBox();
             this.logoLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LanguageLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.sideLogoPicture = new System.Windows.Forms.PictureBox();
+            this.dashboardButton = new System.Windows.Forms.Button();
+            this.todoButton = new System.Windows.Forms.Button();
+            this.studyButton = new System.Windows.Forms.Button();
+            this.stopwatchButton = new System.Windows.Forms.Button();
+            this.notesButton = new System.Windows.Forms.Button();
+            this.motivationalButton = new System.Windows.Forms.Button();
+            this.factButton = new System.Windows.Forms.Button();
+            this.backgroundButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.currentTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.monthlyCalendarTab = new System.Windows.Forms.TabPage();
             this.weeklyButton = new System.Windows.Forms.Button();
+            this.monthPictureBox = new System.Windows.Forms.PictureBox();
             this.dateLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,6 +110,7 @@
             this.monthlyButton = new System.Windows.Forms.Button();
             this.nextWeeklyButton = new System.Windows.Forms.Button();
             this.previousWeeklyButton = new System.Windows.Forms.Button();
+            this.weekPictureBox = new System.Windows.Forms.PictureBox();
             this.weeklyDisplayLabel = new System.Windows.Forms.Label();
             this.fridayLabel = new System.Windows.Forms.Label();
             this.saturdayLabel = new System.Windows.Forms.Label();
@@ -103,43 +120,23 @@
             this.mondayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
             this.weeklyPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.sideLogoPicture = new System.Windows.Forms.PictureBox();
-            this.dashboardButton = new System.Windows.Forms.Button();
-            this.todoButton = new System.Windows.Forms.Button();
-            this.studyButton = new System.Windows.Forms.Button();
-            this.stopwatchButton = new System.Windows.Forms.Button();
-            this.notesButton = new System.Windows.Forms.Button();
-            this.motivationalButton = new System.Windows.Forms.Button();
-            this.factButton = new System.Windows.Forms.Button();
-            this.backgroundButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
-            this.logoutButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.maximizeButton = new System.Windows.Forms.Button();
-            this.hamburgerPictureBox = new System.Windows.Forms.PictureBox();
-            this.monthPictureBox = new System.Windows.Forms.PictureBox();
-            this.weekPictureBox = new System.Windows.Forms.PictureBox();
             this.upperBar.SuspendLayout();
-            this.sidePanel.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.monthlyCalendarTab.SuspendLayout();
-            this.settingsTab.SuspendLayout();
-            this.calendarWeeklyTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).BeginInit();
+            this.sidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.monthlyCalendarTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.monthPictureBox)).BeginInit();
+            this.settingsTab.SuspendLayout();
+            this.calendarWeeklyTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // upperBar
             // 
+            resources.ApplyResources(this.upperBar, "upperBar");
             this.upperBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.upperBar.Controls.Add(this.button1);
-            this.upperBar.Controls.Add(this.comboBox1);
-            this.upperBar.Controls.Add(this.label24);
             this.upperBar.Controls.Add(this.pictureBox2);
             this.upperBar.Controls.Add(this.label3);
             this.upperBar.Controls.Add(this.currentTimeLabel);
@@ -148,28 +145,16 @@
             this.upperBar.Controls.Add(this.XButton);
             this.upperBar.Controls.Add(this.hamburgerPictureBox);
             this.upperBar.Controls.Add(this.logoLabel);
-            resources.ApplyResources(this.upperBar, "upperBar");
             this.upperBar.ForeColor = System.Drawing.Color.Black;
             this.upperBar.Name = "upperBar";
             this.upperBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // comboBox1
+            // pictureBox2
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.ForeColor = System.Drawing.Color.Transparent;
-            this.label24.Name = "label24";
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -183,6 +168,30 @@
             this.currentTimeLabel.ForeColor = System.Drawing.Color.White;
             this.currentTimeLabel.Name = "currentTimeLabel";
             // 
+            // minimizeButton
+            // 
+            resources.ApplyResources(this.minimizeButton, "minimizeButton");
+            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizeButton.ForeColor = System.Drawing.Color.White;
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            this.minimizeButton.MouseLeave += new System.EventHandler(this.minimizeButton_MouseLeave);
+            this.minimizeButton.MouseHover += new System.EventHandler(this.minimizeButton_MouseHover);
+            // 
+            // maximizeButton
+            // 
+            resources.ApplyResources(this.maximizeButton, "maximizeButton");
+            this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.maximizeButton.ForeColor = System.Drawing.Color.White;
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.UseVisualStyleBackColor = false;
+            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
+            this.maximizeButton.MouseLeave += new System.EventHandler(this.maximizeButton_MouseLeave);
+            this.maximizeButton.MouseHover += new System.EventHandler(this.maximizeButton_MouseHover);
+            // 
             // XButton
             // 
             resources.ApplyResources(this.XButton, "XButton");
@@ -195,15 +204,42 @@
             this.XButton.MouseLeave += new System.EventHandler(this.XButton_MouseLeave);
             this.XButton.MouseHover += new System.EventHandler(this.XButton_MouseHover);
             // 
+            // hamburgerPictureBox
+            // 
+            resources.ApplyResources(this.hamburgerPictureBox, "hamburgerPictureBox");
+            this.hamburgerPictureBox.Name = "hamburgerPictureBox";
+            this.hamburgerPictureBox.TabStop = false;
+            this.hamburgerPictureBox.Click += new System.EventHandler(this.hamburgerPictureBox_Click);
+            // 
             // logoLabel
             // 
-            this.logoLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.logoLabel, "logoLabel");
+            this.logoLabel.BackColor = System.Drawing.Color.Transparent;
             this.logoLabel.ForeColor = System.Drawing.Color.White;
             this.logoLabel.Name = "logoLabel";
             // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // LanguageLabel
+            // 
+            resources.ApplyResources(this.LanguageLabel, "LanguageLabel");
+            this.LanguageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LanguageLabel.ForeColor = System.Drawing.Color.Black;
+            this.LanguageLabel.Name = "LanguageLabel";
+            // 
             // sidePanel
             // 
+            resources.ApplyResources(this.sidePanel, "sidePanel");
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.sidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sidePanel.Controls.Add(this.sideLogoPicture);
@@ -218,9 +254,96 @@
             this.sidePanel.Controls.Add(this.settingsButton);
             this.sidePanel.Controls.Add(this.logoutButton);
             this.sidePanel.Controls.Add(this.exitButton);
-            resources.ApplyResources(this.sidePanel, "sidePanel");
             this.sidePanel.ForeColor = System.Drawing.Color.Black;
             this.sidePanel.Name = "sidePanel";
+            // 
+            // sideLogoPicture
+            // 
+            resources.ApplyResources(this.sideLogoPicture, "sideLogoPicture");
+            this.sideLogoPicture.Image = global::Trackgenda.Properties.Resources.TG;
+            this.sideLogoPicture.Name = "sideLogoPicture";
+            this.sideLogoPicture.TabStop = false;
+            // 
+            // dashboardButton
+            // 
+            resources.ApplyResources(this.dashboardButton, "dashboardButton");
+            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.dashboardButton.ForeColor = System.Drawing.Color.White;
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.UseVisualStyleBackColor = false;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
+            // 
+            // todoButton
+            // 
+            resources.ApplyResources(this.todoButton, "todoButton");
+            this.todoButton.BackColor = System.Drawing.Color.Gray;
+            this.todoButton.Name = "todoButton";
+            this.todoButton.UseVisualStyleBackColor = false;
+            this.todoButton.Click += new System.EventHandler(this.todoButton_Click);
+            // 
+            // studyButton
+            // 
+            resources.ApplyResources(this.studyButton, "studyButton");
+            this.studyButton.BackColor = System.Drawing.Color.Gray;
+            this.studyButton.Name = "studyButton";
+            this.studyButton.UseVisualStyleBackColor = false;
+            this.studyButton.Click += new System.EventHandler(this.studyButton_Click);
+            // 
+            // stopwatchButton
+            // 
+            resources.ApplyResources(this.stopwatchButton, "stopwatchButton");
+            this.stopwatchButton.BackColor = System.Drawing.Color.Gray;
+            this.stopwatchButton.Name = "stopwatchButton";
+            this.stopwatchButton.UseVisualStyleBackColor = false;
+            this.stopwatchButton.Click += new System.EventHandler(this.stopwatchButton_Click);
+            // 
+            // notesButton
+            // 
+            resources.ApplyResources(this.notesButton, "notesButton");
+            this.notesButton.BackColor = System.Drawing.Color.Gray;
+            this.notesButton.Name = "notesButton";
+            this.notesButton.UseVisualStyleBackColor = false;
+            this.notesButton.Click += new System.EventHandler(this.notesButton_Click);
+            // 
+            // motivationalButton
+            // 
+            resources.ApplyResources(this.motivationalButton, "motivationalButton");
+            this.motivationalButton.BackColor = System.Drawing.Color.Gray;
+            this.motivationalButton.Name = "motivationalButton";
+            this.motivationalButton.UseVisualStyleBackColor = false;
+            this.motivationalButton.Click += new System.EventHandler(this.motivationalButton_Click);
+            // 
+            // factButton
+            // 
+            resources.ApplyResources(this.factButton, "factButton");
+            this.factButton.BackColor = System.Drawing.Color.Gray;
+            this.factButton.Name = "factButton";
+            this.factButton.UseVisualStyleBackColor = false;
+            this.factButton.Click += new System.EventHandler(this.factButton_Click);
+            // 
+            // backgroundButton
+            // 
+            resources.ApplyResources(this.backgroundButton, "backgroundButton");
+            this.backgroundButton.BackColor = System.Drawing.Color.Gray;
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.UseVisualStyleBackColor = false;
+            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
+            // 
+            // settingsButton
+            // 
+            resources.ApplyResources(this.settingsButton, "settingsButton");
+            this.settingsButton.BackColor = System.Drawing.Color.Gray;
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.UseVisualStyleBackColor = false;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // logoutButton
+            // 
+            resources.ApplyResources(this.logoutButton, "logoutButton");
+            this.logoutButton.BackColor = System.Drawing.Color.Gray;
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // exitButton
             // 
@@ -246,6 +369,7 @@
             // 
             // monthlyCalendarTab
             // 
+            resources.ApplyResources(this.monthlyCalendarTab, "monthlyCalendarTab");
             this.monthlyCalendarTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.monthlyCalendarTab.Controls.Add(this.weeklyButton);
             this.monthlyCalendarTab.Controls.Add(this.monthPictureBox);
@@ -260,23 +384,29 @@
             this.monthlyCalendarTab.Controls.Add(this.nextButton);
             this.monthlyCalendarTab.Controls.Add(this.previousButton);
             this.monthlyCalendarTab.Controls.Add(this.monthlyPanel);
-            resources.ApplyResources(this.monthlyCalendarTab, "monthlyCalendarTab");
             this.monthlyCalendarTab.Name = "monthlyCalendarTab";
             // 
             // weeklyButton
             // 
+            resources.ApplyResources(this.weeklyButton, "weeklyButton");
             this.weeklyButton.BackColor = System.Drawing.Color.White;
             this.weeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.weeklyButton, "weeklyButton");
             this.weeklyButton.ForeColor = System.Drawing.Color.Black;
             this.weeklyButton.Name = "weeklyButton";
             this.weeklyButton.UseVisualStyleBackColor = false;
             this.weeklyButton.Click += new System.EventHandler(this.weeklyButton_Click);
             // 
+            // monthPictureBox
+            // 
+            resources.ApplyResources(this.monthPictureBox, "monthPictureBox");
+            this.monthPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.monthPictureBox.Name = "monthPictureBox";
+            this.monthPictureBox.TabStop = false;
+            // 
             // dateLabel
             // 
-            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.dateLabel, "dateLabel");
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Name = "dateLabel";
             // 
             // label6
@@ -323,9 +453,9 @@
             // 
             // nextButton
             // 
+            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.BackColor = System.Drawing.Color.White;
             this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.ForeColor = System.Drawing.Color.Black;
             this.nextButton.Name = "nextButton";
             this.nextButton.UseVisualStyleBackColor = false;
@@ -333,9 +463,9 @@
             // 
             // previousButton
             // 
+            resources.ApplyResources(this.previousButton, "previousButton");
             this.previousButton.BackColor = System.Drawing.Color.White;
             this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.previousButton, "previousButton");
             this.previousButton.ForeColor = System.Drawing.Color.Black;
             this.previousButton.Name = "previousButton";
             this.previousButton.UseVisualStyleBackColor = false;
@@ -348,7 +478,10 @@
             // 
             // settingsTab
             // 
+            resources.ApplyResources(this.settingsTab, "settingsTab");
             this.settingsTab.BackColor = System.Drawing.Color.White;
+            this.settingsTab.Controls.Add(this.comboBox1);
+            this.settingsTab.Controls.Add(this.LanguageLabel);
             this.settingsTab.Controls.Add(this.longTextBox);
             this.settingsTab.Controls.Add(this.confirmStudyButton);
             this.settingsTab.Controls.Add(this.shortTextBox);
@@ -366,7 +499,6 @@
             this.settingsTab.Controls.Add(this.label22);
             this.settingsTab.Controls.Add(this.label21);
             this.settingsTab.Controls.Add(this.label9);
-            resources.ApplyResources(this.settingsTab, "settingsTab");
             this.settingsTab.Name = "settingsTab";
             // 
             // longTextBox
@@ -493,6 +625,7 @@
             // 
             // calendarWeeklyTab
             // 
+            resources.ApplyResources(this.calendarWeeklyTab, "calendarWeeklyTab");
             this.calendarWeeklyTab.BackColor = System.Drawing.Color.White;
             this.calendarWeeklyTab.Controls.Add(this.label20);
             this.calendarWeeklyTab.Controls.Add(this.label18);
@@ -525,7 +658,6 @@
             this.calendarWeeklyTab.Controls.Add(this.mondayLabel);
             this.calendarWeeklyTab.Controls.Add(this.sundayLabel);
             this.calendarWeeklyTab.Controls.Add(this.weeklyPanel);
-            resources.ApplyResources(this.calendarWeeklyTab, "calendarWeeklyTab");
             this.calendarWeeklyTab.Name = "calendarWeeklyTab";
             // 
             // label20
@@ -638,9 +770,9 @@
             // 
             // monthlyButton
             // 
+            resources.ApplyResources(this.monthlyButton, "monthlyButton");
             this.monthlyButton.BackColor = System.Drawing.Color.White;
             this.monthlyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.monthlyButton, "monthlyButton");
             this.monthlyButton.ForeColor = System.Drawing.Color.Black;
             this.monthlyButton.Name = "monthlyButton";
             this.monthlyButton.UseVisualStyleBackColor = false;
@@ -648,9 +780,9 @@
             // 
             // nextWeeklyButton
             // 
+            resources.ApplyResources(this.nextWeeklyButton, "nextWeeklyButton");
             this.nextWeeklyButton.BackColor = System.Drawing.Color.White;
             this.nextWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.nextWeeklyButton, "nextWeeklyButton");
             this.nextWeeklyButton.ForeColor = System.Drawing.Color.Black;
             this.nextWeeklyButton.Name = "nextWeeklyButton";
             this.nextWeeklyButton.UseVisualStyleBackColor = false;
@@ -658,18 +790,25 @@
             // 
             // previousWeeklyButton
             // 
+            resources.ApplyResources(this.previousWeeklyButton, "previousWeeklyButton");
             this.previousWeeklyButton.BackColor = System.Drawing.Color.White;
             this.previousWeeklyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.previousWeeklyButton, "previousWeeklyButton");
             this.previousWeeklyButton.ForeColor = System.Drawing.Color.Black;
             this.previousWeeklyButton.Name = "previousWeeklyButton";
             this.previousWeeklyButton.UseVisualStyleBackColor = false;
             this.previousWeeklyButton.Click += new System.EventHandler(this.previousWeeklyButton_Click);
             // 
+            // weekPictureBox
+            // 
+            resources.ApplyResources(this.weekPictureBox, "weekPictureBox");
+            this.weekPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.weekPictureBox.Name = "weekPictureBox";
+            this.weekPictureBox.TabStop = false;
+            // 
             // weeklyDisplayLabel
             // 
-            this.weeklyDisplayLabel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.weeklyDisplayLabel, "weeklyDisplayLabel");
+            this.weeklyDisplayLabel.BackColor = System.Drawing.Color.Transparent;
             this.weeklyDisplayLabel.Name = "weeklyDisplayLabel";
             // 
             // fridayLabel
@@ -719,158 +858,10 @@
             resources.ApplyResources(this.weeklyPanel, "weeklyPanel");
             this.weeklyPanel.Name = "weeklyPanel";
             // 
-            // sideLogoPicture
-            // 
-            this.sideLogoPicture.Image = global::Trackgenda.Properties.Resources.TG;
-            resources.ApplyResources(this.sideLogoPicture, "sideLogoPicture");
-            this.sideLogoPicture.Name = "sideLogoPicture";
-            this.sideLogoPicture.TabStop = false;
-            // 
-            // dashboardButton
-            // 
-            resources.ApplyResources(this.dashboardButton, "dashboardButton");
-            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.dashboardButton.ForeColor = System.Drawing.Color.White;
-            this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.UseVisualStyleBackColor = false;
-            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
-            // 
-            // todoButton
-            // 
-            resources.ApplyResources(this.todoButton, "todoButton");
-            this.todoButton.BackColor = System.Drawing.Color.Gray;
-            this.todoButton.Name = "todoButton";
-            this.todoButton.UseVisualStyleBackColor = false;
-            this.todoButton.Click += new System.EventHandler(this.todoButton_Click);
-            // 
-            // studyButton
-            // 
-            resources.ApplyResources(this.studyButton, "studyButton");
-            this.studyButton.BackColor = System.Drawing.Color.Gray;
-            this.studyButton.Name = "studyButton";
-            this.studyButton.UseVisualStyleBackColor = false;
-            this.studyButton.Click += new System.EventHandler(this.studyButton_Click);
-            // 
-            // stopwatchButton
-            // 
-            resources.ApplyResources(this.stopwatchButton, "stopwatchButton");
-            this.stopwatchButton.BackColor = System.Drawing.Color.Gray;
-            this.stopwatchButton.Name = "stopwatchButton";
-            this.stopwatchButton.UseVisualStyleBackColor = false;
-            this.stopwatchButton.Click += new System.EventHandler(this.stopwatchButton_Click);
-            // 
-            // notesButton
-            // 
-            resources.ApplyResources(this.notesButton, "notesButton");
-            this.notesButton.BackColor = System.Drawing.Color.Gray;
-            this.notesButton.Name = "notesButton";
-            this.notesButton.UseVisualStyleBackColor = false;
-            this.notesButton.Click += new System.EventHandler(this.notesButton_Click);
-            // 
-            // motivationalButton
-            // 
-            resources.ApplyResources(this.motivationalButton, "motivationalButton");
-            this.motivationalButton.BackColor = System.Drawing.Color.Gray;
-            this.motivationalButton.Name = "motivationalButton";
-            this.motivationalButton.UseVisualStyleBackColor = false;
-            this.motivationalButton.Click += new System.EventHandler(this.motivationalButton_Click);
-            // 
-            // factButton
-            // 
-            resources.ApplyResources(this.factButton, "factButton");
-            this.factButton.BackColor = System.Drawing.Color.Gray;
-            this.factButton.Name = "factButton";
-            this.factButton.UseVisualStyleBackColor = false;
-            this.factButton.Click += new System.EventHandler(this.factButton_Click);
-            // 
-            // backgroundButton
-            // 
-            resources.ApplyResources(this.backgroundButton, "backgroundButton");
-            this.backgroundButton.BackColor = System.Drawing.Color.Gray;
-            this.backgroundButton.Name = "backgroundButton";
-            this.backgroundButton.UseVisualStyleBackColor = false;
-            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
-            // 
-            // settingsButton
-            // 
-            resources.ApplyResources(this.settingsButton, "settingsButton");
-            this.settingsButton.BackColor = System.Drawing.Color.Gray;
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.UseVisualStyleBackColor = false;
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-            // 
-            // logoutButton
-            // 
-            resources.ApplyResources(this.logoutButton, "logoutButton");
-            this.logoutButton.BackColor = System.Drawing.Color.Gray;
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.UseVisualStyleBackColor = false;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Trackgenda.Properties.Resources.playButton1;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // minimizeButton
-            // 
-            resources.ApplyResources(this.minimizeButton, "minimizeButton");
-            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizeButton.ForeColor = System.Drawing.Color.White;
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            this.minimizeButton.MouseLeave += new System.EventHandler(this.minimizeButton_MouseLeave);
-            this.minimizeButton.MouseHover += new System.EventHandler(this.minimizeButton_MouseHover);
-            // 
-            // maximizeButton
-            // 
-            resources.ApplyResources(this.maximizeButton, "maximizeButton");
-            this.maximizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maximizeButton.ForeColor = System.Drawing.Color.White;
-            this.maximizeButton.Name = "maximizeButton";
-            this.maximizeButton.UseVisualStyleBackColor = false;
-            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
-            this.maximizeButton.MouseLeave += new System.EventHandler(this.maximizeButton_MouseLeave);
-            this.maximizeButton.MouseHover += new System.EventHandler(this.maximizeButton_MouseHover);
-            // 
-            // hamburgerPictureBox
-            // 
-            resources.ApplyResources(this.hamburgerPictureBox, "hamburgerPictureBox");
-            this.hamburgerPictureBox.Name = "hamburgerPictureBox";
-            this.hamburgerPictureBox.TabStop = false;
-            this.hamburgerPictureBox.Click += new System.EventHandler(this.hamburgerPictureBox_Click);
-            // 
-            // monthPictureBox
-            // 
-            this.monthPictureBox.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.monthPictureBox, "monthPictureBox");
-            this.monthPictureBox.Name = "monthPictureBox";
-            this.monthPictureBox.TabStop = false;
-            // 
-            // weekPictureBox
-            // 
-            this.weekPictureBox.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.weekPictureBox, "weekPictureBox");
-            this.weekPictureBox.Name = "weekPictureBox";
-            this.weekPictureBox.TabStop = false;
-            // 
             // CalendarForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.upperBar);
@@ -883,18 +874,18 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CalendarForm_MouseDown);
             this.upperBar.ResumeLayout(false);
             this.upperBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
             this.sidePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.monthlyCalendarTab.ResumeLayout(false);
             this.monthlyCalendarTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.monthPictureBox)).EndInit();
             this.settingsTab.ResumeLayout(false);
             this.settingsTab.PerformLayout();
             this.calendarWeeklyTab.ResumeLayout(false);
             this.calendarWeeklyTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sideLogoPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hamburgerPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monthPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -989,8 +980,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label LanguageLabel;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

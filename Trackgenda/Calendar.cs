@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Net;
+using System.Media;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace Trackgenda
 {
@@ -532,6 +534,7 @@ namespace Trackgenda
                 label21.ForeColor = Color.Black;
                 label22.ForeColor = Color.Black;
                 label23.ForeColor = Color.Black;
+                LanguageLabel.ForeColor = Color.Black;
                 lightRadioButton.ForeColor = Color.Black;
                 darkRadioButton.ForeColor = Color.Black;
                 // Weekly
@@ -592,6 +595,7 @@ namespace Trackgenda
                 label21.ForeColor = Color.White;
                 label22.ForeColor = Color.White;
                 label23.ForeColor = Color.White;
+                LanguageLabel.ForeColor = Color.White;
                 lightRadioButton.ForeColor = Color.White;
                 darkRadioButton.ForeColor = Color.White;
                 // Weekly
@@ -1050,7 +1054,7 @@ namespace Trackgenda
             }
             catch (Exception ex)
             {
-                // Handle any errors
+                
                 MessageBox.Show($"Error fetching weather data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -1076,9 +1080,6 @@ namespace Trackgenda
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

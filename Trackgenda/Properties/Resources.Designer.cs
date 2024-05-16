@@ -193,23 +193,13 @@ namespace Trackgenda.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap playButton {
+        internal static System.Drawing.Bitmap pauseButton {
             get {
-                object obj = ResourceManager.GetObject("playButton", resourceCulture);
+                object obj = ResourceManager.GetObject("pauseButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap playButton1 {
-            get {
-                object obj = ResourceManager.GetObject("playButton1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
+                
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>

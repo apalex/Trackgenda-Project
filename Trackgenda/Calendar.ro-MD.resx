@@ -117,35 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>Limba</value>
-  </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="currentTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="minimizeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAFRJREFUSEvt0TEKgDAQRNHFEyjp1cp7S7yPV3Jm68VKU/0HPxAIhGwCAIA3k1rU
         pvYBzSod6lT3oLpaVS7eVIf+6FKebvLzq7F8nS9syt8LAEAl4gGQ4zPfPlFQpAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="minimizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="maximizeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -157,12 +135,6 @@
         VRSurAE11D20RuiT3IGpMm+xFjAtYn+7ial9aCXsIb8uWmm3nkArbH7DK9wSrqAh8wu3hxaxJpK0Ai3V
         //1tYXGMdURRNCdl2Td/0aS2OA5efQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="maximizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="XButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="hamburgerPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -648,15 +620,6 @@
         AAAAAAAAAAAA7tQAF1XW+2CNfgkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="hamburgerPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="logoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="sideLogoPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="dashboardButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -668,9 +631,6 @@
         r2/EarwvvQRaT4USyaI8bOKu+Pkhqt0kNco10fGhzTUnSBsnuZvofPKRPK+8/ybVazKGtCLJ0kRnXtmY
         hP7Hkwbhow9p4wrQWfjrIoRXQWUhSsgF2/QAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="dashboardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="todoButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -684,9 +644,6 @@
         aB0D+Y8OPi9Fx7uIriDlr/vVwU+CR7AgRTclNy9FN13vGMjbfyYvSnb1eyLBfurrvX7LSsg+4BuuWY5A
         FbBniUP6lbQCDsqaraVBCbwmBJvzyTBkWZb1BfXOiRAZO9ZXAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="todoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="todoButton.Text" xml:space="preserve">
     <value>A FACE</value>
@@ -714,9 +671,6 @@
         r1WqnzUFw5Q7a8+qAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="studyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="studyButton.Text" xml:space="preserve">
     <value>Studiu</value>
   </data>
@@ -735,9 +689,6 @@
         rkJggg==
 </value>
   </data>
-  <data name="stopwatchButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="stopwatchButton.Text" xml:space="preserve">
     <value>Cronometru</value>
   </data>
@@ -754,9 +705,6 @@
         bkciEdwcBBfekH6/H3/lp8cxmUyBQAAnDy58Z4X7BD7RuVwONwZ5JBIJl8sluLC2Wq101h4F9wyHwzEe
         j78ANAP8LPf3h1IAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="notesButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="notesButton.Text" xml:space="preserve">
     <value>Caiet de notițe</value>
@@ -781,9 +729,6 @@
         MR/w/wC+uOx88a3lBbr7L2WA7NnZ2WGHEMV/enVF/J3NcgkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="motivationalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="motivationalButton.Text" xml:space="preserve">
     <value>Citat motivațional</value>
   </data>
@@ -803,9 +748,6 @@
         oTmLoG/QgY/hAsEbjX9W2KVHttNHYQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="factButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="factButton.Text" xml:space="preserve">
     <value>Fapt amuzant</value>
   </data>
@@ -821,9 +763,6 @@
         7NS5NvR7dKJWppA1kZXoVSG+X7YQKtFEvr/Fa1v0SPp+o/+rD3UT534AyvyNS019yzgAAAAASUVORK5C
         YII=
 </value>
-  </data>
-  <data name="backgroundButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="backgroundButton.Text" xml:space="preserve">
     <value>Decor</value>
@@ -841,9 +780,6 @@
         n+VOogOXIKnUHyosOiBplcx6AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="settingsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="settingsButton.Text" xml:space="preserve">
     <value>Setări</value>
   </data>
@@ -858,23 +794,11 @@
         RK5CYII=
 </value>
   </data>
-  <data name="logoutButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="logoutButton.Text" xml:space="preserve">
     <value>Deconectare</value>
   </data>
-  <data name="exitButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="exitButton.Text" xml:space="preserve">
     <value>Ieșire</value>
-  </data>
-  <data name="sidePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 1010</value>
-  </data>
-  <data name="weeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="weeklyButton.Text" xml:space="preserve">
     <value>Săptămânal</value>
@@ -19392,17 +19316,8 @@
         cwF9BLHPx97e3mHt/6sgCIIgCIIgCILcy/JTP/X/AUPEZf6nPS53AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="monthPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="dateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="dateLabel.Text" xml:space="preserve">
     <value>Dată</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 20</value>
@@ -19410,17 +19325,11 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Vineri</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 20</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Sâmbătă</value>
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
@@ -19428,17 +19337,11 @@
   <data name="label8.Text" xml:space="preserve">
     <value>Joi</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Marţi</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -19446,17 +19349,11 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Miercuri</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Luni</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>
@@ -19464,110 +19361,11 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Duminică</value>
   </data>
-  <data name="nextButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="nextButton.Text" xml:space="preserve">
     <value>Următorul</value>
   </data>
-  <data name="previousButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="previousButton.Text" xml:space="preserve">
     <value>Precedent</value>
-  </data>
-  <data name="confirmStudyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="changeThemeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="darkRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lightRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="confirmPasswordTextBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateEmailButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="saturdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="fridayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="thursdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="wednesdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="tuesdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mondayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="sundayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="monthlyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="nextWeeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="previousWeeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="weekPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -38082,36 +37880,6 @@
         cwF9BLHPx97e3mHt/6sgCIIgCIIgCILcy/JTP/X/AUPEZf6nPS53AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="weekPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="weeklyDisplayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="fridayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="saturdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="thursdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="tuesdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="wednesdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mondayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="sundayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1920, 1061</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
@@ -41852,8 +41620,5 @@
         ofEo0m/Q9Y8sAHQHa1S9dfQ3liNs4CfXT66fXLmLULSH0O6Mo2gNbVrru9f/C146f+OaCTTJAAAAAElF
         TkSuQmCC
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>
