@@ -117,6 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>960, 0</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>upperBar</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="comboBox1.Items" xml:space="preserve">
     <value>English</value>
   </data>
@@ -126,14 +156,12 @@
   <data name="comboBox1.Items2" xml:space="preserve">
     <value>Romanian</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 14</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
@@ -147,13 +175,16 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 15</value>
@@ -177,7 +208,10 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1537, 3</value>
@@ -198,13 +232,16 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>1489, 15</value>
@@ -225,14 +262,16 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="currentTimeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="currentTimeLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="currentTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="currentTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1637, 15</value>
@@ -259,7 +298,7 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;currentTimeLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="minimizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -273,6 +312,9 @@
         vAAADrwBlbxySQAAAFRJREFUSEvt0TEKgDAQRNHFEyjp1cp7S7yPV3Jm68VKU/0HPxAIhGwCAIA3k1rU
         pvYBzSod6lT3oLpaVS7eVIf+6FKebvLzq7F8nS9syt8LAEAl4gGQ4zPfPlFQpAAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="minimizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="minimizeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1740, 0</value>
@@ -293,7 +335,7 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;minimizeButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="maximizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -311,6 +353,9 @@
         VRSurAE11D20RuiT3IGpMm+xFjAtYn+7ial9aCXsIb8uWmm3nkArbH7DK9wSrqAh8wu3hxaxJpK0Ai3V
         //1tYXGMdURRNCdl2Td/0aS2OA5efQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="maximizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="maximizeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1800, 0</value>
@@ -331,13 +376,16 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;maximizeButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="XButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="XButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="XButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="XButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1860, 0</value>
@@ -361,7 +409,7 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;XButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="hamburgerPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -847,6 +895,9 @@
         AAAAAAAAAAAA7tQAF1XW+2CNfgkAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="hamburgerPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="hamburgerPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
@@ -869,10 +920,13 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;hamburgerPictureBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="logoLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="logoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="logoLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 15</value>
@@ -896,7 +950,7 @@
     <value>upperBar</value>
   </data>
   <data name="&gt;&gt;logoLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="upperBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -921,6 +975,9 @@
   </data>
   <data name="&gt;&gt;upperBar.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="sideLogoPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="sideLogoPicture.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 30</value>
@@ -973,6 +1030,9 @@
   <data name="dashboardButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="dashboardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="dashboardButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 151</value>
   </data>
@@ -1024,6 +1084,9 @@
   </data>
   <data name="todoButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="todoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="todoButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 231</value>
@@ -1087,6 +1150,9 @@
   <data name="studyButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="studyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="studyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 311</value>
   </data>
@@ -1141,6 +1207,9 @@
   <data name="stopwatchButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="stopwatchButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="stopwatchButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 391</value>
   </data>
@@ -1193,6 +1262,9 @@
   </data>
   <data name="notesButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="notesButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="notesButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 471</value>
@@ -1253,6 +1325,9 @@
   <data name="motivationalButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="motivationalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="motivationalButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 551</value>
   </data>
@@ -1308,6 +1383,9 @@
   <data name="factButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="factButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="factButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 631</value>
   </data>
@@ -1359,6 +1437,9 @@
   </data>
   <data name="backgroundButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="backgroundButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="backgroundButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 711</value>
@@ -1412,6 +1493,9 @@
   <data name="settingsButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="settingsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 791</value>
   </data>
@@ -1462,6 +1546,9 @@
   <data name="logoutButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="logoutButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 871</value>
   </data>
@@ -1500,6 +1587,9 @@
   </data>
   <data name="exitButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="exitButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 951</value>
@@ -1563,6 +1653,9 @@
   </data>
   <data name="weeklyButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="weeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="weeklyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 324</value>
@@ -20101,6 +20194,9 @@
         cwF9BLHPx97e3mHt/6sgCIIgCIIgCILcy/JTP/X/AUPEZf6nPS53AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="monthPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="monthPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>1023, 24</value>
   </data>
@@ -20127,6 +20223,9 @@
   </data>
   <data name="dateLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
+  </data>
+  <data name="dateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="dateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1051, 24</value>
@@ -20161,6 +20260,9 @@
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>1533, 73</value>
   </data>
@@ -20190,6 +20292,9 @@
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>1738, 73</value>
@@ -20221,6 +20326,9 @@
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>1318, 73</value>
   </data>
@@ -20250,6 +20358,9 @@
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>902, 73</value>
@@ -20281,6 +20392,9 @@
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>1100, 73</value>
   </data>
@@ -20310,6 +20424,9 @@
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>697, 73</value>
@@ -20341,6 +20458,9 @@
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 73</value>
   </data>
@@ -20371,6 +20491,9 @@
   <data name="nextButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="nextButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="nextButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 128</value>
   </data>
@@ -20400,6 +20523,9 @@
   </data>
   <data name="previousButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="previousButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="previousButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 222</value>
@@ -20500,6 +20626,9 @@
   <data name="&gt;&gt;longTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="confirmStudyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="confirmStudyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>668, 538</value>
   </data>
@@ -20584,6 +20713,9 @@
   <data name="label23.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt, style=Bold</value>
   </data>
+  <data name="label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
     <value>662, 298</value>
   </data>
@@ -20607,6 +20739,9 @@
   </data>
   <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="changeThemeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="changeThemeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>668, 229</value>
@@ -20635,6 +20770,9 @@
   <data name="darkRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="darkRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="darkRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>692, 174</value>
   </data>
@@ -20662,6 +20800,9 @@
   <data name="lightRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lightRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lightRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>692, 120</value>
   </data>
@@ -20686,6 +20827,9 @@
   <data name="&gt;&gt;lightRadioButton.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="confirmPasswordTextBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="confirmPasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>287, 474</value>
   </data>
@@ -20709,6 +20853,9 @@
   </data>
   <data name="&gt;&gt;confirmPasswordTextBox.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="updateEmailButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="updateEmailButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>287, 229</value>
@@ -20848,6 +20995,9 @@
   <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt, style=Bold</value>
   </data>
+  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
     <value>686, 52</value>
   </data>
@@ -20878,6 +21028,9 @@
   <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt, style=Bold</value>
   </data>
+  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 298</value>
   </data>
@@ -20907,6 +21060,9 @@
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 52</value>
@@ -20965,6 +21121,9 @@
   <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 860</value>
   </data>
@@ -20994,6 +21153,9 @@
   </data>
   <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 795</value>
@@ -21025,6 +21187,9 @@
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 724</value>
   </data>
@@ -21054,6 +21219,9 @@
   </data>
   <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 655</value>
@@ -21085,6 +21253,9 @@
   <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 587</value>
   </data>
@@ -21114,6 +21285,9 @@
   </data>
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 521</value>
@@ -21145,6 +21319,9 @@
   <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 455</value>
   </data>
@@ -21174,6 +21351,9 @@
   </data>
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 391</value>
@@ -21205,6 +21385,9 @@
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 322</value>
   </data>
@@ -21234,6 +21417,9 @@
   </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 257</value>
@@ -21265,6 +21451,9 @@
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>414, 190</value>
   </data>
@@ -21291,6 +21480,9 @@
   </data>
   <data name="saturdayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="saturdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="saturdayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1742, 142</value>
@@ -21319,6 +21511,9 @@
   <data name="fridayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="fridayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="fridayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1542, 142</value>
   </data>
@@ -21345,6 +21540,9 @@
   </data>
   <data name="thursdayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="thursdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="thursdayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1337, 142</value>
@@ -21373,6 +21571,9 @@
   <data name="wednesdayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="wednesdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="wednesdayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1137, 142</value>
   </data>
@@ -21399,6 +21600,9 @@
   </data>
   <data name="tuesdayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="tuesdayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="tuesdayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>936, 142</value>
@@ -21427,6 +21631,9 @@
   <data name="mondayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="mondayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="mondayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>734, 142</value>
   </data>
@@ -21453,6 +21660,9 @@
   </data>
   <data name="sundayDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="sundayDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="sundayDateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>531, 142</value>
@@ -21484,6 +21694,9 @@
   <data name="monthlyButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="monthlyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="monthlyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 367</value>
   </data>
@@ -21514,6 +21727,9 @@
   <data name="nextWeeklyButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="nextWeeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="nextWeeklyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 171</value>
   </data>
@@ -21543,6 +21759,9 @@
   </data>
   <data name="previousWeeklyButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="previousWeeklyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="previousWeeklyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 265</value>
@@ -40081,6 +40300,9 @@
         cwF9BLHPx97e3mHt/6sgCIIgCIIgCILcy/JTP/X/AUPEZf6nPS53AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="weekPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="weekPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>1025, 67</value>
   </data>
@@ -40107,6 +40329,9 @@
   </data>
   <data name="weeklyDisplayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
+  </data>
+  <data name="weeklyDisplayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="weeklyDisplayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1053, 67</value>
@@ -40141,6 +40366,9 @@
   <data name="fridayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="fridayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="fridayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1546, 116</value>
   </data>
@@ -40170,6 +40398,9 @@
   </data>
   <data name="saturdayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="saturdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="saturdayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1736, 116</value>
@@ -40201,6 +40432,9 @@
   <data name="thursdayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="thursdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="thursdayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1329, 116</value>
   </data>
@@ -40230,6 +40464,9 @@
   </data>
   <data name="tuesdayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="tuesdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="tuesdayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>931, 116</value>
@@ -40261,6 +40498,9 @@
   <data name="wednesdayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="wednesdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="wednesdayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1119, 116</value>
   </data>
@@ -40291,6 +40531,9 @@
   <data name="mondayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="mondayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="mondayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>732, 116</value>
   </data>
@@ -40320,6 +40563,9 @@
   </data>
   <data name="sundayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="sundayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="sundayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 116</value>
