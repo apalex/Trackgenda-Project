@@ -138,8 +138,14 @@
   <data name="&gt;&gt;factLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="displayLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 21</value>
+  </data>
   <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="displayLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Underline</value>
   </data>
   <data name="displayLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 26</value>
@@ -155,9 +161,6 @@
   </data>
   <data name="closeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FactForm</value>
@@ -183,26 +186,23 @@
   <data name="&gt;&gt;factLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>223, 0</value>
   </data>
   <data name="&gt;&gt;displayLabel.Name" xml:space="preserve">
     <value>displayLabel</value>
   </data>
-  <data name="&gt;&gt;factLabel.Name" xml:space="preserve">
-    <value>factLabel</value>
-  </data>
   <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 27</value>
-  </data>
-  <data name="&gt;&gt;displayLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;displayLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="displayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 21</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -3951,8 +3951,8 @@
   <data name="&gt;&gt;displayLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;factLabel.Name" xml:space="preserve">
+    <value>factLabel</value>
   </data>
   <data name="factLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3963,13 +3963,10 @@
   <data name="displayLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="displayLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Underline</value>
+  <data name="&gt;&gt;displayLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ro-MD</value>
   </metadata>
 </root>

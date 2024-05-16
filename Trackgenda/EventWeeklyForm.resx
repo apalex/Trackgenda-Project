@@ -130,8 +130,9 @@
   <data name="dateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="controlButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 189</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -142,7 +143,6 @@
   <data name="&gt;&gt;dateLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="exitButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -157,6 +157,9 @@
   </data>
   <data name="descTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 63</value>
+  </data>
+  <data name="controlButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 189</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -4020,6 +4023,9 @@
   <data name="colourComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 21</value>
   </data>
+  <data name="colourComboBox.Items11" xml:space="preserve">
+    <value>Pink</value>
+  </data>
   <data name="&gt;&gt;controlButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -4038,9 +4044,6 @@
   <data name="exitButton.Text" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="&gt;&gt;colourComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -4052,9 +4055,6 @@
   </data>
   <data name="controlButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;colourComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="controlButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 27</value>
@@ -4068,16 +4068,13 @@
   <data name="colourComboBox.Items2" xml:space="preserve">
     <value>Silver</value>
   </data>
-  <data name="colourComboBox.Items11" xml:space="preserve">
-    <value>Pink</value>
+  <data name="&gt;&gt;colourComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 73</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ro-MD</value>
   </metadata>
 </root>

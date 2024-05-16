@@ -39,15 +39,13 @@
             this.confirmTextBox = new System.Windows.Forms.TextBox();
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.closeButton1 = new Trackgenda.CloseButton();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -106,26 +104,11 @@
             // 
             // confirmButton
             // 
-            resources.ApplyResources(this.confirmButton, "confirmButton");
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.confirmButton, "confirmButton");
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
-            // comboBox1
-            // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2")});
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // closeButton1
             // 
@@ -137,8 +120,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.newPasswordTextBox);
@@ -171,7 +152,5 @@
         private System.Windows.Forms.TextBox newPasswordTextBox;
         private System.Windows.Forms.Button confirmButton;
         private CloseButton closeButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
     }
 }

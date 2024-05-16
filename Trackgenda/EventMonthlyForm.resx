@@ -3957,6 +3957,9 @@
   <data name="&gt;&gt;dateLabel.Name" xml:space="preserve">
     <value>dateLabel</value>
   </data>
+  <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 26</value>
+  </data>
   <data name="colourComboBox.Items10" xml:space="preserve">
     <value>SkyBlue</value>
   </data>
@@ -3996,9 +3999,6 @@
   <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
     <value>exitButton</value>
   </data>
-  <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="maximumLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 17</value>
   </data>
@@ -4032,6 +4032,9 @@
   <data name="dateLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
   </data>
+  <data name="maximumLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 52</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 163</value>
   </data>
@@ -4050,17 +4053,14 @@
   <data name="colourComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 21</value>
   </data>
-  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 129</value>
-  </data>
   <data name="colourComboBox.Items11" xml:space="preserve">
     <value>Pink</value>
   </data>
   <data name="editButton.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="maximumLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 52</value>
+  <data name="editButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="&gt;&gt;maximumLabel.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -4113,8 +4113,8 @@
   <data name="editButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="editButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 129</value>
   </data>
   <data name="&gt;&gt;maximumLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4140,13 +4140,10 @@
   <data name="descTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 71</value>
   </data>
-  <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 26</value>
+  <data name="&gt;&gt;descTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ro-MD</value>
   </metadata>
 </root>

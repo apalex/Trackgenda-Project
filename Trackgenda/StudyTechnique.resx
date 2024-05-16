@@ -129,6 +129,10 @@
   <data name="&gt;&gt;timeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="displayLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="displayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -161,8 +165,8 @@
   <data name="controlButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 47</value>
   </data>
-  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 0</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;resetButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3926,8 +3930,8 @@
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;seperatorLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="timeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 60</value>
   </data>
   <data name="&gt;&gt;seperatorLabel.Name" xml:space="preserve">
     <value>seperatorLabel</value>
@@ -3941,21 +3945,14 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="timeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
-  </data>
   <data name="&gt;&gt;resetButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="seperatorLabel.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="timeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
   </data>
   <data name="controlButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3986,6 +3983,9 @@
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 31</value>
+  </data>
+  <data name="&gt;&gt;seperatorLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="seperatorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 1</value>
@@ -4035,9 +4035,6 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -4049,6 +4046,9 @@
   </data>
   <data name="&gt;&gt;resetButton.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 0</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -4098,8 +4098,8 @@
   <data name="&gt;&gt;displayLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="displayLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="timeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;controlButton.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -4118,8 +4118,5 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ro-MD</value>
   </metadata>
 </root>

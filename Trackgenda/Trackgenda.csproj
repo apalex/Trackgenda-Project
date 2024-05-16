@@ -271,6 +271,9 @@
     <EmbeddedResource Include="CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventMonthlyForm.aa.resx">
+      <DependentUpon>EventMonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventMonthlyForm.en-CA.resx">
       <DependentUpon>EventMonthlyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.ro-MD.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopwatchForm.aa.resx">
+      <DependentUpon>StopwatchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StopwatchForm.en-CA.resx">
       <DependentUpon>StopwatchForm.cs</DependentUpon>
